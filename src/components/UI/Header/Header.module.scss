@@ -1,0 +1,58 @@
+@import '@/styles/variables';
+@import '@/styles/keyframes';
+
+.header {
+  color: $white;
+
+  transition: 0.3s;
+  background-color: $black;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+  &_stick {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    animation: 0.3s slideDown;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: 500;
+
+  &__list {
+    place-self: center left;
+
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 25px 20px;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__logo {
+    place-self: center center;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__socials {
+    place-self: center right;
+  }
+}
