@@ -1,0 +1,50 @@
+@import '@/styles/variables';
+@import '@/styles/keyframes';
+
+.slider {
+  position: relative;
+  max-height: 100vh;
+
+  background-color: $black;
+
+  &__image {
+    width: 100%;
+    height: calc(100vh);
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    color: $white;
+    text-align: center;
+
+    animation: 0.7s slideUpPromoSlide;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 3.5rem;
+    white-space: nowrap;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+}
