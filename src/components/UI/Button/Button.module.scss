@@ -1,0 +1,24 @@
+@import '@/styles/variables';
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+
+  font: inherit;
+  color: $white;
+  font-weight: 600;
+
+  background-color: $green;
+  border: 2px solid transparent;
+  border-radius: $borderRadius;
+  transition: .3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $greenHover;
+  }
+
+  &:active {
+    background-color: $greenActive;
+  }
+}
