@@ -19,7 +19,7 @@ export default function Header() {
     ];
   }, []);
 
-  const scrollHandler = () => setIsStickHeader(window.scrollY > 120);
+  const scrollHandler = () => setIsStickHeader(window.scrollY > 100);
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);

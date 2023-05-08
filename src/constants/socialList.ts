@@ -10,7 +10,7 @@ interface ISocialsList {
   icon: FC<IconsProps>;
 }
 
-export const socialsList: ISocialsList[] = [
+export const SOCIAL_LIST: ISocialsList[] = [
   { tel: VIBER_LINK, icon: ViberLogo },
   { tel: TELEGRAM_LINK, icon: TelegramLogo },
   { tel: INSTAGRAM_LINK, icon: InstagramLogo },

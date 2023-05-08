@@ -1,8 +1,10 @@
-@keyframes slideDown {
+@keyframes slideUpPromoSlide {
   from {
-    transform: translateY(-100%);
+    transform: translateX(-50%) translateY(-90%);
+    opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
   }
 }
