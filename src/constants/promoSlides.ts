@@ -1,14 +1,8 @@
 import pineBarkImg from '@/assets/images/slide1.jpg';
 import peatImg from '@/assets/images/slide2.jpg';
-import { StaticImageData } from 'next/image';
+import { IPromoSlides } from '@/types';
 
-interface IpromoSlides {
-  image: StaticImageData;
-  title: string;
-  desc: string;
-}
-
-export const PROMO_SLIDES: IpromoSlides[] = [
+export const PROMO_SLIDES: IPromoSlides[] = [
   {
     image: pineBarkImg,
     title: 'Сосновая кора',

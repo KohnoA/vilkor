@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '../UI/Header';
-import Footer from '../UI/Footer';
+import Header from '../Header';
+import Footer from '../Footer';
 
 interface MainContainerProps {
   children?: React.ReactNode;

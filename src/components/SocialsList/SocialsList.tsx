@@ -12,8 +12,8 @@ function SocialsList({ color }: SocialsListProps) {
   return (
     <ul className={styles.socials}>
       {SOCIAL_LIST.map((item) => (
-        <li key={item.tel}>
-          <Link href={item.tel} className={styles.socials__link}>
+        <li key={item.link}>
+          <Link href={item.link} className={styles.socials__link}>
             <item.icon {...(color ? { color } : {})} />
           </Link>
         </li>

@@ -1,57 +1,26 @@
-import Layout from '@/components/Layout';
+import Layout from '@/components/UI/Layout';
 import PromoSlider from '@/components/PromoSlider';
+import Advantages from '@/components/Advantages';
+import { ADVATAGES } from '@/constants/advantages';
+import { PROMO_SLIDES } from '@/constants/promoSlides';
 
 export default function Home() {
   return (
-    <Layout title="VILKOR | Главная">
-      <PromoSlider />
+    <Layout title="Главная">
+      <PromoSlider content={PROMO_SLIDES} />
 
-      <section
-        className="container"
-        style={{ marginTop: '50px', marginBottom: '50px', textAlign: 'center' }}
-      >
-        <h3 style={{ marginBottom: '20px' }}>Приемущества</h3>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat explicabo voluptatum
-        facilis optio eligendi veniam corrupti rem! Consectetur excepturi repellat nihil maiores,
-        magnam dolores commodi ipsum nam laboriosam repellendus dolorem quam aliquam cupiditate
-        officia. Doloribus ab, doloremque ratione, illum assumenda, voluptates temporibus vero omnis
-        molestias neque iure qui soluta suscipit! Ducimus voluptate, accusantium molestias
-        reprehenderit minus saepe iste temporibus neque deleniti quia aspernatur ut quas non enim
-        totam? Eum, expedita similique magni molestiae sit quam, unde et alias id eaque quisquam
-        deserunt praesentium odio accusantium explicabo debitis sed. Rem facere doloremque, culpa
-        velit minima inventore repudiandae dolorem voluptates placeat! Commodi!
-      </section>
+      <Advantages content={ADVATAGES} />
 
-      <section
-        className="container"
-        style={{ marginTop: '50px', marginBottom: '50px', textAlign: 'center' }}
-      >
-        <h3 style={{ marginBottom: '20px' }}>Карточки товаров</h3>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat explicabo voluptatum
-        facilis optio eligendi veniam corrupti rem! Consectetur excepturi repellat nihil maiores,
-        magnam dolores commodi ipsum nam laboriosam repellendus dolorem quam aliquam cupiditate
-        officia. Doloribus ab, doloremque ratione, illum assumenda, voluptates temporibus vero omnis
-        molestias neque iure qui soluta suscipit! Ducimus voluptate, accusantium molestias
-        reprehenderit minus saepe iste temporibus neque deleniti quia aspernatur ut quas non enim
-        totam? Eum, expedita similique magni molestiae sit quam, unde et alias id eaque quisquam
-        deserunt praesentium odio accusantium explicabo debitis sed. Rem facere doloremque, culpa
-        velit minima inventore repudiandae dolorem voluptates placeat! Commodi!
-      </section>
-
-      <section
-        className="container"
-        style={{ marginTop: '50px', marginBottom: '50px', textAlign: 'center' }}
-      >
-        <h3 style={{ marginBottom: '20px' }}>Контакты</h3>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat explicabo voluptatum
-        facilis optio eligendi veniam corrupti rem! Consectetur excepturi repellat nihil maiores,
-        magnam dolores commodi ipsum nam laboriosam repellendus dolorem quam aliquam cupiditate
-        officia. Doloribus ab, doloremque ratione, illum assumenda, voluptates temporibus vero omnis
-        molestias neque iure qui soluta suscipit! Ducimus voluptate, accusantium molestias
-        reprehenderit minus saepe iste temporibus neque deleniti quia aspernatur ut quas non enim
-        totam? Eum, expedita similique magni molestiae sit quam, unde et alias id eaque quisquam
-        deserunt praesentium odio accusantium explicabo debitis sed. Rem facere doloremque, culpa
-        velit minima inventore repudiandae dolorem voluptates placeat! Commodi!
+      <section className="container" style={{ padding: '100px 0' }}>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem illo id necessitatibus
+        dolorem distinctio culpa, corporis ratione perspiciatis, aperiam a fuga nobis voluptate et!
+        Laboriosam nisi nam incidunt libero. Dolorem porro sunt, atque rem, odio iure similique,
+        neque commodi esse et modi provident. Similique possimus corrupti enim natus, quam quidem
+        iure sit, quasi iste dolorum, libero consequatur? Porro esse veniam quod. Iure, ipsam minus
+        magni porro cum blanditiis maiores accusantium labore nesciunt esse assumenda, officiis
+        soluta. Quibusdam dolorem quidem quos, fuga debitis dolor nisi alias minus dolores mollitia
+        exercitationem dolorum deleniti. Odio autem nesciunt maiores asperiores qui quis laboriosam
+        a?
       </section>
     </Layout>
   );
