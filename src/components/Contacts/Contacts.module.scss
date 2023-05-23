@@ -1,0 +1,10 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.contacts {
+  position: relative;
+
+  &__bg {
+    @include TextureBackground;
+  }
+}

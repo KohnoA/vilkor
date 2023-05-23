@@ -14,7 +14,7 @@ export default function Advantages({ content }: AdvantagesProps) {
     <section className={styles.advantages}>
       <div className={styles.advantages__bg}></div>
 
-      <div className={`container ${styles.advantages__wrapper}`}>
+      <div className={`container section`}>
         <h2 className={`title title_center ${styles.advantages__title}`}>
           {title.slice(0, -3)}{' '}
           <span className={styles.advantages__title_we}>{title.slice(-3, -1)}</span>

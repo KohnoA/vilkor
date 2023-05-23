@@ -11,7 +11,7 @@ interface ProductsProps {
 
 export default function Products({ content }: ProductsProps) {
   return (
-    <section className={`container ${styles.products}`}>
+    <section className={`container section ${styles.products}`}>
       <h2 className={`title title_left ${styles.products__title}`}>Наша продукция</h2>
 
       <ul className={styles.products__list}>

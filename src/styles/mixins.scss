@@ -6,15 +6,44 @@
 
 @mixin BorderBottomGradientCenter() {
   @include borderBottomGradient;
-  border-image-source: radial-gradient(circle, rgba(8,210,69,1) 0%, rgba(249,248,243,0.2) 100%);
+  border-image-source: radial-gradient(
+    circle,
+    rgba(8, 210, 69, 1) 0%,
+    rgba(249, 248, 243, 0.2) 100%
+  );
 }
 
 @mixin BorderBottomGradientLeft() {
   @include borderBottomGradient;
-  border-image-source: linear-gradient(90deg, rgba(8,210,69,1) 0%, rgba(249,248,243,0.2) 100%);
+  border-image-source: linear-gradient(
+    90deg,
+    rgba(8, 210, 69, 1) 0%,
+    rgba(249, 248, 243, 0.2) 100%
+  );
 }
 
 @mixin BorderBottomGradientRight() {
   @include borderBottomGradient;
-  border-image-source: linear-gradient(260deg, rgba(8,210,69,1) 0%, rgba(249,248,243,0.2) 100%);
+  border-image-source: linear-gradient(
+    260deg,
+    rgba(8, 210, 69, 1) 0%,
+    rgba(249, 248, 243, 0.2) 100%
+  );
+}
+
+@mixin TextureBackground() {
+  position: absolute;
+
+  z-index: -1;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: url(../assets/images/white-texture.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  opacity: 0.5;
 }
