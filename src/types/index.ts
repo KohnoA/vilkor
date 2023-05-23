@@ -17,9 +17,15 @@ export interface IPromoSlides {
 export interface IAdvatages {
   title: string;
   tagline: string;
-  list: {
+  list: Array<{
     icon: FC<IconsProps>;
     title: string;
     desc: string;
-  }[];
+  }>;
+}
+
+export interface IProduct {
+  image: StaticImageData;
+  title: string;
+  link: string;
 }

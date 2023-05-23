@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
 
 .advantages {
   position: relative;
@@ -24,20 +25,12 @@
 
   &__wrapper {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 
   &__title {
-    max-width: 40%;
-
     margin: 0 auto;
     margin-bottom: 20px;
-    padding-bottom: 15px;
-
-    font-size: 2rem;
-    white-space: nowrap;
-
-    border-bottom: 2px solid $green;
 
     &_we {
       color: $green;
@@ -77,5 +70,6 @@
     font-weight: 600;
 
     border-bottom: 2px solid $green;
+    @include BorderBottomGradientCenter;
   }
 }
