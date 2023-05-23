@@ -3,6 +3,7 @@ import PromoSlider from '@/components/PromoSlider';
 import Advantages from '@/components/Advantages';
 import { ADVATAGES } from '@/constants/advantages';
 import { PROMO_SLIDES } from '@/constants/promoSlides';
+import Products from '@/components/Products';
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
         exercitationem dolorum deleniti. Odio autem nesciunt maiores asperiores qui quis laboriosam
         a?
       </section>
+
+      <Products />
     </Layout>
   );
 }
