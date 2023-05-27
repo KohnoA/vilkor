@@ -1,24 +1,27 @@
-import TestImage from '@/assets/images/slide1.jpg';
 import { IProduct } from '@/types';
+import koraImg from '@/assets/images/kora-card.jpg';
+import multMaterialImg from '@/assets/images/mult-material-card.jpg';
+import decRastImg from '@/assets/images/dec-rast-card.jpg';
+import torfImg from '@/assets/images/torf-card.jpg';
 
 export const PRODUCTS: IProduct[] = [
   {
-    image: TestImage,
+    image: koraImg,
     title: 'Сосновая кора',
     link: '#',
   },
   {
-    image: TestImage,
+    image: multMaterialImg,
     title: 'Мульчирующие материалы',
     link: '#',
   },
   {
-    image: TestImage,
+    image: decRastImg,
     title: 'Декоративные растения',
     link: '#',
   },
   {
-    image: TestImage,
+    image: torfImg,
     title: 'Торф',
     link: '#',
   },
