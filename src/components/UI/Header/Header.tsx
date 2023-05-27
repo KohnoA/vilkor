@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 import Logo from '@/components/icons/Logo';
-import { IconColor, AppRoutes } from '@/constants';
+import { IconColor, AppRoutes, A1_NUMBER, PHONE_REF } from '@/constants';
 import SocialsList from '@/components/SocialsList';
 import Dropdown from '../Dropdown';
 
@@ -60,7 +60,11 @@ export default function Header() {
           <Logo color={IconColor.white} />
         </Link>
 
-        <div className={styles.nav__socials}>
+        <div className={styles.nav__contacts}>
+          <Link className={styles.nav__number} href={`tel:${A1_NUMBER.replace(PHONE_REF, '')}`}>
+            {A1_NUMBER}
+          </Link>
+
           <SocialsList color={IconColor.white} />
         </div>
       </nav>

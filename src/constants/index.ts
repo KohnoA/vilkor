@@ -5,8 +5,10 @@ export const TELEGRAM_LINK = 'https://t.me/+SU47CN1ClKcMLhHA';
 export const INSTAGRAM_LINK = 'https://www.instagram.com/dary_lesa.by/?igshid=YmMyMTA2M2Y%3D';
 
 // Numbers
-export const A1_NUMBER = '+375 (29) 641-02-26';
-export const MTC_NUMBER = '+375 (29) 654-22-33';
+export const A1_NUMBER = '+375 29 641-02-26';
+
+// RegExp
+export const PHONE_REF = /[\s-]/g;
 
 // enums
 export const enum AppRoutes {
@@ -19,4 +21,5 @@ export const enum AppRoutes {
 export const enum IconColor {
   black = '#171717',
   white = '#f9f8f3',
+  green = '#08d245',
 }

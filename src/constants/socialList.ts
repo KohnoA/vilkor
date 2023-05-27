@@ -6,12 +6,12 @@ import { FC } from 'react';
 import { IconsProps } from '@/types';
 
 interface ISocialsList {
-  tel: string;
+  link: string;
   icon: FC<IconsProps>;
 }
 
 export const SOCIAL_LIST: ISocialsList[] = [
-  { tel: VIBER_LINK, icon: ViberLogo },
-  { tel: TELEGRAM_LINK, icon: TelegramLogo },
-  { tel: INSTAGRAM_LINK, icon: InstagramLogo },
+  { link: VIBER_LINK, icon: ViberLogo },
+  { link: TELEGRAM_LINK, icon: TelegramLogo },
+  { link: INSTAGRAM_LINK, icon: InstagramLogo },
 ];

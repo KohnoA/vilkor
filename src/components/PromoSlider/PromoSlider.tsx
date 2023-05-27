@@ -2,14 +2,18 @@ import React from 'react';
 import Button from '../UI/Button';
 import Image from 'next/image';
 import styles from './PromoSlider.module.scss';
-import { PROMO_SLIDES } from '@/constants/promoSlides';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+import { IPromoSlides } from '@/types';
 
-function PromoSlider() {
+interface PromoSliderProps {
+  content: IPromoSlides[];
+}
+
+function PromoSlider({ content }: PromoSliderProps) {
   return (
     <Swiper
       className={styles.slider}
@@ -19,7 +23,7 @@ function PromoSlider() {
       autoplay={{ delay: 5000 }}
       // loop
     >
-      {PROMO_SLIDES.map((item) => (
+      {content.map((item) => (
         <SwiperSlide key={item.title}>
           <Image
             className={styles.slider__image}
