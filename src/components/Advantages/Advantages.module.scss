@@ -1,0 +1,61 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.advantages {
+  position: relative;
+
+  text-align: center;
+
+  &__bg {
+    @include TextureBackground;
+  }
+
+  &__wrapper {
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    &_we {
+      color: $green;
+    }
+  }
+
+  &__tagline {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__transition {
+    width: 100%;
+    height: 15vh;
+
+    background-image: url(../../assets/icons/transition-block.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.advantage {
+  padding: 30px;
+
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    border-bottom: 2px solid $green;
+    @include BorderBottomGradientCenter;
+  }
+}
