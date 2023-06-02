@@ -29,7 +29,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
             className={styles.slider__image}
             src={item.image}
             alt={item.title}
-            priority={false}
+            priority={true}
           />
           <div className={styles.slider__overlay} />
           <div className={styles.slider__content}>

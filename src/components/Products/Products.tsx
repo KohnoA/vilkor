@@ -19,12 +19,7 @@ export default function Products({ content }: ProductsProps) {
           <li key={title}>
             <Link href={link} className={styles.products__item}>
               <div className={styles.products__imageWrapper}>
-                <Image
-                  className={styles.products__image}
-                  src={image}
-                  alt={title}
-                  priority={false}
-                />
+                <Image className={styles.products__image} src={image} alt={title} priority={true} />
               </div>
 
               <h3 className={styles.products__name}>{title}</h3>
