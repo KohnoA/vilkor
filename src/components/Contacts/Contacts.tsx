@@ -4,8 +4,6 @@ import styles from './Contacts.module.scss';
 export default function Contacts() {
   return (
     <section className={styles.contacts}>
-      <div className={styles.contacts__bg}></div>
-
       <div className={`container section`}>
         <h3 className={`title title_left`}>Контакты</h3>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nemo assumenda beatae

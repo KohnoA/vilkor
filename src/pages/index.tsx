@@ -8,17 +8,25 @@ import { PRODUCTS } from '@/constants/products';
 import Services from '@/components/Services';
 import Works from '@/components/Works';
 import Contacts from '@/components/Contacts';
+import Texture from '@/components/UI/Texture';
+import TransitionIcon from '@/components/icons/TransitionIcon';
 
 export default function Home() {
   return (
     <Layout title="Главная">
       <PromoSlider content={PROMO_SLIDES} />
 
-      <Advantages content={ADVATAGES} />
+      <Texture>
+        <Advantages content={ADVATAGES} />
+
+        <TransitionIcon />
+      </Texture>
 
       <Products content={PRODUCTS} />
 
-      <Services />
+      <Texture>
+        <Services />
+      </Texture>
 
       <Works />
 

@@ -18,7 +18,7 @@ export interface IAdvatages {
   title: string;
   tagline: string;
   list: Array<{
-    icon: FC<IconsProps>;
+    Icon: FC<IconsProps>;
     title: string;
     desc: string;
   }>;

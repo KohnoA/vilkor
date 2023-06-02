@@ -13,14 +13,14 @@ interface PromoSliderProps {
   content: IPromoSlides[];
 }
 
-function PromoSlider({ content }: PromoSliderProps) {
+export default function PromoSlider({ content }: PromoSliderProps) {
   return (
     <Swiper
       className={styles.slider}
       modules={[Navigation, Pagination, A11y, Autoplay]}
       navigation
       pagination={{ clickable: true }}
-      autoplay={{ delay: 5000 }}
+      // autoplay={{ delay: 5000 }}
       // loop
     >
       {content.map((item) => (
@@ -29,7 +29,7 @@ function PromoSlider({ content }: PromoSliderProps) {
             className={styles.slider__image}
             src={item.image}
             alt={item.title}
-            priority={true}
+            priority={false}
           />
           <div className={styles.slider__overlay} />
           <div className={styles.slider__content}>
@@ -42,5 +42,3 @@ function PromoSlider({ content }: PromoSliderProps) {
     </Swiper>
   );
 }
-
-export default React.memo(PromoSlider);

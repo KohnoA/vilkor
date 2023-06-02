@@ -2,7 +2,6 @@
 @import '@/styles/keyframes';
 
 .slider {
-  position: relative;
   max-height: 100vh;
 
   background-color: $black;
@@ -35,8 +34,6 @@
 
     color: $white;
     text-align: center;
-
-    animation: 0.7s slideUpPromoSlide;
   }
 
   &__title {

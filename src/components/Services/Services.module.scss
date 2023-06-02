@@ -2,12 +2,6 @@
 @import '@/styles/mixins';
 
 .services {
-  position: relative;
-
-  &__bg {
-    @include TextureBackground;
-  }
-
   &__title {
     margin-right: 0;
     margin-left: auto;
