@@ -11,20 +11,11 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  color-scheme: dark;
 
   min-width: 320px;
-  overflow-x: hidden;
 
-  & ::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  & ::-webkit-scrollbar-thumb {
-    background: rgba(181,183,194, 1);
-    border-radius: $borderRadius;
-    cursor: pointer;
-  }
+  font-size: 16px;
 }
 
 body {

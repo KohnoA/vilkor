@@ -9,6 +9,7 @@ import Dropdown from '../Dropdown';
 export default function Header() {
   const [isDropdown, setIsDropdown] = useState<boolean>(false);
   const [isStickHeader, setIsStickHeader] = useState<boolean>(false);
+  const STICKY_POINT = 100;
 
   const dropdownContent = useMemo(() => {
     return [
@@ -19,7 +20,7 @@ export default function Header() {
     ];
   }, []);
 
-  const scrollHandler = () => setIsStickHeader(window.scrollY > 100);
+  const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);

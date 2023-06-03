@@ -5,7 +5,7 @@ export const TELEGRAM_LINK = 'https://t.me/+SU47CN1ClKcMLhHA';
 export const INSTAGRAM_LINK = 'https://www.instagram.com/dary_lesa.by/?igshid=YmMyMTA2M2Y%3D';
 
 // Numbers
-export const A1_NUMBER = '+375 29 641-02-26';
+export const A1_NUMBER = '+375 29 607-87-76';
 
 // RegExp
 export const PHONE_REF = /[\s-]/g;
