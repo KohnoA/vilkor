@@ -1,5 +1,6 @@
 import React from 'react';
 import { IconsProps } from '@/types';
+import { IconColor } from '@/constants';
 
 function Logo({ width, height, color }: IconsProps) {
   const INITIAL_WIDTH = 130;
@@ -12,7 +13,7 @@ function Logo({ width, height, color }: IconsProps) {
       height={height ?? INITIAL_HEIGHT}
       version="1"
       viewBox="0 0 224.88 60"
-      fill={color}
+      fill={color ?? IconColor.WHITE}
     >
       <defs>
         <clipPath id="25c81926cb">

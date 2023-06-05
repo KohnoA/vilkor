@@ -9,7 +9,7 @@ function TransitionIcon({ width, height, color }: IconsProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      fill={color ?? IconColor.white}
+      fill={color ?? IconColor.WHITE}
       width={width ?? INITIAL_WIDTH}
       height={height ?? INITIAL_HEIGHT}
       className="t796__svg"

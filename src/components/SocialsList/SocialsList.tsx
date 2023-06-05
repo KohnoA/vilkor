@@ -6,15 +6,21 @@ import { IconColor } from '@/constants';
 
 interface SocialsListProps {
   color?: IconColor;
+  width?: number;
+  height?: number;
+  full?: boolean;
 }
 
-function SocialsList({ color }: SocialsListProps) {
+function SocialsList({ full, ...props }: SocialsListProps) {
   return (
     <ul className={styles.socials}>
-      {SOCIAL_LIST.map((item) => (
-        <li key={item.link}>
-          <Link href={item.link} className={styles.socials__link}>
-            <item.icon {...(color ? { color } : {})} />
+      {SOCIAL_LIST.map(({ link, Icon, title }) => (
+        <li key={title}>
+          <Link
+            href={link}
+            className={`${styles.socials__link} ${full ? styles.socials__link_full : ''}`}
+          >
+            <Icon {...props} /> {full && title}
           </Link>
         </li>
       ))}

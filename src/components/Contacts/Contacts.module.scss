@@ -4,5 +4,96 @@
 .contacts {
   color: $white;
 
-  background-color: $lightBlack;
+  background-image: url(../../assets/images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+
+    padding: 0;
+
+    background-color: $lightBlack;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadowStrong;
+    overflow: hidden;
+  }
+
+  &__info {
+    flex-basis: 50%;
+
+    padding: 30px;
+  }
+
+  &__map {
+    flex-basis: 50%;
+
+    width: 100%;
+    min-height: 100%;
+
+    border: none;
+  }
+
+  &__item {
+    width: min-content;
+    margin-bottom: 25px;
+
+    white-space: nowrap;
+
+    &:nth-child(1) {
+      margin-bottom: 15px;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 8px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_header {
+      margin-bottom: 5px;
+    }
+
+    &_desc {
+      padding-left: 12px;
+    }
+  }
+
+  &__number {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+
+    padding: 10px;
+    padding-left: 12px;
+
+    font-size: 1.2rem;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__mark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    color: $green;
+    font-style: italic;
+
+    border: 2px solid $green;
+    border-radius: $borderRadius;
+  }
 }

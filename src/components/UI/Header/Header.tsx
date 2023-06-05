@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 import Logo from '@/components/icons/Logo';
-import { IconColor, AppRoutes, A1_NUMBER, PHONE_REF } from '@/constants';
+import { IconColor, AppRoutes, A1_NUMBER, A1_NUMBER_REF } from '@/constants';
 import SocialsList from '@/components/SocialsList';
 import Dropdown from '../Dropdown';
 
@@ -39,34 +39,34 @@ export default function Header() {
             onMouseOver={() => setIsDropdown(true)}
             onFocus={() => setIsDropdown(true)}
           >
-            <Link href={AppRoutes.goods} className={styles.nav__link}>
+            <Link href={AppRoutes.GOODS} className={styles.nav__link}>
               Товары
             </Link>
 
             <Dropdown isShow={isDropdown} items={dropdownContent} />
           </li>
           <li className={styles.nav__item}>
-            <Link href={AppRoutes.services} className={styles.nav__link}>
+            <Link href={AppRoutes.SERVICES} className={styles.nav__link}>
               Услуги
             </Link>
           </li>
           <li className={styles.nav__item}>
-            <Link href={AppRoutes.contacts} className={styles.nav__link}>
+            <Link href={AppRoutes.CONTACTS} className={styles.nav__link}>
               Контакты
             </Link>
           </li>
         </ul>
 
-        <Link href={AppRoutes.main} className={styles.nav__logo}>
-          <Logo color={IconColor.white} />
+        <Link href={AppRoutes.MAIN} className={styles.nav__logo}>
+          <Logo color={IconColor.WHITE} />
         </Link>
 
         <div className={styles.nav__contacts}>
-          <Link className={styles.nav__number} href={`tel:${A1_NUMBER.replace(PHONE_REF, '')}`}>
+          <Link className={styles.nav__number} href={A1_NUMBER_REF}>
             {A1_NUMBER}
           </Link>
 
-          <SocialsList color={IconColor.white} />
+          <SocialsList color={IconColor.WHITE} />
         </div>
       </nav>
     </header>

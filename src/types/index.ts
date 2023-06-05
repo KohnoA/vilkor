@@ -14,18 +14,20 @@ export interface IPromoSlides {
   desc: string;
 }
 
-export interface IAdvatages {
+export interface IAdvatage {
+  Icon: FC<IconsProps>;
   title: string;
-  tagline: string;
-  list: Array<{
-    Icon: FC<IconsProps>;
-    title: string;
-    desc: string;
-  }>;
+  desc: string;
 }
 
 export interface IProduct {
   image: StaticImageData;
   title: string;
   link: string;
+}
+
+export interface ISocialItem {
+  link: string;
+  Icon: FC<IconsProps>;
+  title: string;
 }

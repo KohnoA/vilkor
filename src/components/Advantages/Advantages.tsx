@@ -1,29 +1,25 @@
 import React from 'react';
 import styles from './Advantages.module.scss';
 import { IconColor } from '@/constants';
-import { IAdvatages } from '@/types';
+import { IAdvatage } from '@/types';
 
 interface AdvantagesProps {
-  content: IAdvatages;
+  content: IAdvatage[];
 }
 
 export default function Advantages({ content }: AdvantagesProps) {
-  const { title, tagline, list } = content;
-
   return (
     <div className={`container section ${styles.advantages}`}>
       <h2 className={`title title_center ${styles.advantages__title}`}>
-        {title.slice(0, -3)}{' '}
-        <span className={styles.advantages__title_we}>{title.slice(-3, -1)}</span>
-        {title.slice(-1)}
+        Почему именно <span className={styles.advantages__title_we}>мы</span>?
       </h2>
 
-      <p className={styles.advantages__tagline}>{tagline}</p>
+      <p className={styles.advantages__tagline}>Более 3-ёх лет успешной работы</p>
 
       <ul className={styles.advantages__list}>
-        {list.map(({ Icon, title, desc }) => (
+        {content.map(({ Icon, title, desc }) => (
           <li key={title} className={styles.advantage}>
-            <Icon width={60} height={60} color={IconColor.green} />
+            <Icon width={60} height={60} color={IconColor.GREEN} />
 
             <h3 className={styles.advantage__title}>{title}</h3>
             <p>{desc}</p>
