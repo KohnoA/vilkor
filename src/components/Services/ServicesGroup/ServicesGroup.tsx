@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './ServicesGroup.module.scss';
 import { Collapse } from 'react-collapse';
-import ArrowDownIcon from '@/components/icons/ArrowDownIcon';
 import { IService } from '@/types';
+import PlusIcon from '@/components/icons/PlusIcon';
 
 interface ServicesGroupProps {
   title: string;
@@ -35,7 +35,7 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
           className={`${styles.toggler} ${isActive ? styles.toggler_active : ''}`}
           tabIndex={-1}
         >
-          <ArrowDownIcon />
+          <PlusIcon />
         </button>
       </div>
 

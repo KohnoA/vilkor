@@ -31,7 +31,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Детейлинг',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
@@ -60,7 +60,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Тюнинг интерьера',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
@@ -89,7 +89,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Тюнинг и стайлинг экстерьера',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
@@ -118,7 +118,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Охранные системы',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
@@ -147,7 +147,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Мультимедиа аппаратура',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
@@ -176,7 +176,7 @@ export const SERVICES: IServicesGroup[] = [
     ],
   },
   {
-    title: 'Кузовной цех',
+    title: 'Что-то там ещё',
     services: [
       {
         service: 'Замена масла и масляного фильтра',
