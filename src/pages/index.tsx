@@ -10,6 +10,7 @@ import Works from '@/components/Works';
 import Contacts from '@/components/Contacts';
 import Texture from '@/components/UI/Texture';
 import TransitionIcon from '@/components/icons/TransitionIcon';
+import { SERVICES } from '@/constants/services';
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
       <Products content={PRODUCTS} />
 
       <Texture>
-        <Services />
+        <Services content={SERVICES} />
       </Texture>
 
       <Works />

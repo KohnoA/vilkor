@@ -1,11 +1,31 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-.services {
-  &__title {
-    margin-right: 0;
-    margin-left: auto;
+.section {
+  width: 100%;
+}
 
-    text-align: right;
-  }
+.title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.moreInfo {
+  max-width: 420px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.servicesGroups {
+  max-width: 70%;
+
+  margin: 0 auto;
+
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadowLight;
 }

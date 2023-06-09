@@ -49,12 +49,12 @@ body {
 }
 
 .section {
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 80px;
 }
 
 .title {
-  max-width: 50%;
+  max-width: 500px;
 
   margin-bottom: 20px;
   padding-bottom: 15px;
@@ -86,4 +86,8 @@ ul {
 
 :root {
   --swiper-theme-color: #f9f8f3 !important;
+}
+
+.ReactCollapse--collapse {
+  transition: height 300ms;
 }

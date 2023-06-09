@@ -1,0 +1,80 @@
+@import '@/styles/variables';
+
+.item {
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: $boxShadowLight;
+  }
+
+  &:first-child {
+    border-top-right-radius: $borderRadius;
+    border-top-left-radius: $borderRadius;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $borderRadius;
+    border-bottom-left-radius: $borderRadius;
+    border: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+  padding-left: 30px;
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  background-color: transparent;
+  border: none;
+  border-radius: $borderRadius;
+  transition: 0.3s;
+  cursor: pointer;
+
+  & svg {
+    transition: 0.3s;
+    opacity: 0.4;
+  }
+
+  &_active {
+    & svg {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.services {
+  &__list {
+    padding: 0 30px 30px 50px;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    list-style: disc;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

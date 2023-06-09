@@ -31,3 +31,13 @@ export interface ISocialItem {
   Icon: FC<IconsProps>;
   title: string;
 }
+
+export interface IServicesGroup {
+  title: string;
+  services: IService[];
+}
+
+export interface IService {
+  service: string;
+  price: string;
+}
