@@ -48,6 +48,7 @@ export default function WorkItem({ content }: WorkItemProps) {
             className={styles.item__image}
             placeholder="blur"
             blurDataURL={preview.blurDataURL}
+            sizes="600px"
           />
 
           <Image
@@ -56,6 +57,7 @@ export default function WorkItem({ content }: WorkItemProps) {
             className={`${styles.item__image} ${styles.item__image_hoverPreview}`}
             placeholder="blur"
             blurDataURL={hoverPreview.blurDataURL}
+            sizes="600px"
           />
         </div>
 
