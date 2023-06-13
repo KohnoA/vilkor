@@ -9,7 +9,7 @@ export const ADRESS_MAP =
 // Other Info
 export const A1_NUMBER = '+375 (29) 607-87-76';
 export const A1_NUMBER_REF = 'tel:+375296078776';
-export const ADRESS = 'ул. 17 Сентебря 10, Вилейка';
+export const ADRESS = 'Минск, переулок Козлова, 9Г';
 
 // enums
 export const enum AppRoutes {
