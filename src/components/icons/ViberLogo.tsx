@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC, memo } from 'react';
 import { IconsProps } from '@/types';
 import { IconColor } from '@/constants';
 
@@ -19,4 +19,4 @@ const ViberLogo: FC<IconsProps> = ({ width, height, color }) => {
   );
 };
 
-export default React.memo(ViberLogo);
+export default memo(ViberLogo);

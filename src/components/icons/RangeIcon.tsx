@@ -1,6 +1,6 @@
 import { IconColor } from '@/constants';
 import { IconsProps } from '@/types';
-import React, { FC } from 'react';
+import { FC, memo } from 'react';
 
 const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
   const INITIAL_WIDTH = 75;
@@ -25,4 +25,4 @@ const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
   );
 };
 
-export default React.memo(RangeIcon);
+export default memo(RangeIcon);

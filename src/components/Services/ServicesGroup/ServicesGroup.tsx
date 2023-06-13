@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import styles from './ServicesGroup.module.scss';
 import { Collapse } from 'react-collapse';
 import { IService } from '@/types';
@@ -12,7 +12,7 @@ interface ServicesGroupProps {
 function ServicesGroup({ title, services }: ServicesGroupProps) {
   const [isActive, setIsActive] = useState<boolean>(false);
 
-  const stateToggler = () => setIsActive((prev) => !prev);
+  const stateToggler = () => setIsActive(!isActive);
 
   const keyboardHandler = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.code === 'Enter') {
@@ -52,4 +52,4 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
   );
 }
 
-export default React.memo(ServicesGroup);
+export default memo(ServicesGroup);

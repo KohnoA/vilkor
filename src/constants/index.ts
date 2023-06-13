@@ -23,6 +23,7 @@ export const enum IconColor {
   BLACK = '#171717',
   WHITE = '#f9f8f3',
   GREEN = '#08d245',
+  LIGHT_BLACK = '#202020',
 }
 
 export const enum BusinessInfo {

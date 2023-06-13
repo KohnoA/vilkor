@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { IconsProps } from '@/types';
 import { IconColor } from '@/constants';
 
@@ -58,4 +58,4 @@ function Logo({ width, height, color }: IconsProps) {
   );
 }
 
-export default React.memo(Logo);
+export default memo(Logo);

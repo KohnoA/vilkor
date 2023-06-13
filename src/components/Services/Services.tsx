@@ -1,8 +1,7 @@
-import React from 'react';
 import styles from './Services.module.scss';
 import { A1_NUMBER } from '@/constants';
 import { IServicesGroup } from '@/types';
-import ServicesGroup from './ServicesGroup';
+import ServicesGroup from './ServicesGroup/ServicesGroup';
 
 interface ServicesProps {
   content: IServicesGroup[];

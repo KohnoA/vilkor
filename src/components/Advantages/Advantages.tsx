@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Advantages.module.scss';
 import { IconColor } from '@/constants';
 import { IAdvatage } from '@/types';

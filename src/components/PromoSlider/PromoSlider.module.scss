@@ -1,5 +1,4 @@
 @import '@/styles/variables';
-@import '@/styles/keyframes';
 
 .slider {
   max-height: 100vh;
@@ -9,7 +8,7 @@
 
   &__image {
     width: 100%;
-    height: calc(100vh);
+    height: 100vh;
     object-fit: cover;
     object-position: center;
   }

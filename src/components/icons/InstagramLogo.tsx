@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC, memo } from 'react';
 import { IconsProps } from '@/types';
 import { IconColor } from '@/constants';
 
@@ -19,4 +19,4 @@ const InstagramLogo: FC<IconsProps> = ({ width, height, color }) => {
   );
 };
 
-export default React.memo(InstagramLogo);
+export default memo(InstagramLogo);

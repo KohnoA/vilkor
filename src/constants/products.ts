@@ -1,8 +1,8 @@
 import { IProduct } from '@/types';
-import koraImg from '@/assets/images/kora-card.jpg';
-import multMaterialImg from '@/assets/images/mult-material-card.jpg';
-import decRastImg from '@/assets/images/dec-rast-card.jpg';
-import torfImg from '@/assets/images/torf-card.jpg';
+import koraImg from 'public/images/kora-card.jpg';
+import multMaterialImg from 'public/images/mult-material-card.jpg';
+import decRastImg from 'public/images/dec-rast-card.jpg';
+import torfImg from 'public/images/torf-card.jpg';
 
 export const PRODUCTS: IProduct[] = [
   {

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import styles from './Header.module.scss';
 import Link from 'next/link';
 import Logo from '@/components/icons/Logo';

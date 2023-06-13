@@ -1,0 +1,71 @@
+@import '@/styles/variables';
+
+.item {
+  text-align: left;
+
+  cursor: pointer;
+
+  &__imageWrapper {
+    position: relative;
+
+    width: 100%;
+    height: 300px;
+
+    margin-bottom: 10px;
+
+    &:hover {
+      .item__image_hoverPreview {
+        opacity: 1;
+      }
+    } 
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: $borderRadius;
+    transition: 0.3s;
+
+    &_hoverPreview {
+      opacity: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}
+
+.modalContent {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 420px;
+  }
+
+  &__more {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__moreDesc {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+  }
+}

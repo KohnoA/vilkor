@@ -1,10 +1,24 @@
 @import '@/styles/variables';
 
-.works {
-  &__title {
-    margin: 0 auto;
-    margin-bottom: 25px;
+.section {
+  text-align: center;
+}
 
-    text-align: center;
-  }
+.title {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.desc {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 40px;
+
+  margin-bottom: 60px;
 }

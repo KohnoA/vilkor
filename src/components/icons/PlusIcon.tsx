@@ -1,5 +1,5 @@
 import { IconsProps } from '@/types';
-import React from 'react';
+import { memo } from 'react';
 
 function PlusIcon({ color, width, height }: IconsProps) {
   const INITIAL_WIDTH = 25;
@@ -24,4 +24,4 @@ function PlusIcon({ color, width, height }: IconsProps) {
   );
 }
 
-export default React.memo(PlusIcon);
+export default memo(PlusIcon);

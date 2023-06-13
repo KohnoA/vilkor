@@ -5,12 +5,16 @@ import { ADVATAGES } from '@/constants/advantages';
 import { PROMO_SLIDES } from '@/constants/promoSlides';
 import Products from '@/components/Products';
 import { PRODUCTS } from '@/constants/products';
-import Services from '@/components/Services';
-import Works from '@/components/Works';
+import Services from '@/components/Services/Services';
+import Works from '@/components/Works/Works';
 import Contacts from '@/components/Contacts';
-import Texture from '@/components/UI/Texture';
 import TransitionIcon from '@/components/icons/TransitionIcon';
 import { SERVICES } from '@/constants/services';
+import { WORKS } from '@/constants/works';
+import dynamic from 'next/dynamic';
+import ScrollToTop from '@/components/UI/ScrollToTop/ScrollToTop';
+
+const Texture = dynamic(() => import('@/components/UI/Texture'));
 
 export default function Home() {
   return (
@@ -29,9 +33,11 @@ export default function Home() {
         <Services content={SERVICES} />
       </Texture>
 
-      <Works />
+      <Works content={WORKS} />
 
       <Contacts />
+
+      <ScrollToTop />
     </Layout>
   );
 }

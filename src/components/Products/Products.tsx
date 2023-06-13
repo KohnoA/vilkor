@@ -23,16 +23,17 @@ export default function Products({ content }: ProductsProps) {
                   className={styles.products__image}
                   src={image}
                   alt={title}
-                  priority={false}
                   loading="eager"
                   unoptimized
+                  placeholder="blur"
+                  blurDataURL={image.blurDataURL}
                 />
               </div>
 
               <h3 className={styles.products__name}>{title}</h3>
 
               <div className={styles.products__buttonWrapper}>
-                <Button additionalClasses={styles.products__button} text="Подробнее &rsaquo;" />
+                <Button additionalClasses={styles.products__button}>Подробнее &rsaquo;</Button>
               </div>
             </Link>
           </li>

@@ -1,8 +1,8 @@
-import React from 'react';
 import { SOCIAL_LIST } from '@/constants/socialList';
 import Link from 'next/link';
 import styles from './SocialsList.module.scss';
 import { IconColor } from '@/constants';
+import { memo } from 'react';
 
 interface SocialsListProps {
   color?: IconColor;
@@ -28,4 +28,4 @@ function SocialsList({ full, ...props }: SocialsListProps) {
   );
 }
 
-export default React.memo(SocialsList);
+export default memo(SocialsList);

@@ -1,6 +1,6 @@
 import { IconColor } from '@/constants';
 import { IconsProps } from '@/types';
-import React from 'react';
+import { memo } from 'react';
 
 function TransitionIcon({ width, height, color }: IconsProps) {
   const INITIAL_WIDTH = '100%';
@@ -21,4 +21,4 @@ function TransitionIcon({ width, height, color }: IconsProps) {
   );
 }
 
-export default React.memo(TransitionIcon);
+export default memo(TransitionIcon);

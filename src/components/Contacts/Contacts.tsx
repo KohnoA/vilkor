@@ -3,7 +3,7 @@ import styles from './Contacts.module.scss';
 import { A1_NUMBER, A1_NUMBER_REF, ADRESS, ADRESS_MAP, BusinessInfo, IconColor } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
-import A1Img from '@/assets/images/logo-a1.png';
+import A1Img from 'public/images/logo-a1.png';
 import SocialsList from '../SocialsList/SocialsList';
 import DeliveryIcon from '../icons/DeliveryIcon';
 
@@ -12,7 +12,7 @@ export default function Contacts() {
     <section className={`section ${styles.contacts}`}>
       <div className={`container ${styles.contacts__wrapper}`}>
         <div className={styles.contacts__info}>
-          <h3 className={`title title_left`}>Контактная информация</h3>
+          <h3 className={`title title_left ${styles.contacts__title}`}>Контактная информация</h3>
 
           <ul>
             <li className={styles.contacts__item}>

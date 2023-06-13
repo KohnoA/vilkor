@@ -41,3 +41,9 @@ export interface IService {
   service: string;
   price: string;
 }
+
+export interface IWork {
+  title: string;
+  desc: string;
+  images: StaticImageData[];
+}

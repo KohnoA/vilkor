@@ -1,6 +1,6 @@
 import { IconColor } from '@/constants';
 import { IconsProps } from '@/types';
-import React, { FC } from 'react';
+import { FC, memo } from 'react';
 
 const QualityIcon: FC<IconsProps> = ({ width, height, color }) => {
   const INITIAL_WIDTH = 75;
@@ -19,4 +19,4 @@ const QualityIcon: FC<IconsProps> = ({ width, height, color }) => {
   );
 };
 
-export default React.memo(QualityIcon);
+export default memo(QualityIcon);
