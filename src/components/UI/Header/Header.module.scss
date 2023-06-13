@@ -1,6 +1,4 @@
 @import '@/styles/variables';
-@import '@/styles/keyframes';
-
 .header {
   position: fixed;
   top: 0;
@@ -68,6 +66,8 @@
 
   &__number {
     padding: 10px;
+
+    white-space: nowrap;
 
     transition: 0.3s;
 

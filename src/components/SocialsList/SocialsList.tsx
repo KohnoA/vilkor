@@ -1,20 +1,26 @@
-import React from 'react';
 import { SOCIAL_LIST } from '@/constants/socialList';
 import Link from 'next/link';
 import styles from './SocialsList.module.scss';
 import { IconColor } from '@/constants';
+import { memo } from 'react';
 
 interface SocialsListProps {
   color?: IconColor;
+  width?: number;
+  height?: number;
+  full?: boolean;
 }
 
-function SocialsList({ color }: SocialsListProps) {
+function SocialsList({ full, ...props }: SocialsListProps) {
   return (
     <ul className={styles.socials}>
-      {SOCIAL_LIST.map((item) => (
-        <li key={item.link}>
-          <Link href={item.link} className={styles.socials__link}>
-            <item.icon {...(color ? { color } : {})} />
+      {SOCIAL_LIST.map(({ link, Icon, title }) => (
+        <li key={title}>
+          <Link
+            href={link}
+            className={`${styles.socials__link} ${full ? styles.socials__link_full : ''}`}
+          >
+            <Icon {...props} /> {full && title}
           </Link>
         </li>
       ))}
@@ -22,4 +28,4 @@ function SocialsList({ color }: SocialsListProps) {
   );
 }
 
-export default React.memo(SocialsList);
+export default memo(SocialsList);

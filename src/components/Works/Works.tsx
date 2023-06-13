@@ -1,19 +1,28 @@
-import React from 'react';
 import styles from './Works.module.scss';
+import Button from '../UI/Button/Button';
+import { IWork } from '@/types';
+import { INSTAGRAM_LINK } from '@/constants';
+import WorkItem from './WorkItem/WorkItem';
 
-export default function Works() {
+interface WorksProps {
+  content: IWork[];
+}
+
+export default function Works({ content }: WorksProps) {
   return (
-    <section className={`container section ${styles.works}`}>
-      <h3 className={`title title_center ${styles.works__title}`}>Наши работы</h3>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nemo assumenda beatae
-      adipisci quas fugiat nisi? Veritatis amet suscipit veniam nesciunt tempora. Voluptatem at
-      enim, sint nisi magnam saepe impedit accusamus perspiciatis tenetur quisquam, corrupti
-      corporis quasi facilis, dolor iure. Nesciunt ut aliquam corporis blanditiis! Voluptates harum,
-      similique aliquid possimus obcaecati saepe iusto ab vel dolore sit porro expedita quibusdam
-      quia quas odit fuga! Provident eligendi reprehenderit vero eos asperiores qui ipsam accusamus
-      ipsum aspernatur tenetur ipsa esse omnis fugit quia molestiae dolores quos eveniet quae
-      adipisci, numquam corporis! Odit vero quis accusamus facilis! Rem exercitationem deleniti
-      suscipit dolore ratione.
+    <section className={`container section ${styles.section}`}>
+      <h3 className={`title title_center ${styles.title}`}>Наши работы</h3>
+      <p className={styles.desc}>
+        Мы поможем реализовать ваши желания или предложить свои варианты тюнинга вашего автомобиля
+      </p>
+
+      <ul className={styles.list}>
+        {content.map((work, index) => (
+          <WorkItem key={index} content={work} />
+        ))}
+      </ul>
+
+      <Button href={INSTAGRAM_LINK}>Увидеть больше &rsaquo;</Button>
     </section>
   );
 }

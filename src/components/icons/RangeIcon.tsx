@@ -1,6 +1,6 @@
 import { IconColor } from '@/constants';
 import { IconsProps } from '@/types';
-import React, { FC } from 'react';
+import { FC, memo } from 'react';
 
 const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
   const INITIAL_WIDTH = 75;
@@ -12,7 +12,7 @@ const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
       width={width ?? INITIAL_WIDTH}
       height={height ?? INITIAL_HEIGHT}
       viewBox="0 0 48 48"
-      fill={color ?? IconColor.green}
+      fill={color ?? IconColor.GREEN}
     >
       <g data-name="Layer 2">
         <path fill="none" d="M0 0H48V48H0z" data-name="invisible box"></path>
@@ -25,4 +25,4 @@ const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
   );
 };
 
-export default React.memo(RangeIcon);
+export default memo(RangeIcon);

@@ -1,6 +1,8 @@
 @import '@/styles/variables';
 
 .products {
+  padding-top: 50px;
+
   &__title {
     margin-bottom: 25px;
   }
@@ -22,17 +24,17 @@
     text-align: center;
 
     border-radius: $borderRadius;
-    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: $boxShadowLight;
 
     transition: 0.3s;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
-      box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.3);
+      box-shadow: $boxShadowStrong;
 
       .products__image {
-        transform: scale(1.05);
+        transform: scale(1.02);
       }
     }
   }
@@ -40,10 +42,8 @@
   &__imageWrapper {
     width: 100%;
     height: 250px;
-  
+
     margin-bottom: 15px;
-    
-    object-fit: cover;
     overflow: hidden;
   }
 
@@ -51,7 +51,10 @@
     width: 100%;
     height: 100%;
 
-    transition: .3s;
+    object-fit: cover;
+    object-position: center;
+
+    transition: 0.3s;
   }
 
   &__name {

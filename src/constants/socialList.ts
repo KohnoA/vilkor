@@ -2,16 +2,10 @@ import InstagramLogo from '@/components/icons/InstagramLogo';
 import TelegramLogo from '@/components/icons/TelegramLogo';
 import ViberLogo from '@/components/icons/ViberLogo';
 import { INSTAGRAM_LINK, TELEGRAM_LINK, VIBER_LINK } from '.';
-import { FC } from 'react';
-import { IconsProps } from '@/types';
+import { ISocialItem } from '@/types';
 
-interface ISocialsList {
-  link: string;
-  icon: FC<IconsProps>;
-}
-
-export const SOCIAL_LIST: ISocialsList[] = [
-  { link: VIBER_LINK, icon: ViberLogo },
-  { link: TELEGRAM_LINK, icon: TelegramLogo },
-  { link: INSTAGRAM_LINK, icon: InstagramLogo },
+export const SOCIAL_LIST: ISocialItem[] = [
+  { link: VIBER_LINK, Icon: ViberLogo, title: 'Viber' },
+  { link: TELEGRAM_LINK, Icon: TelegramLogo, title: 'Telegram' },
+  { link: INSTAGRAM_LINK, Icon: InstagramLogo, title: 'Instagram' },
 ];

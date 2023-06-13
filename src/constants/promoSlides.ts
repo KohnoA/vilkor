@@ -1,8 +1,8 @@
 import { IPromoSlides } from '@/types';
-import testImg from '@/assets/images/slide1.jpg';
-import koraImg from '@/assets/images/kora-slide.jpg';
-import decRastImg from '@/assets/images/dec-rast-slide.jpg';
-import multMaterialImg from '@/assets/images/mult-material-slide.jpg';
+import testImg from 'public/images/slide1.jpg';
+import koraImg from 'public/images/kora-slide.jpg';
+import decRastImg from 'public/images/dec-rast-slide.jpg';
+import multMaterialImg from 'public/images/mult-material-slide.jpg';
 
 export const PROMO_SLIDES: IPromoSlides[] = [
   {

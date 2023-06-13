@@ -1,0 +1,78 @@
+@import '@/styles/variables';
+
+.item {
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+  padding-left: 30px;
+
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    .toggler {
+      background-color: $green;
+
+      & svg path {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+
+  & svg {
+    transition: 0.3s;
+  }
+
+  &_active {
+    & svg {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.services {
+  &__list {
+    padding: 0 30px 30px 50px;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    list-style: disc;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

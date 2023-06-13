@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
 import styles from './Dropdown.module.scss';
+import { memo } from 'react';
 
 interface IDropdownItems {
   link: string;
@@ -26,4 +26,4 @@ function Dropdown({ isShow, items }: DropdownProps) {
   );
 }
 
-export default React.memo(Dropdown);
+export default memo(Dropdown);
