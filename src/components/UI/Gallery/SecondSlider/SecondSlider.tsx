@@ -31,6 +31,8 @@ function SecondSlider({ images, currentSlideIndex, setThumbs }: SecondSliderProp
             alt="Photo of an example of work"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
+            sizes="200px"
+            quality={60}
           />
         </SwiperSlide>
       ))}

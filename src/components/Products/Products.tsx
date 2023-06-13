@@ -23,8 +23,7 @@ export default function Products({ content }: ProductsProps) {
                   className={styles.products__image}
                   src={image}
                   alt={title}
-                  loading="eager"
-                  unoptimized
+                  sizes="350px"
                   placeholder="blur"
                   blurDataURL={image.blurDataURL}
                 />

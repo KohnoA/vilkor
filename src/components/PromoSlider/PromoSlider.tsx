@@ -34,6 +34,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
             src={image}
             alt={title}
             priority={true}
+            sizes="100vw"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
           />
