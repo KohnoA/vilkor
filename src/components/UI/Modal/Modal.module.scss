@@ -1,0 +1,53 @@
+@import '@/styles/variables';
+
+.backdrop {
+  position: fixed;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+}
+
+.content {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  justify-content: center;
+
+  max-width: 95vw;
+  max-height: 95vh;
+
+  padding: 40px;
+
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadowStrong;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: 0.3s;
+  cursor: pointer;
+
+  & svg {
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

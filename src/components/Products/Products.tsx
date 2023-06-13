@@ -15,17 +15,25 @@ export default function Products({ content }: ProductsProps) {
       <h2 className={`title title_left ${styles.products__title}`}>Наша продукция</h2>
 
       <ul className={styles.products__list}>
-        {content.map((product) => (
-          <li key={product.title}>
-            <Link href={product.link} className={styles.products__item}>
+        {content.map(({ title, link, image }) => (
+          <li key={title}>
+            <Link href={link} className={styles.products__item}>
               <div className={styles.products__imageWrapper}>
-                <Image className={styles.products__image} src={product.image} alt="Test" />
+                <Image
+                  className={styles.products__image}
+                  src={image}
+                  alt={title}
+                  loading="eager"
+                  unoptimized
+                  placeholder="blur"
+                  blurDataURL={image.blurDataURL}
+                />
               </div>
 
-              <h3 className={styles.products__name}>{product.title}</h3>
+              <h3 className={styles.products__name}>{title}</h3>
 
               <div className={styles.products__buttonWrapper}>
-                <Button additionalClasses={styles.products__button} text="Подробнее &rsaquo;" />
+                <Button additionalClasses={styles.products__button}>Подробнее &rsaquo;</Button>
               </div>
             </Link>
           </li>
