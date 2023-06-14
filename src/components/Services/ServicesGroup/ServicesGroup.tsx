@@ -43,7 +43,7 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
         <ul className={styles.services__list}>
           {services.map(({ service, price }, index) => (
             <li key={index} className={styles.services__item}>
-              {service} — {price}
+              {service} — <span className={styles.services__price}>{price}</span>
             </li>
           ))}
         </ul>

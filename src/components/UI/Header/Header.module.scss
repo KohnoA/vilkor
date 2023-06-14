@@ -1,17 +1,24 @@
 @import '@/styles/variables';
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
-  padding: 0 20px;
-
-  padding: 10px 5px;
 
   color: $white;
 
   transition: 0.3s;
+
+  &_onMain {
+    position: fixed;
+    padding: 10px 5px;
+  }
+
+  &_notOnMain {
+    position: sticky;
+    padding: 0 5px;
+    background-color: $black;
+  }
 
   &_stick {
     padding: 0;
