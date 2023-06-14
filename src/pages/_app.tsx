@@ -11,7 +11,7 @@ import '@/styles/globals.scss';
 import '@/styles/animations.scss';
 
 const montserrat = Montserrat({
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   style: ['normal', 'italic'],
   subsets: ['latin', 'cyrillic'],
 });

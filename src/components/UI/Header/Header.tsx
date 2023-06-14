@@ -17,10 +17,10 @@ export default function Header() {
 
   const dropdownContent = useMemo(() => {
     return [
-      { link: '#', content: 'Сосновая кора' },
-      { link: '#', content: 'Мульчирующие материалы' },
-      { link: '#', content: 'Декоративные растения' },
-      { link: '#', content: 'Торф' },
+      { link: AppRoutes.GOODS, content: 'Сосновая кора' },
+      { link: AppRoutes.GOODS, content: 'Мульчирующие материалы' },
+      { link: AppRoutes.GOODS, content: 'Декоративные растения' },
+      { link: AppRoutes.GOODS, content: 'Торф' },
     ];
   }, []);
 
