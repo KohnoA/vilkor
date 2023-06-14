@@ -15,10 +15,10 @@ interface DropdownProps {
 function Dropdown({ isShow, items }: DropdownProps) {
   return (
     <ul className={`${styles.dropdown} ${isShow ? styles.dropdown_show : ''}`}>
-      {items.map((item) => (
-        <li key={item.content}>
-          <Link href={item.link} className={styles.dropdown__link}>
-            {item.content}
+      {items.map(({ link, content }) => (
+        <li key={content}>
+          <Link href={link} className={styles.dropdown__link}>
+            {content}
           </Link>
         </li>
       ))}
