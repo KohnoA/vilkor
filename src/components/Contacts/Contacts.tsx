@@ -1,15 +1,19 @@
 import styles from './Contacts.module.scss';
-import { A1_NUMBER, A1_NUMBER_REF, ADRESS, BusinessInfo, IconColor } from '@/constants';
+import { A1_NUMBER, A1_NUMBER_REF, ADRESS, AppRoutes, BusinessInfo, IconColor } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import A1Img from 'public/images/logo-a1.png';
 import SocialsList from '../SocialsList/SocialsList';
 import DeliveryIcon from '../icons/DeliveryIcon';
 import YMap from './YMap/YMap';
+import { useRouter } from 'next/router';
 
 export default function Contacts() {
+  const { pathname } = useRouter();
+  const isContactsPage = pathname === AppRoutes.CONTACTS;
+
   return (
-    <section className={`section ${styles.section}`}>
+    <section className={`section ${styles.section} ${isContactsPage ? 'single-section-page' : ''}`}>
       <div className={`container ${styles.wrapper}`}>
         <div className={styles.info}>
           <h3 className={`title title_left ${styles.title}`}>Контактная информация</h3>
@@ -17,7 +21,14 @@ export default function Contacts() {
           <ul>
             <li className={styles.item}>
               <Link href={A1_NUMBER_REF} className={styles.number}>
-                <Image src={A1Img} width={18} height={18} alt="Мобильный оператор А1" /> {A1_NUMBER}
+                <Image
+                  src={A1Img}
+                  width={18}
+                  height={18}
+                  sizes="50px"
+                  alt="Мобильный оператор А1"
+                />{' '}
+                {A1_NUMBER}
               </Link>
             </li>
 

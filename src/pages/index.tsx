@@ -14,7 +14,7 @@ import { WORKS } from '@/constants/works';
 import dynamic from 'next/dynamic';
 import ScrollToTop from '@/components/UI/ScrollToTop/ScrollToTop';
 
-const Texture = dynamic(() => import('@/components/UI/Texture'));
+const Texture = dynamic(() => import('@/components/UI/Texture/Texture'));
 
 export default function Home() {
   return (

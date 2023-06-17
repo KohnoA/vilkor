@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import styles from './Texture.module.scss';
+import texture from 'public/images/white-texture.jpg';
 
 interface TextureProps {
   children: React.ReactNode;
@@ -6,8 +8,10 @@ interface TextureProps {
 
 export default function Texture({ children }: TextureProps) {
   return (
-    <section className={styles.texture}>
-      <div className={styles.texture__bg}></div>
+    <section className={styles.section}>
+      <div className={styles.wrapper}>
+        <Image className={styles.image} src={texture} fill sizes="100vw" alt="Задний фон" />
+      </div>
 
       {children}
     </section>

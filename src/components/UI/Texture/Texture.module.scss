@@ -1,25 +1,28 @@
-.texture {
+.section {
   position: relative;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  &__bg {
-    position: absolute;
-    z-index: -1;
+  width: 100%;
+  clip-path: inset(0 0 0 0);
+}
 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.wrapper {
+  position: fixed;
+  z-index: -1;
+  
+  height: 100%;
+  width: 100%;
 
-    background-image: url('/images/white-texture.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  left: 0;
+  top: 0;
 
-    opacity: 0.6;
-  }
+  opacity: 0.6;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
 }
