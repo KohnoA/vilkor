@@ -37,6 +37,7 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1160px;
 
   margin: 0 auto;
@@ -59,7 +60,7 @@ body {
 .title {
   max-width: 500px;
 
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-bottom: 15px;
 
   font-size: 2rem;

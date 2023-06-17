@@ -7,7 +7,11 @@ import decRastImg from 'public/images/dec-rast-card.jpg';
 import torfImg from 'public/images/torf-card.jpg';
 
 import barkLarge from 'public/images/bark-large.jpg';
+
 import barkMedium from 'public/images/bark-medium.jpg';
+import barkMedium2 from 'public/images/bark-medium2.jpg';
+import barkMedium3 from 'public/images/bark-medium3.jpg';
+
 import barkSmall03 from 'public/images/bark-small-0-3.jpg';
 import barkSmall13 from 'public/images/bark-small-1-3.jpg';
 import barkSifting from 'public/images/bark-sifting.jpg';
@@ -22,7 +26,7 @@ export const PRODUCTS: IProduct[] = [
     items: [
       {
         id: 1,
-        image: barkLarge,
+        images: [barkLarge, barkMedium2],
         title: 'Кора сосновая (крупная)',
         fraction: '9 - 14 см.',
         volume: '50 л.',
@@ -30,7 +34,7 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 2,
-        image: barkMedium,
+        images: [barkMedium, barkMedium2, barkMedium3],
         title: 'Кора сосновая (средняя)',
         fraction: '4 - 8 см.',
         volume: '50 л.',
@@ -38,7 +42,7 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 3,
-        image: barkSmall13,
+        images: [barkSmall13, barkMedium2],
         title: 'Кора сосновая (мелкая люкс)',
         fraction: '1 - 3 см.',
         volume: '50 л.',
@@ -46,7 +50,7 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 4,
-        image: barkSmall03,
+        images: [barkSmall03, barkMedium2],
         title: 'Кора сосновая (мелкая)',
         fraction: '0 - 3 см.',
         volume: '50 л.',
@@ -54,7 +58,7 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 5,
-        image: barkSifting,
+        images: [barkSifting, barkMedium2],
         title: 'Кора сосновая (отсев)',
         fraction: '0 - 0,5см',
         volume: '50 л.',

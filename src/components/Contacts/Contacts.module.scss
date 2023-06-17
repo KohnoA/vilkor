@@ -2,12 +2,20 @@
 
 .section {
   padding-top: 80px;
-  color: $white;
 
-  background-image: url('/images/background.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  &_dark {
+    .wrapper {
+      color: $white;
+      background-color: $lightBlack;
+    }
+  }
+
+  &_light {
+    .wrapper {
+      color: $black;
+      background-color: $white;
+    }
+  }
 }
 
 .wrapper {
@@ -15,7 +23,6 @@
 
   padding: 0;
 
-  background-color: $lightBlack;
   border-radius: $borderRadius;
   box-shadow: $boxShadowStrong;
   overflow: hidden;
@@ -86,9 +93,9 @@
 
   padding: 15px 0;
 
-  color: $green;
+  color: $white;
   font-style: italic;
 
-  border: 2px solid $green;
   border-radius: $borderRadius;
+  background-color: $green;
 }

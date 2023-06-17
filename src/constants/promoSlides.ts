@@ -3,17 +3,19 @@ import testImg from 'public/images/slide1.jpg';
 import koraImg from 'public/images/kora-slide.jpg';
 import decRastImg from 'public/images/dec-rast-slide.jpg';
 import multMaterialImg from 'public/images/mult-material-slide.jpg';
+import torfImg from 'public/images/torf-slide.jpg';
+import serviecsImg from 'public/images/services-slide.jpg';
 
 export const PROMO_SLIDES: IPromoSlides[] = [
-  {
-    image: koraImg,
-    title: 'Сосновая кора',
-    desc: 'В наличии все фракции',
-  },
   {
     image: decRastImg,
     title: 'Декоративные растения',
     desc: 'Саженцы хвойных и лиственных деревьев',
+  },
+  {
+    image: koraImg,
+    title: 'Сосновая кора',
+    desc: 'В наличии все фракции',
   },
   {
     image: multMaterialImg,
@@ -21,12 +23,12 @@ export const PROMO_SLIDES: IPromoSlides[] = [
     desc: 'Широкий выбор, доступные цены',
   },
   {
-    image: testImg,
+    image: torfImg,
     title: 'Торф',
     desc: 'Позволит повысить урожайность за счёт улучшения грунта',
   },
   {
-    image: testImg,
+    image: serviecsImg,
     title: 'Услуги',
     desc: 'Реализация сада под «ключ». Благоустройство, расчистка участка',
   },

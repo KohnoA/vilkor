@@ -1,10 +1,9 @@
 import Services from '@/components/Services/Services';
 import Layout from '@/components/UI/Layout/Layout';
 import { SERVICES } from '@/constants/services';
-
 import dynamic from 'next/dynamic';
 
-const Texture = dynamic(() => import('@/components/UI/Texture/Texture'));
+const Texture = dynamic(() => import('@/components/UI/Background/Background'));
 
 export default function ServicesPage() {
   return (

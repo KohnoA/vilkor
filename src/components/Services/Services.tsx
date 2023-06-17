@@ -9,7 +9,7 @@ interface ServicesProps {
 
 export default function Services({ content }: ServicesProps) {
   return (
-    <section className={`container section ${styles.section}`}>
+    <section className={`container section`}>
       <h2 className={`title title_center ${styles.title}`}>Наши услуги</h2>
 
       <p className={styles.moreInfo}>

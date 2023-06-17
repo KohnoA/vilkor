@@ -22,6 +22,11 @@ export const enum AppRoutes {
   CONTACTS = '/contacts',
 }
 
+export const enum AppTheme {
+  DARK = 'dark',
+  LIGHT = 'light',
+}
+
 export const enum IconColor {
   BLACK = '#171717',
   WHITE = '#f9f8f3',

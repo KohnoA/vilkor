@@ -1,19 +1,17 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './Card.module.scss';
-import { IProduct, IProductItem } from '@/types';
 import Link from 'next/link';
 import Button from '../Button/Button';
 import { ReactNode, memo } from 'react';
 
 interface CardProps {
-  content: IProduct | IProductItem;
+  title: string;
+  image: StaticImageData;
   link: string;
   children?: ReactNode;
 }
 
-function Card({ content, link, children }: CardProps) {
-  const { title, image } = content;
-
+function Card({ title, image, link, children }: CardProps) {
   return (
     <li>
       <Link href={link} className={styles.item}>
@@ -22,7 +20,7 @@ function Card({ content, link, children }: CardProps) {
             className={styles.image}
             src={image}
             alt={title}
-            sizes="330px"
+            sizes="350px"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
           />

@@ -4,30 +4,26 @@
   position: fixed;
 
   right: 15px;
-  bottom: 0;
+  bottom: 15px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 10px 15px;
-  padding-bottom: 12px;
+  padding: 12px;
 
   background-color: $lightBlack;
   border: none;
-  border-top-left-radius: $borderRadius;
-  border-top-right-radius: $borderRadius;
+  border-radius: $borderRadius;
   box-shadow: $boxShadowLight;
   transition: 0.3s;
   cursor: pointer;
 
   opacity: 0;
   pointer-events: none;
-  transform: translateY(100%);
 
   &:hover {
     opacity: 0.8;
-    transform: translateY(0);
   }
 
   &:active {
@@ -37,6 +33,5 @@
   &_show {
     opacity: 0.5;
     pointer-events: all;
-    transform: translateY(15%);
   }
 }

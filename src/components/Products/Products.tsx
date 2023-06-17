@@ -12,8 +12,8 @@ export default function Products({ content }: ProductsProps) {
       <h2 className={`title title_left ${styles.title}`}>Наша продукция</h2>
 
       <ul className={styles.list}>
-        {content.map((product) => (
-          <Card key={product.id} content={product} link={product.link} />
+        {content.map(({ id, link, title, image }) => (
+          <Card key={id} title={title} image={image} link={link} />
         ))}
       </ul>
     </section>

@@ -2,7 +2,7 @@ import Button from '@/components/UI/Button/Button';
 import Layout from '@/components/UI/Layout/Layout';
 import { AppRoutes } from '@/constants';
 import styles from './NotFound.module.scss';
-import Texture from '@/components/UI/Texture/Texture';
+import Texture from '@/components/UI/Background/Background';
 
 export default function NotFound() {
   return (

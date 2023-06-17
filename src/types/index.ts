@@ -22,7 +22,7 @@ export interface IAdvatage {
 
 export interface IProductItem {
   id: number;
-  image: StaticImageData;
+  images: StaticImageData[];
   title: string;
   fraction: string;
   volume: string;

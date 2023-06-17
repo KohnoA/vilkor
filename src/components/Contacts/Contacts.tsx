@@ -1,19 +1,25 @@
 import styles from './Contacts.module.scss';
-import { A1_NUMBER, A1_NUMBER_REF, ADRESS, AppRoutes, BusinessInfo, IconColor } from '@/constants';
+import { A1_NUMBER, A1_NUMBER_REF, ADRESS, AppTheme, BusinessInfo, IconColor } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import A1Img from 'public/images/logo-a1.png';
 import SocialsList from '../SocialsList/SocialsList';
 import DeliveryIcon from '../icons/DeliveryIcon';
-import YMap from './YMap/YMap';
-import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
-export default function Contacts() {
-  const { pathname } = useRouter();
-  const isContactsPage = pathname === AppRoutes.CONTACTS;
+const YMap = dynamic(() => import('./YMap/YMap'), { ssr: false });
 
+interface ContactsProps {
+  theme: AppTheme;
+}
+
+export default function Contacts({ theme }: ContactsProps) {
   return (
-    <section className={`section ${styles.section} ${isContactsPage ? 'single-section-page' : ''}`}>
+    <section
+      className={`section ${styles.section} ${
+        theme === AppTheme.DARK ? styles.section_dark : styles.section_light
+      }`}
+    >
       <div className={`container ${styles.wrapper}`}>
         <div className={styles.info}>
           <h3 className={`title title_left ${styles.title}`}>Контактная информация</h3>
@@ -23,8 +29,8 @@ export default function Contacts() {
               <Link href={A1_NUMBER_REF} className={styles.number}>
                 <Image
                   src={A1Img}
-                  width={18}
-                  height={18}
+                  width={20}
+                  height={20}
                   sizes="50px"
                   alt="Мобильный оператор А1"
                 />{' '}
@@ -43,7 +49,7 @@ export default function Contacts() {
             </li>
 
             <li className={`${styles.item} ${styles.mark}`}>
-              <DeliveryIcon width={20} height={20} />
+              <DeliveryIcon width={20} height={20} color={IconColor.WHITE} />
               <p>Осуществляем доставку по всей Беларуси!</p>
             </li>
 

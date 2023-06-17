@@ -6,7 +6,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import styles from './ProductPage.module.scss';
 import SocialsList from '@/components/SocialsList/SocialsList';
 import { A1_NUMBER, A1_NUMBER_REF, IconColor } from '@/constants';
-import Texture from '@/components/UI/Texture/Texture';
+import Texture from '@/components/UI/Background/Background';
 import Link from 'next/link';
 import Image from 'next/image';
 import a1Logo from 'public/images/logo-a1.png';
@@ -16,14 +16,15 @@ interface ProdcutPageProps {
 }
 
 export default function ProductPage({ product }: ProdcutPageProps) {
-  const { title, image, price, fraction, volume } = product;
+  const { title, images, price, fraction, volume } = product;
+
   return (
     <Layout title={title}>
       <Texture>
         <section className={`container section single-section-page ${styles.section}`}>
           <h2 className={`title title_center ${styles.title}`}>{title}</h2>
           <div className={styles.wrapper}>
-            <Gallery images={[image, image, image]} />
+            <Gallery images={images} />
 
             <div className={styles.info}>
               <div>
@@ -59,7 +60,7 @@ export default function ProductPage({ product }: ProdcutPageProps) {
                       src={a1Logo}
                       width={20}
                       height={20}
-                      sizes="60px"
+                      sizes="50px"
                       alt="Мобильный оператор А1"
                     />
                     {A1_NUMBER}
