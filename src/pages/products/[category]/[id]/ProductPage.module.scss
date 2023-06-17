@@ -1,0 +1,107 @@
+@import '@/styles/variables';
+
+.section {
+  width: 100%;
+}
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.subTitle {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+
+  border-radius: $borderRadius;
+  background-color: $white;
+  box-shadow: $boxShadowLight;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productProps {
+  margin-bottom: 15px;
+}
+
+.note {
+  margin-bottom: 15px;
+
+  &__listDesc {
+    margin-bottom: 5px;
+  }
+}
+
+.stock {
+  margin-bottom: 15px;
+
+  color: $green;
+  font-weight: 700;
+}
+
+.price {
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.number {
+  margin-bottom: 15px;
+
+  &__desc {
+    margin-bottom: 5px;
+    font-style: italic;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    width: min-content;
+
+    padding: 5px;
+
+    white-space: nowrap;
+    font-size: 1.2rem;
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.socials {
+  margin-bottom: 10px;
+
+  &__desc {
+    font-style: italic;
+  }
+}
+
+.mark {
+  padding: 10px 15px;
+
+  color: $white;
+  text-align: center;
+  font-style: italic;
+
+  border-radius: $borderRadius;
+  background-color: $green;
+}

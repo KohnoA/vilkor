@@ -20,10 +20,22 @@ export interface IAdvatage {
   desc: string;
 }
 
+export interface IProductItem {
+  id: number;
+  image: StaticImageData;
+  title: string;
+  fraction: string;
+  volume: string;
+  price: string;
+}
+
 export interface IProduct {
+  id: number;
   image: StaticImageData;
   title: string;
   link: string;
+  category: string;
+  items: IProductItem[];
 }
 
 export interface ISocialItem {

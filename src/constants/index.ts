@@ -14,7 +14,11 @@ export const ADRESS = 'Минск, переулок Козлова, 9Г';
 // enums
 export const enum AppRoutes {
   MAIN = '/',
-  GOODS = '/goods',
+  PRODUCTS = '/products',
+  PRODUCTS_BARK = '/products/bark',
+  PRODUCTS_PLANTS = '/products/plants',
+  PRODUCTS_MULCH = '/products/mulch',
+  PRODUCTS_PEAT = '/products/peat',
   SERVICES = '/services',
   CONTACTS = '/contacts',
 }

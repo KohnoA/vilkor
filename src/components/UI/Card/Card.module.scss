@@ -1,0 +1,69 @@
+@import '@/styles/variables';
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  border-radius: $borderRadius;
+  box-shadow: $boxShadowLight;
+  background-color: $white;
+
+  transition: 0.3s;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $boxShadowStrong;
+
+    .image {
+      transform: scale(1.02);
+    }
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+}
+
+.image {
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: 0.3s;
+}
+
+.info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.title {
+  flex-grow: 1;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 15px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.button {
+  width: 100%;
+}

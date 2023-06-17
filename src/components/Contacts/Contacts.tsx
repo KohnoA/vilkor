@@ -17,7 +17,14 @@ export default function Contacts() {
           <ul>
             <li className={styles.contacts__item}>
               <Link href={A1_NUMBER_REF} className={styles.contacts__number}>
-                <Image src={A1Img} width={18} height={18} alt="Мобильный оператор А1" /> {A1_NUMBER}
+                <Image
+                  src={A1Img}
+                  width={18}
+                  height={18}
+                  sizes="50px"
+                  alt="Мобильный оператор А1"
+                />{' '}
+                {A1_NUMBER}
               </Link>
             </li>
 

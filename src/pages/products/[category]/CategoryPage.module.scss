@@ -1,0 +1,60 @@
+@import '@/styles/mixins';
+@import '@/styles/variables';
+
+.section {
+  width: 100%;
+}
+
+.list {
+  @include CardsContainer;
+}
+
+.productInfo {
+  margin-bottom: 15px;
+  text-align: left;
+
+  &__FracAndVolum {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__stockAndPrice {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__stock {
+    color: $green;
+    font-weight: 700;
+  }
+
+  &__price {
+    font-weight: 700;
+  }
+}
+
+.infoSection {
+  &__subTitle {
+    margin-bottom: 20px;
+
+    font-size: 1.4rem;
+  }
+
+  &__desc {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+
+  &__num {
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: italic;
+  }
+}
