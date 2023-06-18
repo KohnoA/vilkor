@@ -27,16 +27,16 @@ export default function PromoSlider({ content }: PromoSliderProps) {
       // autoplay={{ delay: 5000 }}
       // loop
     >
-      {content.map(({ title, desc, image }) => (
+      {content.map(({ title, desc, image }, index) => (
         <SwiperSlide key={title}>
           <Image
             className={styles.slider__image}
             src={image}
             alt={title}
-            priority={true}
             sizes="100vw"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
+            {...(index === 0 ? { priority: true } : {})}
           />
           <div className={styles.slider__overlay} />
           <div className={styles.slider__content}>

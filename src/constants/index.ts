@@ -14,10 +14,6 @@ export const MAP_COORDINATES = [53.896432, 27.597359];
 export const enum AppRoutes {
   MAIN = '/',
   PRODUCTS = '/products',
-  PRODUCTS_BARK = '/products/bark',
-  PRODUCTS_PLANTS = '/products/plants',
-  PRODUCTS_MULCH = '/products/mulch',
-  PRODUCTS_PEAT = '/products/peat',
   SERVICES = '/services',
   CONTACTS = '/contacts',
 }
@@ -25,6 +21,13 @@ export const enum AppRoutes {
 export const enum AppTheme {
   DARK = 'dark',
   LIGHT = 'light',
+}
+
+export const enum ProductCategory {
+  BARK = 'bark',
+  MULCH = 'mulch',
+  PLANTS = 'plants',
+  PEAT = 'peat',
 }
 
 export const enum IconColor {

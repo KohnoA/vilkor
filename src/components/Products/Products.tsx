@@ -1,6 +1,7 @@
 import styles from './Products.module.scss';
 import { IProduct } from '@/types';
 import Card from '../UI/Card/Card';
+import { AppRoutes } from '@/constants';
 
 interface ProductsProps {
   content: IProduct[];
@@ -12,8 +13,8 @@ export default function Products({ content }: ProductsProps) {
       <h2 className={`title title_left ${styles.title}`}>Наша продукция</h2>
 
       <ul className={styles.list}>
-        {content.map(({ id, link, title, image }) => (
-          <Card key={id} title={title} image={image} link={link} />
+        {content.map(({ id, title, image, category }) => (
+          <Card key={id} title={title} image={image} link={`${AppRoutes.PRODUCTS}/${category}`} />
         ))}
       </ul>
     </section>

@@ -1,4 +1,4 @@
-import { IconColor } from '@/constants';
+import { IconColor, ProductCategory } from '@/constants';
 import { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
@@ -24,17 +24,19 @@ export interface IProductItem {
   id: number;
   images: StaticImageData[];
   title: string;
-  fraction: string;
-  volume: string;
+  fraction?: string;
+  packaging?: string;
+  volume?: string;
+  acidity?: string;
   price: string;
+  stock: boolean;
 }
 
 export interface IProduct {
   id: number;
   image: StaticImageData;
   title: string;
-  link: string;
-  category: string;
+  category: ProductCategory;
   items: IProductItem[];
 }
 

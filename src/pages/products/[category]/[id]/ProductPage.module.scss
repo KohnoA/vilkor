@@ -1,9 +1,5 @@
 @import '@/styles/variables';
 
-.section {
-  width: 100%;
-}
-
 .title {
   margin: 0 auto;
   margin-bottom: 25px;
@@ -14,7 +10,7 @@
 .subTitle {
   margin-bottom: 15px;
   padding-bottom: 15px;
-  
+
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -45,13 +41,25 @@
   &__listDesc {
     margin-bottom: 5px;
   }
+
+  &__paragraph {
+    margin-top: 15px;
+    text-indent: 30px;
+    text-align: justify;
+  }
 }
 
 .stock {
   margin-bottom: 15px;
-
-  color: $green;
   font-weight: 700;
+
+  &_true {
+    color: $green;
+  }
+
+  &_false {
+    color: darkred;
+  }
 }
 
 .price {

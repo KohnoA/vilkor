@@ -4,19 +4,20 @@ import { PRODUCTS } from '@/constants/products';
 import { IProductItem } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import styles from './ProductPage.module.scss';
-import SocialsList from '@/components/SocialsList/SocialsList';
-import { A1_NUMBER, A1_NUMBER_REF, IconColor } from '@/constants';
 import Texture from '@/components/UI/Background/Background';
-import Link from 'next/link';
-import Image from 'next/image';
-import a1Logo from 'public/images/logo-a1.png';
+import MulchNote from './components/MulchNote';
+import BarkNote from './components/BarkNote';
+import ContactsInfo from './components/ContactsInfo';
+import { ProductCategory } from '@/constants';
+import PeatNote from './components/PeatNote';
 
 interface ProdcutPageProps {
   product: IProductItem;
+  category: ProductCategory;
 }
 
-export default function ProductPage({ product }: ProdcutPageProps) {
-  const { title, images, price, fraction, volume } = product;
+export default function ProductPage({ product, category }: ProdcutPageProps) {
+  const { title, images, price, fraction, volume, packaging, stock, acidity } = product;
 
   return (
     <Layout title={title}>
@@ -30,50 +31,24 @@ export default function ProductPage({ product }: ProdcutPageProps) {
               <div>
                 <h3 className={`title title_left ${styles.subTitle}`}>Информация о товаре</h3>
                 <div className={styles.productProps}>
-                  <p>Фракция: {fraction}</p>
-                  <p>Упаковка: Мешок</p>
-                  <p>Объем: {volume}</p>
+                  {acidity && <p>Кислотность: {acidity}</p>}
+                  {fraction && <p>Фракция: {fraction}</p>}
+                  {packaging && <p>Упаковка: {packaging}</p>}
+                  {volume && <p>Объем: {volume}</p>}
                 </div>
 
-                <div className={styles.note}>
-                  <p>Сосновая кора - 100% натуральный продукт.</p>
-                  <p className={styles.note__listDesc}>Наша кора поможет вам:</p>
-                  <ul>
-                    <li>📍Избавиться от сорняков</li>
-                    <li>📍Сохранить влагу в почве</li>
-                    <li>📍Улучшить качество грунта</li>
-                    <li>📍Сделать красивым дачный участок</li>
-                    <li>📍Тратить меньше сил на уход за участком и больше отдыхать</li>
-                  </ul>
-                </div>
+                {category === ProductCategory.MULCH && <MulchNote title={title} />}
+                {category === ProductCategory.BARK && <BarkNote />}
+                {category === ProductCategory.PEAT && <PeatNote title={title} />}
 
-                <p className={styles.stock}>В наличии</p>
+                <p className={`${styles.stock} ${stock ? styles.stock_true : styles.stock_false}`}>
+                  {stock ? 'В наличии' : 'Нет в наличии'}
+                </p>
 
                 <p className={styles.price}>Цена: {price}</p>
               </div>
 
-              <div>
-                <div className={styles.number}>
-                  <p className={styles.number__desc}>Позвонить с сайта:</p>
-                  <Link href={A1_NUMBER_REF} className={styles.number__link}>
-                    <Image
-                      src={a1Logo}
-                      width={20}
-                      height={20}
-                      sizes="50px"
-                      alt="Мобильный оператор А1"
-                    />
-                    {A1_NUMBER}
-                  </Link>
-                </div>
-
-                <div className={styles.socials}>
-                  <p className={styles.socials__desc}>Принимаем заказы в социальных сетях:</p>
-                  <SocialsList full color={IconColor.GREEN} />
-                </div>
-
-                <p className={styles.mark}>Осуществляем доставку по всей Беларуси!</p>
-              </div>
+              <ContactsInfo />
             </div>
           </div>
         </section>
@@ -91,8 +66,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { category: categoryRoute, id } = context.params ?? {};
-  const category = PRODUCTS.find(({ category }) => category === categoryRoute);
-  const product = category?.items.find((item) => item.id.toString() === id);
+  const productCategory = PRODUCTS.find(({ category }) => category === categoryRoute);
+  const product = productCategory?.items.find((item) => item.id.toString() === id);
 
   if (!product) {
     return {
@@ -101,6 +76,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 
   return {
-    props: { product },
+    props: { product, category: categoryRoute },
   };
 };

@@ -1,5 +1,4 @@
 import { IPromoSlides } from '@/types';
-import testImg from 'public/images/slide1.jpg';
 import koraImg from 'public/images/kora-slide.jpg';
 import decRastImg from 'public/images/dec-rast-slide.jpg';
 import multMaterialImg from 'public/images/mult-material-slide.jpg';

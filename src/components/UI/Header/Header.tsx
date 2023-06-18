@@ -17,7 +17,10 @@ export default function Header() {
   const isMainPage = pathname === AppRoutes.MAIN;
 
   const dropdownContent = useMemo(() => {
-    return PRODUCTS.map(({ link, title }) => ({ link, title }));
+    return PRODUCTS.map(({ title, category }) => ({
+      title,
+      link: `${AppRoutes.PRODUCTS}/${category}`,
+    }));
   }, []);
 
   const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
