@@ -6,6 +6,7 @@ import { IconColor, AppRoutes, A1_NUMBER, A1_NUMBER_REF } from '@/constants';
 import SocialsList from '@/components/SocialsList';
 import Dropdown from '../Dropdown';
 import { useRouter } from 'next/router';
+import { PRODUCTS } from '@/constants/products';
 
 const STICKY_POINT = 100;
 
@@ -16,12 +17,10 @@ export default function Header() {
   const isMainPage = pathname === AppRoutes.MAIN;
 
   const dropdownContent = useMemo(() => {
-    return [
-      { link: AppRoutes.GOODS, content: 'Сосновая кора' },
-      { link: AppRoutes.GOODS, content: 'Мульчирующие материалы' },
-      { link: AppRoutes.GOODS, content: 'Декоративные растения' },
-      { link: AppRoutes.GOODS, content: 'Торф' },
-    ];
+    return PRODUCTS.map(({ title, category }) => ({
+      title,
+      link: `${AppRoutes.PRODUCTS}/${category}`,
+    }));
   }, []);
 
   const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
@@ -47,7 +46,7 @@ export default function Header() {
             onMouseOver={() => setIsDropdown(true)}
             onFocus={() => setIsDropdown(true)}
           >
-            <Link href={AppRoutes.GOODS} className={styles.nav__link}>
+            <Link href={AppRoutes.PRODUCTS} className={styles.nav__link}>
               Товары
             </Link>
 

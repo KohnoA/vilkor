@@ -1,6 +1,6 @@
 @import '@/styles/variables';
 
-.item {
+.container {
   font-size: 1.2rem;
   font-weight: 600;
 
@@ -58,26 +58,24 @@
   }
 }
 
-.services {
-  &__list {
-    padding: 0 30px 30px 50px;
+.list {
+  padding: 0 30px 30px 50px;
 
-    font-size: 1rem;
-    font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 
-    list-style: disc;
+  list-style: disc;
+}
+
+.item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
+}
 
-  &__item {
-    margin-bottom: 5px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  &__price {
-    font-weight: 600;
-    font-style: italic;
-  }
+.explanation {
+  font-weight: 600;
+  font-style: italic;
 }

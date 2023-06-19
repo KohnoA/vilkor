@@ -1,75 +1,13 @@
-@import '@/styles/variables';
+@import '@/styles/mixins';
 
-.products {
+.section {
   padding-top: 50px;
+}
 
-  &__title {
-    margin-bottom: 25px;
-  }
+.title {
+  margin-bottom: 25px;
+}
 
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 100%;
-
-    text-align: center;
-
-    border-radius: $borderRadius;
-    box-shadow: $boxShadowLight;
-
-    transition: 0.3s;
-    overflow: hidden;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: $boxShadowStrong;
-
-      .products__image {
-        transform: scale(1.02);
-      }
-    }
-  }
-
-  &__imageWrapper {
-    width: 100%;
-    height: 250px;
-
-    margin-bottom: 15px;
-    overflow: hidden;
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: 0.3s;
-  }
-
-  &__name {
-    margin-bottom: 15px;
-    padding: 0 15px;
-
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-
-  &__buttonWrapper {
-    padding: 0 15px 15px 15px;
-  }
-
-  &__button {
-    width: 100%;
-  }
+.list {
+  @include CardsContainer;
 }
