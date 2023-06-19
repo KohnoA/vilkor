@@ -1,0 +1,37 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.list {
+  @include CardsContainer;
+}
+
+.cardInfo {
+  margin-bottom: 15px;
+  text-align: left;
+
+  &__FracAndVolum {
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  &__stockAndPrice {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__stock {
+    font-weight: 700;
+
+    &_true {
+      color: $green;
+    }
+
+    &_false {
+      color: darkred;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+  }
+}

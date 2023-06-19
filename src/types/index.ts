@@ -1,4 +1,4 @@
-import { IconColor } from '@/constants';
+import { IconColor, ProductCategory } from '@/constants';
 import { StaticImageData } from 'next/image';
 import { FC } from 'react';
 
@@ -10,6 +10,7 @@ export interface IconsProps {
 
 export interface IPromoSlides {
   image: StaticImageData;
+  link: string;
   title: string;
   desc: string;
 }
@@ -20,10 +21,24 @@ export interface IAdvatage {
   desc: string;
 }
 
+export interface IProductItem {
+  id: number;
+  images: StaticImageData[];
+  title: string;
+  fraction?: string;
+  packaging?: string;
+  volume?: string;
+  acidity?: string;
+  price: string;
+  stock: boolean;
+}
+
 export interface IProduct {
+  id: number;
   image: StaticImageData;
   title: string;
-  link: string;
+  category: ProductCategory;
+  items: IProductItem[];
 }
 
 export interface ISocialItem {
@@ -32,18 +47,18 @@ export interface ISocialItem {
   title: string;
 }
 
-export interface IServicesGroup {
-  title: string;
-  services: IService[];
-}
-
-export interface IService {
-  service: string;
-  price: string;
-}
-
 export interface IWork {
   title: string;
   desc: string;
   images: StaticImageData[];
 }
+
+export type AccordionContentType = {
+  id: number;
+  title: string;
+  list: {
+    id: number;
+    name: string;
+    explanation: string;
+  }[];
+}[];

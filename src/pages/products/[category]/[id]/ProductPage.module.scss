@@ -1,0 +1,54 @@
+@import '@/styles/variables';
+
+.title {
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  text-align: center;
+}
+
+.subTitle {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.wrapper {
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+
+  border-radius: $borderRadius;
+  background-color: $white;
+  box-shadow: $boxShadowLight;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productProps {
+  margin-bottom: 15px;
+}
+
+.stock {
+  margin-bottom: 15px;
+  font-weight: 700;
+
+  &_true {
+    color: $green;
+  }
+
+  &_false {
+    color: darkred;
+  }
+}
+
+.price {
+  margin-bottom: 15px;
+  font-weight: 700;
+}

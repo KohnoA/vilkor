@@ -4,7 +4,7 @@ import { memo } from 'react';
 
 interface IDropdownItems {
   link: string;
-  content: string;
+  title: string;
 }
 
 interface DropdownProps {
@@ -15,10 +15,10 @@ interface DropdownProps {
 function Dropdown({ isShow, items }: DropdownProps) {
   return (
     <ul className={`${styles.dropdown} ${isShow ? styles.dropdown_show : ''}`}>
-      {items.map((item) => (
-        <li key={item.content}>
-          <Link href={item.link} className={styles.dropdown__link}>
-            {item.content}
+      {items.map(({ link, title }) => (
+        <li key={title}>
+          <Link href={link} className={styles.dropdown__link}>
+            {title}
           </Link>
         </li>
       ))}

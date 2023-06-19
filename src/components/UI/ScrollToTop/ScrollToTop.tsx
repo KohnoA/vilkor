@@ -24,7 +24,7 @@ export default function ScrollToTop() {
       className={`${styles.button} ${showUpButton ? styles.button_show : ''}`}
       onClick={backToTopHandler}
     >
-      <ArrowUpIcon color={IconColor.WHITE} width={18} height={18} />
+      <ArrowUpIcon color={IconColor.WHITE} width={15} height={15} />
     </button>
   );
 }

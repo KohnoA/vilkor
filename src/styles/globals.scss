@@ -37,6 +37,7 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1160px;
 
   margin: 0 auto;
@@ -52,6 +53,10 @@ body {
   padding-bottom: 80px;
 }
 
+.single-section-page {
+  min-height: calc(100vh - 140px);
+}
+
 .title {
   max-width: 500px;
 
@@ -63,6 +68,10 @@ body {
 
   &_center {
     @include BorderBottomGradientCenter;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    text-align: center;
   }
 
   &_left {

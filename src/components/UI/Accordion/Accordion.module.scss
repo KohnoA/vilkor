@@ -1,0 +1,11 @@
+@import '@/styles/variables';
+
+.list {
+  max-width: 790px;
+
+  margin: 0 auto;
+
+  background-color: $white;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadowLight;
+}

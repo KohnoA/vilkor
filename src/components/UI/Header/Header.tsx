@@ -5,19 +5,22 @@ import Logo from '@/components/icons/Logo';
 import { IconColor, AppRoutes, A1_NUMBER, A1_NUMBER_REF } from '@/constants';
 import SocialsList from '@/components/SocialsList';
 import Dropdown from '../Dropdown';
+import { useRouter } from 'next/router';
+import { PRODUCTS } from '@/constants/products';
+
+const STICKY_POINT = 100;
 
 export default function Header() {
+  const { pathname } = useRouter();
   const [isDropdown, setIsDropdown] = useState<boolean>(false);
   const [isStickHeader, setIsStickHeader] = useState<boolean>(false);
-  const STICKY_POINT = 100;
+  const isMainPage = pathname === AppRoutes.MAIN;
 
   const dropdownContent = useMemo(() => {
-    return [
-      { link: '#', content: 'Сосновая кора' },
-      { link: '#', content: 'Мульчирующие материалы' },
-      { link: '#', content: 'Декоративные растения' },
-      { link: '#', content: 'Торф' },
-    ];
+    return PRODUCTS.map(({ title, category }) => ({
+      title,
+      link: `${AppRoutes.PRODUCTS}/${category}`,
+    }));
   }, []);
 
   const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
@@ -29,7 +32,11 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`${styles.header} ${isStickHeader ? styles.header_stick : ''}`}>
+    <header
+      className={`${styles.header} ${isMainPage ? styles.header_onMain : styles.header_notOnMain} ${
+        isStickHeader ? styles.header_stick : ''
+      }`}
+    >
       <nav className={`container ${styles.nav}`}>
         <ul className={styles.nav__list}>
           <li
@@ -39,7 +46,7 @@ export default function Header() {
             onMouseOver={() => setIsDropdown(true)}
             onFocus={() => setIsDropdown(true)}
           >
-            <Link href={AppRoutes.GOODS} className={styles.nav__link}>
+            <Link href={AppRoutes.PRODUCTS} className={styles.nav__link}>
               Товары
             </Link>
 
