@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../ProductPage.module.scss';
+import styles from './ContactsInfo.module.scss';
 import Link from 'next/link';
 import { A1_NUMBER, A1_NUMBER_REF, IconColor } from '@/constants';
 import SocialsList from '@/components/SocialsList/SocialsList';

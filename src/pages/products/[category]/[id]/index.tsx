@@ -5,11 +5,11 @@ import { IProductItem } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import styles from './ProductPage.module.scss';
 import Texture from '@/components/UI/Background/Background';
-import MulchNote from './components/MulchNote';
-import BarkNote from './components/BarkNote';
-import ContactsInfo from './components/ContactsInfo';
+import MulchNote from '@/components/Screens/ProductPage/Notes/MulchNote';
+import BarkNote from '@/components/Screens/ProductPage/Notes/BarkNote';
+import ContactsInfo from '@/components/Screens/ProductPage/ContactsInfo/ContactsInfo';
+import PeatNote from '@/components/Screens/ProductPage/Notes/PeatNote';
 import { ProductCategory } from '@/constants';
-import PeatNote from './components/PeatNote';
 
 interface ProdcutPageProps {
   product: IProductItem;

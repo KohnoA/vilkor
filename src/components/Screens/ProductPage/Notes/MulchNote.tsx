@@ -1,10 +1,14 @@
-import styles from '../ProductPage.module.scss';
+import styles from './Notes.module.scss';
 
-export default function BarkNote() {
+interface MulchNoteProps {
+  title: string;
+}
+
+export default function MulchNote({ title }: MulchNoteProps) {
   return (
     <div className={styles.note}>
-      <p>Сосновая кора - 100% натуральный продукт.</p>
-      <p className={styles.note__listDesc}>Наша кора поможет вам:</p>
+      <p>{title} - 100% натуральный продукт.</p>
+      <p className={styles.note__listDesc}>Этот мульчирующий материал поможет вам:</p>
       <ul>
         <li>📍Избавиться от сорняков</li>
         <li>📍Сохранить влагу в почве</li>

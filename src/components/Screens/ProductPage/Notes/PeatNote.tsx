@@ -1,4 +1,4 @@
-import styles from '../ProductPage.module.scss';
+import styles from './Notes.module.scss';
 
 interface PeatNoteProps {
   title: string;

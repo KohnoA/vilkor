@@ -3,13 +3,13 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { PRODUCTS } from '@/constants/products';
 import { IProduct } from '@/types';
 import dynamic from 'next/dynamic';
-import CategoryProductsList from './components/CategoryProductsList/CategoryProductsList';
-import BarkInfo from './components/BarkInfo/BarkInfo';
 import { ProductCategory } from '@/constants';
-import PeatInfo from './components/PeatInfo/PeatInfo';
-import MulchInfo from './components/MulchInfo/MulchInfo';
-import PlantsInfo from './components/PlantsInfo/PlantsInfo';
-import PlantsSection from './components/PlantsSection/PlantsSection';
+import CategoryProductsList from '@/components/Screens/CategoryPage/CategoryProductsList/CategoryProductsList';
+import BarkInfo from '@/components/Screens/CategoryPage/BarkInfo/BarkInfo';
+import PeatInfo from '@/components/Screens/CategoryPage/PeatInfo/PeatInfo';
+import MulchInfo from '@/components/Screens/CategoryPage/MulchInfo/MulchInfo';
+import PlantsInfo from '@/components/Screens/CategoryPage/PlantsInfo/PlantsInfo';
+import PlantsSection from '@/components/Screens/CategoryPage/PlantsSection/PlantsSection';
 
 const Background = dynamic(() => import('@/components/UI/Background/Background'), { ssr: false });
 
