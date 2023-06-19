@@ -10,6 +10,7 @@ export interface IconsProps {
 
 export interface IPromoSlides {
   image: StaticImageData;
+  link: string;
   title: string;
   desc: string;
 }
@@ -46,18 +47,18 @@ export interface ISocialItem {
   title: string;
 }
 
-export interface IServicesGroup {
-  title: string;
-  services: IService[];
-}
-
-export interface IService {
-  service: string;
-  price: string;
-}
-
 export interface IWork {
   title: string;
   desc: string;
   images: StaticImageData[];
 }
+
+export type AccordionContentType = {
+  id: number;
+  title: string;
+  list: {
+    id: number;
+    name: string;
+    explanation: string;
+  }[];
+}[];

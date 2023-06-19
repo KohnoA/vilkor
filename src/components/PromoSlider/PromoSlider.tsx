@@ -24,10 +24,10 @@ export default function PromoSlider({ content }: PromoSliderProps) {
       navigation
       pagination={{ clickable: true }}
       className={styles.slider}
-      // autoplay={{ delay: 5000 }}
-      // loop
+      autoplay={{ delay: 8000 }}
+      loop
     >
-      {content.map(({ title, desc, image }, index) => (
+      {content.map(({ title, desc, image, link }, index) => (
         <SwiperSlide key={title}>
           <Image
             className={styles.slider__image}
@@ -42,7 +42,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
           <div className={styles.slider__content}>
             <h2 className={styles.slider__title}>{title}</h2>
             <p className={styles.slider__description}>{desc}</p>
-            <Button>Подробнее &rsaquo;</Button>
+            <Button href={link}>Подробнее &rsaquo;</Button>
           </div>
         </SwiperSlide>
       ))}

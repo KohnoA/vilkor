@@ -1,10 +1,10 @@
 import styles from './Services.module.scss';
 import { A1_NUMBER } from '@/constants';
-import { IServicesGroup } from '@/types';
-import ServicesGroup from './ServicesGroup/ServicesGroup';
+import { AccordionContentType } from '@/types';
+import Accordion from '../UI/Accordion/Accordion';
 
 interface ServicesProps {
-  content: IServicesGroup[];
+  content: AccordionContentType;
 }
 
 export default function Services({ content }: ServicesProps) {
@@ -16,11 +16,7 @@ export default function Services({ content }: ServicesProps) {
         За подробной информацией обращайтесь к нам по телефону: {A1_NUMBER}
       </p>
 
-      <ul className={styles.servicesGroups}>
-        {content.map((servicesGroup, index) => (
-          <ServicesGroup key={index} {...servicesGroup} />
-        ))}
-      </ul>
+      <Accordion content={content} />
     </section>
   );
 }

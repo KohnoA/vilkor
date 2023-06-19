@@ -1,15 +1,12 @@
 import { memo, useState } from 'react';
-import styles from './ServicesGroup.module.scss';
+import styles from './AccordionItem.module.scss';
 import { Collapse } from 'react-collapse';
-import { IService } from '@/types';
 import PlusIcon from '@/components/icons/PlusIcon';
+import { AccordionContentType } from '@/types';
 
-interface ServicesGroupProps {
-  title: string;
-  services: IService[];
-}
+type AccordionItemProps = Omit<AccordionContentType[0], 'id'>;
 
-function ServicesGroup({ title, services }: ServicesGroupProps) {
+function AccordionItem({ title, list }: AccordionItemProps) {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const stateToggler = () => setIsActive(!isActive);
@@ -21,7 +18,7 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
   };
 
   return (
-    <li className={styles.item}>
+    <li className={styles.container}>
       <div
         className={styles.header}
         onClick={stateToggler}
@@ -40,10 +37,10 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
       </div>
 
       <Collapse isOpened={isActive}>
-        <ul className={styles.services__list}>
-          {services.map(({ service, price }, index) => (
-            <li key={index} className={styles.services__item}>
-              {service} — <span className={styles.services__price}>{price}</span>
+        <ul className={styles.list}>
+          {list.map(({ name, explanation, id }) => (
+            <li key={id} className={styles.item}>
+              {name} — <span className={styles.explanation}>{explanation}</span>
             </li>
           ))}
         </ul>
@@ -52,4 +49,4 @@ function ServicesGroup({ title, services }: ServicesGroupProps) {
   );
 }
 
-export default memo(ServicesGroup);
+export default memo(AccordionItem);

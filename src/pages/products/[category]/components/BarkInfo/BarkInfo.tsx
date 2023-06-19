@@ -15,7 +15,7 @@ export const BARK_ADVATAGES_LIST = [
 
 export default function BarkInfo() {
   return (
-    <section className="container section">
+    <section className="container section single-section-page">
       <h2 className={`title title_left`}>Отсутствует опыт мульчирования почвы?</h2>
 
       <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>

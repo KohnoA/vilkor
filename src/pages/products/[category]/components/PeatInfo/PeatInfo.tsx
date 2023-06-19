@@ -2,7 +2,7 @@ import styles from './PeatInfo.module.scss';
 
 export default function PeatInfo() {
   return (
-    <section className="container section">
+    <section className="container section single-section-page">
       <h2 className="title title_left">Что нужно знать о торфе</h2>
 
       <p className={styles.advatages}>

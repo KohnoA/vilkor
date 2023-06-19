@@ -7,6 +7,9 @@ import CategoryProductsList from './components/CategoryProductsList/CategoryProd
 import BarkInfo from './components/BarkInfo/BarkInfo';
 import { ProductCategory } from '@/constants';
 import PeatInfo from './components/PeatInfo/PeatInfo';
+import MulchInfo from './components/MulchInfo/MulchInfo';
+import PlantsInfo from './components/PlantsInfo/PlantsInfo';
+import PlantsSection from './components/PlantsSection/PlantsSection';
 
 const Background = dynamic(() => import('@/components/UI/Background/Background'), { ssr: false });
 
@@ -19,17 +22,21 @@ export default function CategoryPage({ category }: CategoryPageProps) {
 
   return (
     <Layout title={title}>
-      <section className="container section">
-        <h2 className="title title_left">{title}</h2>
+      {categoryTitle === ProductCategory.PLANTS ? (
+        <PlantsSection />
+      ) : (
+        <section className="container section">
+          <h2 className="title title_left">{title}</h2>
 
-        <CategoryProductsList products={items} category={categoryTitle} />
-      </section>
+          <CategoryProductsList products={items} category={categoryTitle} />
+        </section>
+      )}
 
       <Background>
         {categoryTitle === ProductCategory.BARK && <BarkInfo />}
         {categoryTitle === ProductCategory.PEAT && <PeatInfo />}
-        {categoryTitle === ProductCategory.MULCH && <p>Мульчирующие матриалы инфо</p>}
-        {categoryTitle === ProductCategory.PLANTS && <p>Декоративные растения инфо</p>}
+        {categoryTitle === ProductCategory.MULCH && <MulchInfo />}
+        {categoryTitle === ProductCategory.PLANTS && <PlantsInfo />}
       </Background>
     </Layout>
   );

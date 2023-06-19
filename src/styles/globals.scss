@@ -68,6 +68,10 @@ body {
 
   &_center {
     @include BorderBottomGradientCenter;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    text-align: center;
   }
 
   &_left {

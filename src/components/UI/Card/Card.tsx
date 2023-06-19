@@ -20,7 +20,7 @@ function Card({ title, image, link, children }: CardProps) {
             className={styles.image}
             src={image}
             alt={title}
-            sizes="350px"
+            sizes="320px"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
           />
