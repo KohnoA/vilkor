@@ -16,11 +16,11 @@ interface ContactsProps {
 export default function Contacts({ theme }: ContactsProps) {
   return (
     <section
-      className={`section ${styles.section} ${
+      className={`section container ${styles.section} ${
         theme === AppTheme.DARK ? styles.section_dark : styles.section_light
       }`}
     >
-      <div className={`container ${styles.wrapper}`}>
+      <div className={styles.wrapper}>
         <div className={styles.info}>
           <h3 className={`title title_left ${styles.title}`}>Контактная информация</h3>
 
