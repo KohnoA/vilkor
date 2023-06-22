@@ -5,15 +5,16 @@ import { IconColor } from '@/constants';
 import { memo } from 'react';
 
 interface SocialsListProps {
+  className?: string;
   color?: IconColor;
   width?: number;
   height?: number;
   full?: boolean;
 }
 
-function SocialsList({ full, ...props }: SocialsListProps) {
+function SocialsList({ className, full, ...props }: SocialsListProps) {
   return (
-    <ul className={styles.socials}>
+    <ul className={`${styles.socials} ${className ?? ''}`}>
       {SOCIAL_LIST.map(({ link, Icon, title }) => (
         <li key={title}>
           <Link

@@ -7,6 +7,7 @@ import SocialsList from '@/components/SocialsList';
 import Dropdown from '../Dropdown';
 import { useRouter } from 'next/router';
 import { PRODUCTS } from '@/constants/products';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 const STICKY_POINT = 100;
 
@@ -75,6 +76,8 @@ export default function Header() {
 
           <SocialsList color={IconColor.WHITE} />
         </div>
+
+        <BurgerMenu />
       </nav>
     </header>
   );

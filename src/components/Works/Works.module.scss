@@ -22,3 +22,15 @@
 
   margin-bottom: 60px;
 }
+
+@media screen and (max-width: $tablet) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media screen and (max-width: $mobileM) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}

@@ -40,7 +40,7 @@ export default function Contacts({ theme }: ContactsProps) {
 
             <li className={styles.item}>
               <p className={styles.item__header}>Мы в социальных сетях:</p>
-              <SocialsList full color={IconColor.GREEN} />
+              <SocialsList className={styles.socials} full color={IconColor.GREEN} />
             </li>
 
             <li className={styles.item}>

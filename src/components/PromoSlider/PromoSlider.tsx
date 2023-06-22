@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import { CSSProperties } from 'react';
 import Button from '../UI/Button';
 import Image from 'next/image';
 import styles from './PromoSlider.module.scss';
@@ -23,14 +23,14 @@ export default function PromoSlider({ content }: PromoSliderProps) {
       modules={[EffectFade, Navigation, Pagination, A11y, Autoplay]}
       navigation
       pagination={{ clickable: true }}
-      className={styles.slider}
+      className={styles.container}
       autoplay={{ delay: 8000 }}
       loop
     >
       {content.map(({ title, desc, image, link }, index) => (
         <SwiperSlide key={title}>
           <Image
-            className={styles.slider__image}
+            className={styles.image}
             src={image}
             alt={title}
             sizes="100vw"
@@ -38,10 +38,10 @@ export default function PromoSlider({ content }: PromoSliderProps) {
             blurDataURL={image.blurDataURL}
             {...(index === 0 ? { priority: true } : {})}
           />
-          <div className={styles.slider__overlay} />
-          <div className={styles.slider__content}>
-            <h2 className={styles.slider__title}>{title}</h2>
-            <p className={styles.slider__description}>{desc}</p>
+          <div className={styles.overlay} />
+          <div className={styles.content}>
+            <h2 className={styles.title}>{title}</h2>
+            <p className={styles.description}>{desc}</p>
             <Button href={link}>Подробнее &rsaquo;</Button>
           </div>
         </SwiperSlide>

@@ -1,6 +1,8 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
 
 .section {
+  position: relative;
   padding-top: 80px;
 
   &_dark {
@@ -39,7 +41,6 @@
 }
 
 .item {
-  width: min-content;
   margin-bottom: 25px;
 
   white-space: nowrap;
@@ -71,6 +72,8 @@
   align-items: center;
   gap: 5px;
 
+  width: min-content;
+
   padding: 10px;
   padding-left: 12px;
 
@@ -98,4 +101,48 @@
 
   border-radius: $borderRadius;
   background-color: $green;
+}
+
+@media (max-width: $laptop) {
+  .section {
+    padding-bottom: 430px;
+  }
+
+  .wrapper {
+    display: block;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $tablet) {
+  .info {
+    padding: 15px;
+  }
+
+  .title {
+    margin-left: auto;
+    margin-right: auto;
+
+    white-space: wrap;
+    text-align: center;
+    @include BorderBottomGradientCenter;
+  }
+
+  .mark {
+    white-space: wrap;
+    text-align: center;
+
+    & svg {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $mobileL) {
+  .socials {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }

@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 
   padding: 15px;
   padding-left: 30px;
@@ -31,6 +32,10 @@
         stroke: $white;
       }
     }
+  }
+
+  &__title {
+    flex-grow: 1;
   }
 }
 
@@ -48,6 +53,7 @@
   cursor: pointer;
 
   & svg {
+    will-change: transform;
     transition: 0.3s;
   }
 
@@ -78,4 +84,17 @@
 .explanation {
   font-weight: 600;
   font-style: italic;
+}
+
+@media screen and (max-width: $tablet) {
+  .item {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: $mobileL) {
+  .container {
+    font-size: 1rem;
+  }
 }

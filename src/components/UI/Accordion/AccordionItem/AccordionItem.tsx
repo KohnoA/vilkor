@@ -26,7 +26,7 @@ function AccordionItem({ title, list }: AccordionItemProps) {
         role="button"
         tabIndex={0}
       >
-        <p>{title}</p>
+        <p className={styles.header__title}>{title}</p>
 
         <button
           className={`${styles.toggler} ${isActive ? styles.toggler_active : ''}`}
