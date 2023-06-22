@@ -1,8 +1,15 @@
+@import '@/styles/variables';
+
 .map {
   flex-basis: 50%;
+}
 
-  width: 100%;
-  min-height: 100%;
-
-  border: none;
+@media (max-width: $laptop) {
+  .map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+  }
 }

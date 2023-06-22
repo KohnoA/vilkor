@@ -1,0 +1,36 @@
+@import '@/styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & svg {
+    transition: 0.3s;
+    opacity: 0.3;
+    transform: rotate(180deg);
+  }
+
+  &_active {
+    & svg {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+.list {
+  padding-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.item {
+  padding: 10px;
+  padding-right: 0;
+}
+
+@media (max-width: $mobileL) {
+  .list {
+    font-size: 1rem;
+  }
+}

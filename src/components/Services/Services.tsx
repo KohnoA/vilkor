@@ -13,7 +13,8 @@ export default function Services({ content }: ServicesProps) {
       <h2 className={`title title_center ${styles.title}`}>Наши услуги</h2>
 
       <p className={styles.moreInfo}>
-        За подробной информацией обращайтесь к нам по телефону: {A1_NUMBER}
+        За подробной информацией обращайтесь к нам по телефону:{' '}
+        <span className={styles.number}>{A1_NUMBER}</span>
       </p>
 
       <Accordion content={content} />

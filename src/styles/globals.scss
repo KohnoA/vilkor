@@ -81,6 +81,14 @@ body {
   &_right {
     @include BorderBottomGradientRight;
   }
+
+  @media (max-width: $mobileL) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: $mobileM) {
+    font-size: 1.6rem;
+  }
 }
 
 a {

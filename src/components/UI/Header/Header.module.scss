@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+
 .header {
   top: 0;
   left: 0;
@@ -11,12 +12,11 @@
 
   &_onMain {
     position: fixed;
-    padding: 10px 5px;
+    padding: 10px 0;
   }
 
   &_notOnMain {
     position: sticky;
-    padding: 0 5px;
     background-color: $black;
   }
 
@@ -55,6 +55,7 @@
 
   &__logo {
     place-self: center center;
+    padding: 5px;
 
     transition: 0.3s;
 
@@ -80,6 +81,55 @@
 
     &:hover {
       opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: $laptop) {
+  .nav {
+    &__list {
+      order: 1;
+      place-self: center center;
+    }
+
+    &__logo {
+      order: 0;
+      place-self: center start;
+    }
+
+    &__contacts {
+      order: 2;
+      place-self: center end;
+    }
+
+    &__number {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .header {
+    &_onMain {
+      padding: 6px 0;
+    }
+
+    &_stick {
+      padding: 6px 0;
+    }
+  }
+  .nav {
+    &__list {
+      display: none;
+    }
+
+    &__logo {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    &__contacts {
+      display: none;
     }
   }
 }
