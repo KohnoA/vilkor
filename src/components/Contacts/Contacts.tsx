@@ -16,11 +16,11 @@ interface ContactsProps {
 export default function Contacts({ theme }: ContactsProps) {
   return (
     <section
-      className={`section ${styles.section} ${
+      className={`section container ${styles.section} ${
         theme === AppTheme.DARK ? styles.section_dark : styles.section_light
       }`}
     >
-      <div className={`container ${styles.wrapper}`}>
+      <div className={styles.wrapper}>
         <div className={styles.info}>
           <h3 className={`title title_left ${styles.title}`}>Контактная информация</h3>
 
@@ -40,7 +40,7 @@ export default function Contacts({ theme }: ContactsProps) {
 
             <li className={styles.item}>
               <p className={styles.item__header}>Мы в социальных сетях:</p>
-              <SocialsList full color={IconColor.GREEN} />
+              <SocialsList className={styles.socials} full color={IconColor.GREEN} />
             </li>
 
             <li className={styles.item}>

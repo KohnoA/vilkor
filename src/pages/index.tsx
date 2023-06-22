@@ -1,5 +1,5 @@
 import Layout from '@/components/UI/Layout';
-import PromoSlider from '@/components/PromoSlider';
+import PromoSlider from '@/components/PromoSlider/PromoSlider';
 import Advantages from '@/components/Advantages';
 import { ADVATAGES } from '@/constants/advantages';
 import { PROMO_SLIDES } from '@/constants/promoSlides';
