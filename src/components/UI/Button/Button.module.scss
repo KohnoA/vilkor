@@ -27,3 +27,9 @@
     background-color: $greenActive;
   }
 }
+
+@media (max-width: $mobileL) {
+  .button {
+    font-size: 14px;
+  }
+}

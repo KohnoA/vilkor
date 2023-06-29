@@ -1,6 +1,6 @@
 import Layout from '@/components/UI/Layout';
 import PromoSlider from '@/components/PromoSlider/PromoSlider';
-import Advantages from '@/components/Advantages';
+import Advantages from '@/components/Advantages/Advantages';
 import { ADVATAGES } from '@/constants/advantages';
 import { PROMO_SLIDES } from '@/constants/promoSlides';
 import Products from '@/components/Products';
@@ -15,7 +15,7 @@ import dynamic from 'next/dynamic';
 import contactsBg from 'public/images/background.jpg';
 import { AppTheme } from '@/constants';
 
-const Background = dynamic(() => import('@/components/UI/Background/Background'), { ssr: false });
+const Background = dynamic(() => import('@/components/UI/Background/Background'));
 const ScrollToTop = dynamic(() => import('@/components/UI/ScrollToTop/ScrollToTop'), {
   ssr: false,
 });

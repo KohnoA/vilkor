@@ -1,7 +1,7 @@
 import { memo, useMemo, useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 import Link from 'next/link';
-import { A1_NUMBER, A1_NUMBER_REF, AppRoutes } from '@/constants';
+import { A1_NUMBER, A1_NUMBER_REF, AppRoutes, IconColor } from '@/constants';
 import SocialsList from '@/components/SocialsList/SocialsList';
 import A1Img from 'public/images/logo-a1.png';
 import Image from 'next/image';
@@ -44,7 +44,6 @@ function BurgerMenu() {
             Главная
           </Link>
         </li>
-
         <DropdownItem
           header="Товары"
           content={productsDropdown}
@@ -63,12 +62,11 @@ function BurgerMenu() {
         </li>
 
         <li className={styles.contacts}>
-          <SocialsList width={36} height={36} />
-
           <Link href={A1_NUMBER_REF} className={styles.number}>
             <Image src={A1Img} width={24} height={24} sizes="50px" alt="Мобильный оператор А1" />
             {A1_NUMBER}
           </Link>
+          <SocialsList color={IconColor.GREEN} width={36} height={36} />
         </li>
       </ul>
 

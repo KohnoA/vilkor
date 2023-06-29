@@ -13,7 +13,7 @@ export default function Advantages({ content }: AdvantagesProps) {
         Почему именно <span className={styles.advantages__title_we}>мы</span>?
       </h2>
 
-      <p className={styles.advantages__tagline}>Более 3-ёх лет успешной работы</p>
+      <p className={`subTitle ${styles.advantages__tagline}`}>Более 3-ёх лет успешной работы</p>
 
       <ul className={styles.advantages__list}>
         {content.map(({ Icon, title, desc }) => (

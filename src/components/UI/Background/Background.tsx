@@ -26,11 +26,10 @@ function Background({ image, opacity, fixed = true, children }: BackgroundProps)
           className={styles.image}
           src={image ?? defaultTexture}
           fill
-          sizes="100vw"
+          sizes="1440px"
           alt="Задний фон"
         />
       </div>
-
       <div className={styles.children}>{children}</div>
     </section>
   );

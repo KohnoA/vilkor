@@ -33,10 +33,9 @@ export default function PromoSlider({ content }: PromoSliderProps) {
             className={styles.image}
             src={image}
             alt={title}
-            sizes="100vw"
+            sizes="1440px"
             placeholder="blur"
             blurDataURL={image.blurDataURL}
-            {...(index === 0 ? { priority: true } : {})}
           />
           <div className={styles.overlay} />
           <div className={styles.content}>

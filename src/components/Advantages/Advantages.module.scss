@@ -15,6 +15,7 @@
   }
 
   &__tagline {
+    margin: 0 auto;
     margin-bottom: 40px;
   }
 
@@ -43,36 +44,32 @@
 
 @media (max-width: $laptop) {
   .advantages {
-    &__tagline {
-      margin-bottom: 20px;
-    }
-
     &__list {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, min-content);
-      row-gap: 0;
     }
   }
 
   .advantage {
-    padding: 15px 30px;
+    max-width: 360px;
+    padding: 15px;
 
     &:nth-child(1) {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      place-self: center end;
     }
 
     &:nth-child(2) {
       grid-column: 2 / 3;
       grid-row: 1 / 2;
+      place-self: center start;
     }
 
     &:nth-child(3) {
       grid-column: 1 / 3;
       grid-row: 2 / 3;
-
       place-self: center center;
-      max-width: 50%;
     }
   }
 }
@@ -80,38 +77,42 @@
 @media screen and (max-width: $tablet) {
   .advantages {
     &__list {
-      @media screen and (max-width: $tablet) {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, min-content);
-      }
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 30px;
     }
   }
 
   .advantage {
-    max-width: 425px;
-    place-self: center center;
+    &__title {
+      padding-bottom: initial;
+      border: none;
+    }
 
     &:nth-child(1) {
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+      place-self: center center;
     }
 
     &:nth-child(2) {
       grid-column: 1 / 2;
       grid-row: 2 / 3;
+      place-self: center center;
     }
 
     &:nth-child(3) {
       grid-column: 1 / 2;
       grid-row: 3 / 4;
-
-      max-width: 425px;
+      place-self: center center;
     }
   }
 }
 
 @media (max-width: $mobileL) {
   .advantage {
-    padding: 15px;
+    &__title {
+      font-size: 1.2rem;
+    }
   }
 }
