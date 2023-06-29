@@ -30,7 +30,7 @@ function DropdownItem({ className, header, content, isActiveBurger }: DropdownIt
   };
 
   return (
-    <li className={className ?? ''}>
+    <li {...(className ? { className } : {})}>
       <div
         className={`${styles.header} ${showDropdown ? styles.header_active : ''}`}
         onClick={setShowDropdownHandler}

@@ -8,7 +8,7 @@ function YMap() {
     return {
       center: MAP_COORDINATES,
       zoom: 17,
-      behaviors: ['drag', 'dblClickZoom', 'multiTouch'],
+      behaviors: ['drag', 'dblClickZoom'], // 'multiTouch'
     };
   }, []);
 

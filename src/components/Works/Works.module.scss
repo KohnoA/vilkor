@@ -23,14 +23,16 @@
   margin-bottom: 60px;
 }
 
-@media screen and (max-width: $tablet) {
+@media (max-width: $laptop) {
   .list {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 }
 
-@media screen and (max-width: $mobileM) {
+@media (max-width: $tablet) {
   .list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    column-gap: 15px;
+    row-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   }
 }

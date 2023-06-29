@@ -45,19 +45,29 @@
   font-weight: 700;
 }
 
-@media (max-width: $tablet) {
+@media (max-width: $laptop) {
   .imageWrapper {
     height: 250px;
   }
 }
 
-@media (max-width: $mobileL) {
+@media (max-width: $tablet) {
   .imageWrapper {
     height: 220px;
   }
 
   .title {
     font-size: 1.2rem;
+  }
+
+  .image_hoverPreview {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobileL) {
+  .imageWrapper {
+    height: 200px;
   }
 }
 

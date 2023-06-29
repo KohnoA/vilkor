@@ -94,7 +94,7 @@
 
   width: 100%;
 
-  padding: 15px 0;
+  padding: 15px 15px;
 
   color: $white;
   font-style: italic;
@@ -117,20 +117,20 @@
 
 @media (max-width: $tablet) {
   .info {
-    padding: 15px;
+    padding: 20px;
   }
 
   .title {
     margin-left: auto;
     margin-right: auto;
 
-    white-space: wrap;
+    white-space: normal;
     text-align: center;
     @include BorderBottomGradientCenter;
   }
 
   .mark {
-    white-space: wrap;
+    white-space: normal;
     text-align: center;
 
     & svg {
@@ -144,5 +144,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    gap: 0;
   }
 }
