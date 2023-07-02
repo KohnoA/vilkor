@@ -27,7 +27,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
       autoplay={{ delay: 8000 }}
       loop
     >
-      {content.map(({ title, desc, image, link }, index) => (
+      {content.map(({ title, desc, image, link }) => (
         <SwiperSlide key={title}>
           <Image
             className={styles.image}
