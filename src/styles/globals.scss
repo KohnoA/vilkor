@@ -12,6 +12,7 @@ html {
   min-height: -webkit-fill-available;
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: hidden;
 
   min-width: 320px;
 
@@ -42,7 +43,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1160px;
+  max-width: $maxAppWidth;
 
   margin: 0 auto;
   padding: 0 15px;

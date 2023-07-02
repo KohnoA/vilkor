@@ -8,10 +8,11 @@ import SecondSlider from './SecondSlider/SecondSlider';
 const INITIAL_SLIDE_INDEX = 0;
 
 interface GalleryProps {
+  className?: string;
   images: StaticImageData[];
 }
 
-function Gallery({ images }: GalleryProps) {
+function Gallery({ className, images }: GalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number>(INITIAL_SLIDE_INDEX);
 
@@ -22,7 +23,7 @@ function Gallery({ images }: GalleryProps) {
   const setThumbsSwiperHandler = useCallback((swiper: SwiperType) => setThumbsSwiper(swiper), []);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className ?? ''}`}>
       <MainSlider
         images={images}
         thumbsSwiper={thumbsSwiper}

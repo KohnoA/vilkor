@@ -1,4 +1,17 @@
+@import '@/styles/variables';
+
 .container {
-  width: 670px;
-  height: 480px;
+  max-width: 720px;
+}
+
+@media (max-width: $tablet) {
+  .container {
+    --swiper-navigation-size: 30px;
+  }
+}
+
+@media (max-width: $mobileM) {
+  .container {
+    --swiper-navigation-size: 25px;
+  }
 }
