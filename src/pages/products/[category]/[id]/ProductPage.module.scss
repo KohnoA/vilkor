@@ -25,6 +25,10 @@
   box-shadow: $boxShadowLight;
 }
 
+.gallery {
+  max-width: 60%;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -51,4 +55,22 @@
 .price {
   margin-bottom: 15px;
   font-weight: 700;
+}
+
+@media (max-width: $tablet) {
+  .wrapper {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .gallery {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .section {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

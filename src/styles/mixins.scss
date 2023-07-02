@@ -1,7 +1,7 @@
 @mixin borderBottomGradient() {
   border-bottom: 3px solid;
   border-image-slice: 1;
-  border-width: 2px;
+  border-width: 3px;
 }
 
 @mixin BorderBottomGradientCenter() {

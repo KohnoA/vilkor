@@ -25,7 +25,7 @@ export default function ProductPage({ product, category }: ProdcutPageProps) {
         <section className={`container section single-section-page ${styles.section}`}>
           <h2 className={`title title_center ${styles.title}`}>{title}</h2>
           <div className={styles.wrapper}>
-            <Gallery images={images} />
+            <Gallery className={styles.gallery} images={images} />
 
             <div className={styles.info}>
               <div>
