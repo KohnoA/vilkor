@@ -179,9 +179,5 @@
 @media (max-width: $mobileM) {
   .list {
     width: 100%;
-
-    &::before {
-      width: 100%;
-    }
   }
 }
