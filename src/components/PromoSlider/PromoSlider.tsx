@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect } from 'react';
+import { CSSProperties } from 'react';
 import Button from '../UI/Button';
 import Image from 'next/image';
 import styles from './PromoSlider.module.scss';
@@ -27,7 +27,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
       autoplay={{ delay: 8000 }}
       loop
     >
-      {content.map(({ title, desc, image, link }, index) => (
+      {content.map(({ title, desc, image, link }) => (
         <SwiperSlide key={title}>
           <Image
             className={styles.image}

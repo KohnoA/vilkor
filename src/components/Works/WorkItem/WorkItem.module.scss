@@ -31,7 +31,8 @@
 
   border-radius: $borderRadius;
   transition: 0.3s;
-
+  box-shadow: $boxShadowMin;
+  
   &_hoverPreview {
     opacity: 0;
   }
@@ -47,7 +48,7 @@
 
 @media (max-width: $laptop) {
   .imageWrapper {
-    height: 250px;
+    height: 260px;
   }
 }
 
@@ -67,12 +68,12 @@
 
 @media screen and (max-width: $mobileL) {
   .imageWrapper {
-    height: 200px;
+    height: 180px;
   }
 }
 
 @media screen and (max-width: $mobileM) {
   .imageWrapper {
-    height: 190px;
+    height: 170px;
   }
 }
