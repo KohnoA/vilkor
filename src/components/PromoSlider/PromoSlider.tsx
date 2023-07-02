@@ -1,4 +1,4 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, useEffect } from 'react';
 import Button from '../UI/Button';
 import Image from 'next/image';
 import styles from './PromoSlider.module.scss';
