@@ -20,9 +20,26 @@
   border-radius: $borderRadius;
 }
 
+@media (max-width: $laptop) {
+  .imageWrapper {
+    height: 380px;
+  }
+}
+
 @media (max-width: $tablet) {
   .imageWrapper {
-    max-height: 425px;
-    height: 100%;
+    height: 360px;
+  }
+}
+
+@media (max-width: $mobileL) {
+  .imageWrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: $mobileM) {
+  .imageWrapper {
+    height: 260px;
   }
 }
