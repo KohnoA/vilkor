@@ -14,7 +14,7 @@ interface ModalContentProps {
 export default function ModalContent({ images, title, desc }: ModalContentProps) {
   return (
     <div className={styles.container}>
-      <Gallery images={images} />
+      <Gallery images={images} className={styles.gallery} />
 
       <div className={styles.info}>
         <div>
@@ -23,10 +23,10 @@ export default function ModalContent({ images, title, desc }: ModalContentProps)
         </div>
 
         <div className={styles.more}>
-          <p className={styles.moreDesc}>
-            Хотите увидеть больше наших работ? <br /> Тогда переходите к нам в инстаграм!
+          <p className={styles.more__desc}>
+            Хотите увидеть больше наших работ? Тогда переходите к нам в инстаграм!
           </p>
-          <Button href={INSTAGRAM_LINK}>
+          <Button href={INSTAGRAM_LINK} additionalClasses={styles.more__button}>
             <InstagramLogo color={IconColor.WHITE} /> Наш Инстаграм
           </Button>
         </div>

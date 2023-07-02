@@ -24,7 +24,9 @@ function Modal({ isActive, children, closeHandler }: ModalProps) {
   useEffect(() => {
     setIsMounted(true);
 
-    return () => setIsMounted(false);
+    return () => {
+      setIsMounted(false);
+    };
   }, []);
 
   if (!isMounted) {

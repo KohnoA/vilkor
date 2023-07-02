@@ -7,10 +7,13 @@ $white: #f9f8f3;
 
 $borderRadius: 5px;
 
+$boxShadowMin: 0px 2px 4px rgba(0, 0, 0, 0.1);
 $boxShadowLight: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
 $boxShadowStrong: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
 
 $laptop: 1024px;
 $tablet: 768px;
 $mobileL: 425px;
-$mobileM: 375px; 
+$mobileM: 375px;
+
+$maxAppWidth: 1160px;
