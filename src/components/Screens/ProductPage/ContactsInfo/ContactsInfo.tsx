@@ -18,7 +18,7 @@ export default function ContactsInfo() {
 
       <div className={styles.socials}>
         <p className={styles.socials__desc}>Принимаем заказы в социальных сетях:</p>
-        <SocialsList full color={IconColor.GREEN} />
+        <SocialsList className={styles.socials__list} full color={IconColor.GREEN} />
       </div>
 
       <p className={styles.mark}>Осуществляем доставку по всей Беларуси!</p>

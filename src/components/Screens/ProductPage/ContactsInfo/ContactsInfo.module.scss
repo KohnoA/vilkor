@@ -46,3 +46,17 @@
   border-radius: $borderRadius;
   background-color: $green;
 }
+
+@media (max-width: $laptop) {
+  .socials {
+    &__desc {
+      margin-bottom: 5px;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+  }
+}
