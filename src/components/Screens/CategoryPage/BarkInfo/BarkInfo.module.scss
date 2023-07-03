@@ -1,5 +1,24 @@
 @import '@/styles/variables';
 
+.section {
+  opacity: 0;
+
+  &_animate {
+    transition: 0.8s;
+    opacity: 1;
+
+    .title {
+      transition: 0.8s;
+      transform: translateX(0);
+    }
+  }
+}
+
+.title {
+  white-space: nowrap;
+  transform: translateX(-10%);
+}
+
 .subTitle {
   margin-bottom: 20px;
 
@@ -22,6 +41,12 @@
   font-size: 1.2rem;
   font-weight: 700;
   font-style: italic;
+}
+
+@media (max-width: $laptop) {
+  .title {
+    white-space: normal;
+  }
 }
 
 @media (max-width: $mobileM) {

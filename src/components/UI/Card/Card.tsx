@@ -2,18 +2,20 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './Card.module.scss';
 import Link from 'next/link';
 import Button from '../Button/Button';
-import { ReactNode, memo } from 'react';
+import { ReactNode, memo, CSSProperties } from 'react';
 
 interface CardProps {
+  className?: string;
+  style?: CSSProperties;
   title: string;
   image: StaticImageData;
   link: string;
   children?: ReactNode;
 }
 
-function Card({ title, image, link, children }: CardProps) {
+function Card({ className, style, title, image, link, children }: CardProps) {
   return (
-    <li>
+    <li style={style} {...(className ? { className } : {})}>
       <Link href={link} className={styles.item}>
         <div className={styles.imageWrapper}>
           <Image

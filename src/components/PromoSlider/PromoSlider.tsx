@@ -6,12 +6,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFade, Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import { IPromoSlides } from '@/types';
 import { IconColor } from '@/constants';
+import { useInView } from 'react-intersection-observer';
 
 interface PromoSliderProps {
   content: IPromoSlides[];
 }
 
 export default function PromoSlider({ content }: PromoSliderProps) {
+  const { ref, inView } = useInView({ triggerOnce: true });
+
   return (
     <Swiper
       style={
@@ -29,20 +32,29 @@ export default function PromoSlider({ content }: PromoSliderProps) {
     >
       {content.map(({ title, desc, image, link }) => (
         <SwiperSlide key={title}>
-          <Image
-            className={styles.image}
-            src={image}
-            alt={title}
-            sizes="1440px"
-            placeholder="blur"
-            blurDataURL={image.blurDataURL}
-          />
-          <div className={styles.overlay} />
-          <div className={styles.content}>
-            <h2 className={styles.title}>{title}</h2>
-            <p className={styles.description}>{desc}</p>
-            <Button href={link}>Подробнее &rsaquo;</Button>
-          </div>
+          {({ isActive }) => (
+            <>
+              <Image
+                className={styles.image}
+                src={image}
+                alt={title}
+                sizes="1440px"
+                placeholder="blur"
+                blurDataURL={image.blurDataURL}
+              />
+              <div className={styles.overlay} />
+              <div
+                ref={ref}
+                className={`${styles.content} ${inView && isActive ? styles.content_animate : ''}`}
+              >
+                <h2 className={styles.title}>{title}</h2>
+                <p className={styles.description}>{desc}</p>
+                <Button additionalClasses={styles.button} href={link}>
+                  Подробнее &rsaquo;
+                </Button>
+              </div>
+            </>
+          )}
         </SwiperSlide>
       ))}
     </Swiper>

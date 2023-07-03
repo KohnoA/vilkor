@@ -25,11 +25,7 @@ export default function CategoryPage({ category }: CategoryPageProps) {
       {categoryTitle === ProductCategory.PLANTS ? (
         <PlantsSection />
       ) : (
-        <section className="container section">
-          <h2 className="title title_left">{title}</h2>
-
-          <CategoryProductsList products={items} category={categoryTitle} />
-        </section>
+        <CategoryProductsList title={title} products={items} category={categoryTitle} />
       )}
 
       <Background>
