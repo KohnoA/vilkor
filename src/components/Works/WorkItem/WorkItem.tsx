@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, CSSProperties } from 'react';
 import styles from './WorkItem.module.scss';
 import { IWork } from '@/types';
 import dynamic from 'next/dynamic';
@@ -10,10 +10,12 @@ const ModalLazy = dynamic(() => import('@/components/UI/Modal/Modal'), {
 });
 
 interface WorkItemProps {
+  className?: string;
+  style?: CSSProperties;
   content: IWork;
 }
 
-export default function WorkItem({ content }: WorkItemProps) {
+export default function WorkItem({ className, style, content }: WorkItemProps) {
   const { title, desc, images } = content;
   const [preview, hoverPreview] = images;
 
@@ -32,7 +34,8 @@ export default function WorkItem({ content }: WorkItemProps) {
   return (
     <>
       <li
-        className={styles.item}
+        className={`${styles.item} ${className ?? ''}`}
+        style={style}
         onClick={showModalHanlder}
         onKeyDown={keyboardHandler}
         role="tab"

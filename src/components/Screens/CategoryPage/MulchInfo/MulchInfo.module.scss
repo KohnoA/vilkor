@@ -1,0 +1,17 @@
+.section {
+  opacity: 0;
+
+  &_animate {
+    transition: 0.8s;
+    opacity: 1;
+
+    .title {
+      transition: 0.8s;
+      transform: translateX(0);
+    }
+  }
+}
+
+.title {
+  transform: translateX(-10%);
+}

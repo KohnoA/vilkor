@@ -10,6 +10,7 @@ import BarkNote from '@/components/Screens/ProductPage/Notes/BarkNote';
 import ContactsInfo from '@/components/Screens/ProductPage/ContactsInfo/ContactsInfo';
 import PeatNote from '@/components/Screens/ProductPage/Notes/PeatNote';
 import { ProductCategory } from '@/constants';
+import { useInView } from 'react-intersection-observer';
 
 interface ProdcutPageProps {
   product: IProductItem;
@@ -18,11 +19,17 @@ interface ProdcutPageProps {
 
 export default function ProductPage({ product, category }: ProdcutPageProps) {
   const { title, images, price, fraction, volume, packaging, stock, acidity } = product;
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
     <Layout title={title}>
       <Texture>
-        <section className={`container section single-section-page ${styles.section}`}>
+        <section
+          ref={ref}
+          className={`container section single-section-page ${styles.section} ${
+            inView ? styles.section_animate : ''
+          }`}
+        >
           <h2 className={`title title_center ${styles.title}`}>{title}</h2>
           <div className={styles.wrapper}>
             <Gallery className={styles.gallery} images={images} />
