@@ -1,9 +1,17 @@
 import styles from './PeatInfo.module.scss';
+import { useInView } from 'react-intersection-observer';
 
 export default function PeatInfo() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <section className="container section single-section-page">
-      <h2 className="title title_left">Что нужно знать о торфе</h2>
+    <section
+      ref={ref}
+      className={`container section single-section-page ${styles.section} ${
+        inView ? styles.section_animate : ''
+      }`}
+    >
+      <h2 className={`title title_left ${styles.title}`}>Что нужно знать о торфе</h2>
 
       <p className={styles.advatages}>
         В первую очередь торф используется для улучшения структуры почвы. Благодаря своей

@@ -2,17 +2,48 @@
 
 .section {
   text-align: center;
+
+  &_animate {
+    .title {
+      transition: 0.8s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .desc {
+      transition: 0.8s 0.5s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .item {
+      transition: 0.8s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .button {
+      transition: 0.8s 0.8s;
+      opacity: 1;
+    }
+  }
 }
 
 .title {
   margin: 0 auto;
   margin-bottom: 20px;
+
+  opacity: 0;
+  transform: translateY(100%);
 }
 
 .desc {
   max-width: 500px;
   margin: 0 auto;
   margin-bottom: 40px;
+
+  opacity: 0;
+  transform: translateY(-15%);
 }
 
 .list {
@@ -21,6 +52,15 @@
   gap: 40px;
 
   margin-bottom: 60px;
+}
+
+.item {
+  opacity: 0;
+  transform: translateY(10%);
+}
+
+.button {
+  opacity: 0;
 }
 
 @media (max-width: $laptop) {

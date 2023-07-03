@@ -2,12 +2,34 @@
 
 .section {
   padding-top: 50px;
+
+  &_animate {
+    .title {
+      transition: 0.8s;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .card {
+      transition: 0.8s;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 .title {
   margin-bottom: 25px;
+
+  opacity: 0;
+  transform: translateX(-10%);
 }
 
 .list {
   @include CardsContainer;
+}
+
+.card {
+  opacity: 0;
+  transform: translateY(10%);
 }

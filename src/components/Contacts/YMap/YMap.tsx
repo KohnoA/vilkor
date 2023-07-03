@@ -3,12 +3,16 @@ import styles from './YMap.module.scss';
 import { IconColor, MAP_COORDINATES } from '@/constants';
 import { memo, useMemo } from 'react';
 
-function YMap() {
+interface YMapProps {
+  className?: string;
+}
+
+function YMap({ className }: YMapProps) {
   const mapState = useMemo(() => {
     return {
       center: MAP_COORDINATES,
       zoom: 17,
-      behaviors: ['drag', 'dblClickZoom'], // 'multiTouch'
+      behaviors: ['drag', 'dblClickZoom'],
     };
   }, []);
 
@@ -30,7 +34,7 @@ function YMap() {
         apikey: process.env.NEXT_PUBLIC_YANDEX_MAP_API_KEY,
       }}
     >
-      <Map className={styles.map} defaultState={mapState}>
+      <Map className={`${styles.map} ${className ?? ''}`} defaultState={mapState}>
         <Placemark
           geometry={MAP_COORDINATES}
           defaultProperties={placemarkProps}

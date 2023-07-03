@@ -1,4 +1,5 @@
 import styles from './BarkInfo.module.scss';
+import { useInView } from 'react-intersection-observer';
 
 export const BARK_ADVATAGES_LIST = [
   'Определяемся с местом мульчирования: клумба, сад или грядки.',
@@ -14,9 +15,16 @@ export const BARK_ADVATAGES_LIST = [
 ];
 
 export default function BarkInfo() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <section className="container section single-section-page">
-      <h2 className={`title title_left`}>Отсутствует опыт мульчирования почвы?</h2>
+    <section
+      ref={ref}
+      className={`container section single-section-page ${styles.section} ${
+        inView ? styles.section_animate : ''
+      }`}
+    >
+      <h2 className={`title title_left ${styles.title}`}>Отсутствует опыт мульчирования почвы?</h2>
 
       <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>
 

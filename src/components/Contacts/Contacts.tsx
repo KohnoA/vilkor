@@ -6,6 +6,7 @@ import A1Img from 'public/images/logo-a1.png';
 import SocialsList from '../SocialsList/SocialsList';
 import DeliveryIcon from '../icons/DeliveryIcon';
 import dynamic from 'next/dynamic';
+import { useInView } from 'react-intersection-observer';
 
 const YMap = dynamic(() => import('./YMap/YMap'), { ssr: false });
 
@@ -14,9 +15,12 @@ interface ContactsProps {
 }
 
 export default function Contacts({ theme }: ContactsProps) {
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+
   return (
     <section
-      className={`section container ${styles.section} ${
+      ref={ref}
+      className={`section container ${styles.section} ${inView ? styles.section_animate : ''} ${
         theme === AppTheme.DARK ? styles.section_dark : styles.section_light
       }`}
     >
@@ -60,7 +64,7 @@ export default function Contacts({ theme }: ContactsProps) {
           </ul>
         </div>
 
-        <YMap />
+        <YMap className={styles.map} />
       </div>
     </section>
   );
