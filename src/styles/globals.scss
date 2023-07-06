@@ -9,12 +9,8 @@
 }
 
 html {
-  min-height: -webkit-fill-available;
   scroll-behavior: smooth;
   color-scheme: dark;
-  overflow-x: hidden;
-
-  min-width: 320px;
 
   font-size: 16px;
 }
@@ -22,13 +18,16 @@ html {
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-
+  
+  min-width: 320px;
+  
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
   color: $black;
-
+  
   background-color: $white;
+  overflow-x: hidden;
 }
 
 #__next {
