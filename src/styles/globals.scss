@@ -9,6 +9,7 @@
 }
 
 html {
+  height: -webkit-fill-available;
   scroll-behavior: smooth;
   color-scheme: dark;
 
@@ -16,9 +17,9 @@ html {
 }
 
 body {
-  // min-height: 100vh;
-  // min-height: -webkit-fill-available;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  // height: 100vh;
   
   min-width: 320px;
   
@@ -31,11 +32,11 @@ body {
   overflow-x: hidden;
 }
 
-@supports (-webkit-touch-callout: none) {
-  body {
-    height: -webkit-fill-available;
-  }
-}
+// @supports (-webkit-touch-callout: none) {
+//   body {
+//     height: -webkit-fill-available;
+//   }
+// }
 
 #__next {
   display: flex;
