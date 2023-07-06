@@ -1,4 +1,4 @@
-import { useState, CSSProperties } from 'react';
+import { useState, CSSProperties, useCallback } from 'react';
 import styles from './WorkItem.module.scss';
 import { IWork } from '@/types';
 import dynamic from 'next/dynamic';
@@ -23,7 +23,7 @@ export default function WorkItem({ className, style, content }: WorkItemProps) {
 
   const showModalHanlder = () => setIsShowModal(true);
 
-  const closeModalHandler = () => setIsShowModal(false);
+  const closeModalHandler = useCallback(() => setIsShowModal(false), []);
 
   const keyboardHandler = (event: React.KeyboardEvent<HTMLLIElement>) => {
     if (event.code === 'Enter') {
