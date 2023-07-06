@@ -9,18 +9,13 @@
 }
 
 html {
-  height: -webkit-fill-available;
   scroll-behavior: smooth;
   color-scheme: dark;
 
   font-size: 16px;
 }
 
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-  // height: 100vh;
-  
+body {  
   min-width: 320px;
   
   font-family: inherit;
@@ -31,12 +26,6 @@ body {
   background-color: $white;
   overflow-x: hidden;
 }
-
-// @supports (-webkit-touch-callout: none) {
-//   body {
-//     height: -webkit-fill-available;
-//   }
-// }
 
 #__next {
   display: flex;
