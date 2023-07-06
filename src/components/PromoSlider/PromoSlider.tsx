@@ -49,9 +49,7 @@ export default function PromoSlider({ content }: PromoSliderProps) {
               >
                 <h2 className={styles.title}>{title}</h2>
                 <p className={styles.description}>{desc}</p>
-                <Button additionalClasses={styles.button} href={link}>
-                  Подробнее &rsaquo;
-                </Button>
+                <Button href={link}>Подробнее &rsaquo;</Button>
               </div>
             </>
           )}
