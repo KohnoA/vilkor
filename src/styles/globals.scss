@@ -16,8 +16,9 @@ html {
 }
 
 body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
+  // min-height: 100vh;
+  // min-height: -webkit-fill-available;
+  height: 100vh;
   
   min-width: 320px;
   
@@ -28,6 +29,12 @@ body {
   
   background-color: $white;
   overflow-x: hidden;
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    height: -webkit-fill-available;
+  }
 }
 
 #__next {
