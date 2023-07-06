@@ -12,9 +12,16 @@ interface DropdownItemProps {
     title: string;
     link: string;
   }[];
+  closeBurger: () => void;
 }
 
-function DropdownItem({ className, header, content, isActiveBurger }: DropdownItemProps) {
+function DropdownItem({
+  className,
+  header,
+  content,
+  isActiveBurger,
+  closeBurger,
+}: DropdownItemProps) {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
   useEffect(() => {
@@ -46,7 +53,9 @@ function DropdownItem({ className, header, content, isActiveBurger }: DropdownIt
         <ul className={styles.list}>
           {content.map(({ title, link }) => (
             <li key={title} className={styles.item}>
-              <Link href={link}>{title}</Link>
+              <Link href={link} onClick={closeBurger}>
+                {title}
+              </Link>
             </li>
           ))}
         </ul>
