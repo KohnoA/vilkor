@@ -21,24 +21,24 @@
 
 @media (max-width: $laptop) {
   .imageWrapper {
-    height: 380px;
+    height: 360px;
   }
 }
 
-@media (max-width: $tablet) {
+@media (max-width: $mobileXL) {
   .imageWrapper {
-    height: 360px;
+    height: 260px;
   }
 }
 
 @media (max-width: $mobileL) {
   .imageWrapper {
-    height: 300px;
+    height: 220px;
   }
 }
 
 @media (max-width: $mobileM) {
   .imageWrapper {
-    height: 260px;
+    max-height: 190px;
   }
 }
