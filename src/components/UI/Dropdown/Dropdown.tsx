@@ -10,14 +10,15 @@ interface IDropdownItems {
 interface DropdownProps {
   isShow: boolean;
   items: IDropdownItems[];
+  closeHanlder: () => void;
 }
 
-function Dropdown({ isShow, items }: DropdownProps) {
+function Dropdown({ isShow, items, closeHanlder }: DropdownProps) {
   return (
-    <ul className={`${styles.dropdown} ${isShow ? styles.dropdown_show : ''}`}>
+    <ul className={`${styles.list} ${isShow ? styles.list_show : ''}`}>
       {items.map(({ link, title }) => (
         <li key={title}>
-          <Link href={link} className={styles.dropdown__link}>
+          <Link href={link} className={styles.link} onClick={closeHanlder}>
             {title}
           </Link>
         </li>

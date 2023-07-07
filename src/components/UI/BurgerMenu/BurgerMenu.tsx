@@ -1,4 +1,4 @@
-import { memo, useMemo, useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 import Link from 'next/link';
 import { A1_NUMBER, A1_NUMBER_REF, AppRoutes, IconColor } from '@/constants';
@@ -19,6 +19,8 @@ function BurgerMenu() {
   }, []);
 
   const burgerToggler = () => setIsActiveBurger(!isActiveBurger);
+
+  const closeBurgerHandler = useCallback(() => setIsActiveBurger(false), []);
 
   const keywordHandler = (event: React.KeyboardEvent<HTMLElement>) => {
     if (event.code === 'Enter') {
@@ -49,14 +51,15 @@ function BurgerMenu() {
           content={productsDropdown}
           className={styles.item}
           isActiveBurger={isActiveBurger}
+          closeBurger={closeBurgerHandler}
         />
         <li className={styles.item}>
-          <Link href={AppRoutes.SERVICES} className={styles.link}>
+          <Link href={AppRoutes.SERVICES} className={styles.link} onClick={closeBurgerHandler}>
             Услуги
           </Link>
         </li>
         <li className={styles.item}>
-          <Link href={AppRoutes.CONTACTS} className={styles.link}>
+          <Link href={AppRoutes.CONTACTS} className={styles.link} onClick={closeBurgerHandler}>
             Контакты
           </Link>
         </li>

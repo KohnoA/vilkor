@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useRef, useState } from 'react';
 import styles from './Modal.module.scss';
 import { createPortal } from 'react-dom';
 import PlusIcon from '@/components/icons/PlusIcon';
@@ -21,13 +21,28 @@ function Modal({ isActive, children, closeHandler }: ModalProps) {
     }
   };
 
+  const escapeClosureHandler = useCallback(
+    (event: KeyboardEvent) => {
+      if (event.code === 'Escape') {
+        closeHandler();
+      }
+    },
+    [closeHandler]
+  );
+
   useEffect(() => {
     setIsMounted(true);
 
-    return () => {
-      setIsMounted(false);
-    };
+    return () => setIsMounted(false);
   }, []);
+
+  useEffect(() => {
+    if (isActive) {
+      document.addEventListener('keydown', escapeClosureHandler);
+    } else {
+      document.removeEventListener('keydown', escapeClosureHandler);
+    }
+  }, [escapeClosureHandler, isActive]);
 
   if (!isMounted) {
     return null;
@@ -50,13 +65,12 @@ function Modal({ isActive, children, closeHandler }: ModalProps) {
           role="button"
           tabIndex={0}
         >
+          {/* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
           <div
             className={`modal-content-animation ${styles.content}`}
             onClick={(event) => event.stopPropagation()}
-            onKeyDown={(event) => event.stopPropagation()}
-            role="button"
-            tabIndex={-1}
           >
+            {/* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
             <span
               className={styles.close}
               onClick={closeHandler}

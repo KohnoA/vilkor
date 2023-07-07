@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Logo from '@/components/icons/Logo';
 import { IconColor, AppRoutes, A1_NUMBER, A1_NUMBER_REF } from '@/constants';
 import SocialsList from '@/components/SocialsList';
-import Dropdown from '../Dropdown';
+import Dropdown from '../Dropdown/Dropdown';
 import { useRouter } from 'next/router';
 import { PRODUCTS } from '@/constants/products';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
@@ -26,6 +26,10 @@ export default function Header() {
 
   const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
 
+  const showProductsDropdown = () => setIsDropdown(true);
+
+  const closeProductsDropdown = () => setIsDropdown(false);
+
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);
 
@@ -42,16 +46,20 @@ export default function Header() {
         <ul className={styles.nav__list}>
           <li
             className={styles.nav__item}
-            onMouseOut={() => setIsDropdown(false)}
-            onBlur={() => setIsDropdown(false)}
-            onMouseOver={() => setIsDropdown(true)}
-            onFocus={() => setIsDropdown(true)}
+            onMouseOut={closeProductsDropdown}
+            onBlur={closeProductsDropdown}
+            onMouseOver={showProductsDropdown}
+            onFocus={showProductsDropdown}
           >
             <Link href={AppRoutes.PRODUCTS} className={styles.nav__link}>
               Товары
             </Link>
 
-            <Dropdown isShow={isDropdown} items={dropdownContent} />
+            <Dropdown
+              closeHanlder={closeProductsDropdown}
+              isShow={isDropdown}
+              items={dropdownContent}
+            />
           </li>
           <li className={styles.nav__item}>
             <Link href={AppRoutes.SERVICES} className={styles.nav__link}>
