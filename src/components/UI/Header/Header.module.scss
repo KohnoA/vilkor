@@ -7,23 +7,22 @@
   z-index: 2;
 
   color: $white;
-
-  background: $headerBackgroundShadow;
   transition: 0.3s;
 
   &_onMain {
     position: fixed;
     padding: 10px 0;
+    background: $headerBackgroundShadow;
   }
 
   &_notOnMain {
     position: sticky;
-    background-color: $black;
+    background: $black;
   }
 
   &_stick {
     padding: 0;
-    background-color: $black;
+    background: $black;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
 }
