@@ -19,7 +19,6 @@
 }
 
 .list {
-  padding-top: 10px;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -27,6 +26,10 @@
 .item {
   padding: 10px;
   padding-right: 0;
+
+  &:first-child {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: $mobileL) {

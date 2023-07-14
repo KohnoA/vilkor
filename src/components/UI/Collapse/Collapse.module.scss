@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 300ms;
+
+  &_open {
+    grid-template-rows: 1fr;
+  }
+}
+
+.content {
+  min-height: 0;
+}

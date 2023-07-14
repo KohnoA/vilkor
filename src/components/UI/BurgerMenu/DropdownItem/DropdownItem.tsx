@@ -1,8 +1,8 @@
 import { memo, useEffect, useState } from 'react';
 import styles from './DropdownItem.module.scss';
 import ArrowUpIcon from '@/components/icons/ArrowUpIcon';
-import { Collapse } from 'react-collapse';
 import Link from 'next/link';
+import Collapse from '../../Collapse/Collapse';
 
 interface DropdownItemProps {
   className?: string;
@@ -49,7 +49,7 @@ function DropdownItem({
         <ArrowUpIcon width={15} height={15} />
       </div>
 
-      <Collapse isOpened={showDropdown}>
+      <Collapse isActive={showDropdown}>
         <ul className={styles.list}>
           {content.map(({ title, link }) => (
             <li key={title} className={styles.item}>
