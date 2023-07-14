@@ -9,7 +9,7 @@ interface ServicesProps {
 }
 
 export default function Services({ content }: ServicesProps) {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <section

@@ -9,7 +9,7 @@ interface ProductsProps {
 }
 
 export default function Products({ content }: ProductsProps) {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <section

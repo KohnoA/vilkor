@@ -15,7 +15,7 @@ interface ContactsProps {
 }
 
 export default function Contacts({ theme }: ContactsProps) {
-  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <section

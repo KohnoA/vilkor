@@ -24,17 +24,19 @@ export default function Header() {
     }));
   }, []);
 
-  const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
-
   const showProductsDropdown = () => setIsDropdown(true);
 
   const closeProductsDropdown = () => setIsDropdown(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler);
+    if (isMainPage) {
+      const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
 
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, []);
+      window.addEventListener('scroll', scrollHandler);
+
+      return () => window.removeEventListener('scroll', scrollHandler);
+    }
+  }, [isMainPage]);
 
   return (
     <header

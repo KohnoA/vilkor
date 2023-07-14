@@ -10,7 +10,7 @@ interface WorksProps {
 }
 
 export default function Works({ content }: WorksProps) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section
