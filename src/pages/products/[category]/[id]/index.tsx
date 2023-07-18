@@ -3,7 +3,7 @@ import Layout from '@/components/UI/Layout/Layout';
 import { PRODUCTS } from '@/constants/products';
 import { IProductItem } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import styles from './ProductPage.module.scss';
+import styles from '@/components/Screens/ProductPage/ProductPage.module.scss';
 import Texture from '@/components/UI/Background/Background';
 import MulchNote from '@/components/Screens/ProductPage/Notes/MulchNote';
 import BarkNote from '@/components/Screens/ProductPage/Notes/BarkNote';

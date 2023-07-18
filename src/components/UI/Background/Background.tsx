@@ -10,9 +10,9 @@ interface BackgroundProps {
   fixed?: boolean;
 }
 
-function Background({ image, opacity, fixed = true, children }: BackgroundProps) {
-  const DEFAULT_OPACITY = '0.6';
+const DEFAULT_OPACITY = '0.6';
 
+function Background({ image, opacity, fixed = true, children }: BackgroundProps) {
   return (
     <section className={styles.container}>
       <div

@@ -15,10 +15,7 @@ function CategoryProductsList({ title, products, category }: CategoryProductsLis
   const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <section
-      ref={ref}
-      className={`container section ${styles.section} ${inView ? styles.section_animate : ''}`}
-    >
+    <section ref={ref} className={`container section ${inView ? styles.section_animate : ''}`}>
       <h2 className={`title title_left ${styles.title}`}>{title}</h2>
 
       <ul className={styles.list}>

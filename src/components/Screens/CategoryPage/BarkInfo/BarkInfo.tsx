@@ -1,7 +1,7 @@
 import styles from './BarkInfo.module.scss';
 import { useInView } from 'react-intersection-observer';
 
-export const BARK_ADVATAGES_LIST = [
+const BARK_ADVATAGES_LIST = [
   'Определяемся с местом мульчирования: клумба, сад или грядки.',
   'Количество материала и фракция (размер) коры: приблизительно 1 пакет на 1 м2.',
   'Кора может быть мелкой, средней, крупной фракции.',

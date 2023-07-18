@@ -1,8 +1,10 @@
 .container {
   position: relative;
+  z-index: -1;
 
   width: 100%;
   height: min-content;
+  -webkit-clip-path: inset(0 0 0 0);
   clip-path: inset(0 0 0 0);
 }
 
