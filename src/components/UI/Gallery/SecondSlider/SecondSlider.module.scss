@@ -18,7 +18,7 @@
   object-position: center;
 
   border-radius: $borderRadius;
-  transition: 0.3s;
+  transition: opacity 300ms;
   cursor: pointer;
 
   &_notActive {

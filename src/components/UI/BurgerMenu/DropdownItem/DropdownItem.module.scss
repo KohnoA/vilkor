@@ -6,7 +6,7 @@
   align-items: center;
 
   & svg {
-    transition: 0.3s;
+    transition: transform 300ms, opacity 300ms;
     opacity: 0.1;
     transform: rotate(-180deg);
   }

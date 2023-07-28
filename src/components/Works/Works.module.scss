@@ -6,23 +6,23 @@
   opacity: 0;
 
   &_animate {
-    transition: 0.8s;
+    transition: opacity 800ms;
     opacity: 1;
 
     .title {
-      transition: 0.8s;
+      transition: opacity 800ms, transform 800ms;
       opacity: 1;
       transform: translateY(0);
     }
 
     .desc {
-      transition: 0.8s 0.5s;
+      transition: opacity 800ms 500ms, transform 800ms 500ms;
       opacity: 1;
       transform: translateY(0);
     }
 
     .item {
-      transition: 0.8s;
+      transition: opacity 800ms, transform 800ms;
       opacity: 1;
       transform: translateY(0);
     }

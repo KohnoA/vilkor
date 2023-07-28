@@ -30,7 +30,7 @@
   object-position: center;
 
   border-radius: $borderRadius;
-  transition: 0.3s;
+  transition: opacity 0.3s;
   box-shadow: $boxShadowMin;
   
   &_hoverPreview {

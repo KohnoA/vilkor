@@ -26,7 +26,7 @@ export default function Works({ content }: WorksProps) {
         {content.map((work, index) => (
           <WorkItem
             className={styles.item}
-            style={{ transitionDelay: `${index / 5 + 0.3}s` }}
+            style={{ transitionDelay: `0.${index * 2}s` }}
             key={index}
             content={work}
           />

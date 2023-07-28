@@ -49,7 +49,7 @@
 
   &_animate {
     transform: scale(1);
-    transition: 1s 0.3s;
+    transition: opacity 1s 0.3s, transform 1s 0.3s;
     opacity: 1;
     will-change: transform;
   }

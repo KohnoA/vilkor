@@ -32,6 +32,7 @@ export default function Header() {
     if (isMainPage) {
       const scrollHandler = () => setIsStickHeader(window.scrollY > STICKY_POINT);
 
+      scrollHandler();
       window.addEventListener('scroll', scrollHandler);
 
       return () => window.removeEventListener('scroll', scrollHandler);

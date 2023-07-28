@@ -6,9 +6,15 @@
 
   &_open {
     grid-template-rows: 1fr;
+
+    .content {
+      opacity: 1;
+    }
   }
 }
 
 .content {
   min-height: 0;
+  opacity: 0;
+  transition: opacity 300ms;
 }

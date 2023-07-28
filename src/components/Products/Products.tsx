@@ -22,7 +22,7 @@ export default function Products({ content }: ProductsProps) {
         {content.map(({ id, title, image, category }, index) => (
           <Card
             className={styles.card}
-            style={{ transitionDelay: `${index / 5 + 0.3}s` }}
+            style={{ transitionDelay: `0.${index * 2}s` }}
             key={id}
             title={title}
             image={image}

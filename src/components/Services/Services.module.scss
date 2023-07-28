@@ -4,19 +4,19 @@
 .section {
   &_animate {
     .title{
-      transition: 0.8s;
+      transition: opacity 800ms, transform 800ms;
       opacity: 1;
       transform: translateY(0);
     }
 
     .moreInfo {
-      transition: 0.8s 0.5s;
+      transition: opacity 800ms 500ms, transform 800ms 500ms;
       opacity: 1;
       transform: translateY(0);
     }
 
     .accordion {
-      transition: 0.8s 0.8s;
+      transition: opacity 800ms, transform 800ms;
       opacity: 1;
       transform: scale(1);
     }

@@ -2,11 +2,11 @@
   opacity: 0;
 
   &_animate {
-    transition: 0.8s;
+    transition: opacity 0.8s;
     opacity: 1;
 
     .title {
-      transition: 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
       transform: translateY(0);
     }
   }

@@ -22,17 +22,17 @@
   &_animate {
     .info {
       opacity: 1;
-      transition: 0.8s;
+      transition: opacity 0.8s;
     }
 
     .title {
-      transition: 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
       transform: translateX(0);
       opacity: 1;
     }
 
     .map {
-      transition: 0.8s;
+      transition: opacity 0.8s;
       opacity: 1;
     }
   }

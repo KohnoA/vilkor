@@ -28,7 +28,7 @@ export default function Advantages({ content }: AdvantagesProps) {
           <li
             key={title}
             className={styles.advantage}
-            style={{ transitionDelay: `${index / 3 + 0.5}s` }}
+            style={{ transitionDelay: `0.${index * 2}s` }}
           >
             <Icon width={60} height={60} color={IconColor.GREEN} />
 

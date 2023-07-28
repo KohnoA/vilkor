@@ -5,13 +5,13 @@
 
   &_animate {
     .title {
-      transition: 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
       opacity: 1;
       transform: translateX(0);
     }
 
     .card {
-      transition: 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
       opacity: 1;
       transform: translateY(0);
     }

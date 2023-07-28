@@ -34,20 +34,20 @@
   &_animate {
     .advantages {
       &__title {
-        transition: 0.8s;
+        transition: opacity 0.8s, transform 0.8s;
         transform: translateY(0);
         opacity: 1;
       }
 
       &__tagline {
-        transition: 0.8s 0.5s;
+        transition: opacity 0.8s 0.5s, transform 0.8s 0.5s;
         transform: translateY(0);
         opacity: 1;
       }
     }
 
     .advantage {
-      transition: 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
       transform: translateY(0);
       opacity: 1;
     }

@@ -30,7 +30,7 @@
 
     background-color: $white;
     border-radius: $borderRadius;
-    transition: 0.3s;
+    transition: transform 300ms, width 300ms, opacity 300ms, left 300ms;
 
     &:nth-child(1) {
       top: 0;
@@ -92,8 +92,7 @@
   font-size: 1.4rem;
 
   background-color: $black;
-  transition: 0.3s;
-  opacity: 0;
+  transition: right 300ms;
   overflow-y: auto;
   box-shadow: $boxShadowStrong;
 
@@ -114,7 +113,6 @@
 
   &_active {
     right: 0;
-    opacity: 1;
 
     &::before {
       right: 10px;
@@ -162,7 +160,7 @@
   backdrop-filter: blur(1px);
   pointer-events: none;
   opacity: 0;
-  transition: 0.3s;
+  transition: opacity 300ms;
 
   &_active {
     opacity: 1;
