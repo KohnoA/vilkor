@@ -20,7 +20,9 @@ export default function BarkInfo() {
   return (
     <section
       ref={ref}
-      className={`container section ${styles.section} ${inView ? styles.section_animate : ''}`}
+      className={`container section single-section-page ${styles.section} ${
+        inView ? styles.section_animate : ''
+      }`}
     >
       <h2 className={`title title_left ${styles.title}`}>Отсутствует опыт мульчирования почвы?</h2>
 
