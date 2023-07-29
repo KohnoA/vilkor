@@ -30,7 +30,8 @@ function Background({ image, opacity, fixed = true, children }: BackgroundProps)
           alt="Задний фон"
         />
       </div>
-      <div className={styles.children}>{children}</div>
+      {/* <div className={styles.children}>{children}</div> */}
+      {children}
     </section>
   );
 }
