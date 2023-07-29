@@ -33,7 +33,7 @@ export default function BarkInfo() {
         красива. Итак:
       </p>
 
-      <p>
+      <p style={{ marginBottom: '20px' }}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam consequuntur nulla
         quibusdam. Qui, sed facilis. Adipisci ut molestiae quidem? Obcaecati quasi adipisci, facilis
         illum unde doloribus excepturi cum repellendus iure amet accusantium autem fugiat voluptate
