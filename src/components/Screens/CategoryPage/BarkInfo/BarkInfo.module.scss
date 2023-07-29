@@ -1,19 +1,19 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-// .section {
-//   opacity: 0;
+.section {
+  opacity: 0;
 
-//   &_animate {
-//     transition: opacity 0.8s;
-//     opacity: 1; 
+  &_animate {
+    transition: opacity 0.8s;
+    opacity: 1; 
 
-//     .title {
-//       transition: transform 0.8s;
-//       transform: translateX(0);
-//     }
-//   }
-// }
+    // .title {
+    //   transition: transform 0.8s;
+    //   transform: translateX(0);
+    // }
+  }
+}
 
 // .title {
 //   transform: translateX(-10%);
