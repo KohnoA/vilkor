@@ -1,16 +1,8 @@
-import { useInView } from 'react-intersection-observer';
 import styles from './MulchInfo.module.scss';
 
 export default function MulchInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
   return (
-    <section
-      ref={ref}
-      className={`container section single-section-page ${styles.section} ${
-        inView ? styles.section_animate : ''
-      }`}
-    >
+    <section className={`container section single-section-page`}>
       <h2 className={`title title_left ${styles.title}`}>Мульчирующие изделия</h2>
 
       <p>

@@ -1,24 +1,6 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-.section {
-  opacity: 0;
-
-  &_animate {
-    transition: opacity 0.8s;
-    opacity: 1;
-
-    .title {
-      transition: opacity 0.8s, transform 0.8s;
-      transform: translateY(0);
-    }
-  }
-}
-
-.title {
-  transform: translateX(-10%);
-}
-
 @media (max-width: $tablet) {
   .title {
     text-align: center;

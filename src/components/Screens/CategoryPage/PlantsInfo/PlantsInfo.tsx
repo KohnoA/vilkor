@@ -1,16 +1,8 @@
-import { useInView } from 'react-intersection-observer';
 import styles from './PlantsInfo.module.scss';
 
 export default function PlantsInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
   return (
-    <section
-      ref={ref}
-      className={`container section single-section-page ${styles.section} ${
-        inView ? styles.section_animate : ''
-      }`}
-    >
+    <section className={`container section single-section-page`}>
       <h2 className={`title title_left ${styles.title}`}>Декоративные растения</h2>
 
       <p>

@@ -1,16 +1,8 @@
 import styles from './PeatInfo.module.scss';
-import { useInView } from 'react-intersection-observer';
 
 export default function PeatInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-
   return (
-    <section
-      ref={ref}
-      className={`container section single-section-page ${styles.section} ${
-        inView ? styles.section_animate : ''
-      }`}
-    >
+    <section className={`container section single-section-page`}>
       <h2 className={`title title_left ${styles.title}`}>Что нужно знать о торфе</h2>
 
       <p className={styles.advatages}>

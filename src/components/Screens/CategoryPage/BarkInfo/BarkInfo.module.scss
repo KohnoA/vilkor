@@ -1,32 +1,12 @@
 @import '@/styles/variables';
 @import '@/styles/mixins';
 
-.section {
-  &_animate {
-    .title {
-      opacity: 1;
-      transform: translateX(0);
-      transition: opacity 0.8s, transform 0.8s;
-    }
-
-    .subTitle,
-    .desc,
-    .list {
-      opacity: 1;
-      transition: opacity 0.8s;
-    }
-  }
-}
-
 .title {
   max-width: none;
   display: inline-block;
-  opacity: 0;
-  transform: translateX(-10%);
 }
 
 .subTitle {
-  opacity: 0;
   margin-bottom: 15px;
 
   font-size: 1.2rem;
@@ -34,12 +14,10 @@
 }
 
 .desc {
-  opacity: 0;
   margin-bottom: 20px;
 }
 
 .list {
-  opacity: 0;
   list-style: none;
 }
 
