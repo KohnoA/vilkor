@@ -33,37 +33,13 @@ export default function BarkInfo() {
         красива. Итак:
       </p>
 
-      <p style={{ marginBottom: '20px' }}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam consequuntur nulla
-        quibusdam. Qui, sed facilis. Adipisci ut molestiae quidem? Obcaecati quasi adipisci, facilis
-        illum unde doloribus excepturi cum repellendus iure amet accusantium autem fugiat voluptate
-        reprehenderit enim temporibus laboriosam ipsum praesentium tempora suscipit quae sunt
-        voluptas veniam. Dignissimos, consectetur sed? Nihil dolorem placeat error et inventore nisi
-        perspiciatis debitis natus voluptatem delectus nobis aperiam, voluptatibus esse molestias
-        porro deserunt fuga, veritatis aspernatur dolor corrupti quod dolores dolorum maxime
-        adipisci? Error veniam, inventore voluptates totam quam ducimus nostrum porro ea. In
-        eligendi suscipit doloribus, corporis dolor nihil incidunt reiciendis laborum laudantium?
-      </p>
-
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam consequuntur nulla
-        quibusdam. Qui, sed facilis. Adipisci ut molestiae quidem? Obcaecati quasi adipisci, facilis
-        illum unde doloribus excepturi cum repellendus iure amet accusantium autem fugiat voluptate
-        reprehenderit enim temporibus laboriosam ipsum praesentium tempora suscipit quae sunt
-        voluptas veniam. Dignissimos, consectetur sed? Nihil dolorem placeat error et inventore nisi
-        perspiciatis debitis natus voluptatem delectus nobis aperiam, voluptatibus esse molestias
-        porro deserunt fuga, veritatis aspernatur dolor corrupti quod dolores dolorum maxime
-        adipisci? Error veniam, inventore voluptates totam quam ducimus nostrum porro ea. In
-        eligendi suscipit doloribus, corporis dolor nihil incidunt reiciendis laborum laudantium?
-      </p>
-
-      {/* <ol className={styles.list}>
+      <ol className={styles.list}>
         {BARK_ADVATAGES_LIST.map((advatage, index) => (
           <li className={styles.item} key={index}>
             <span className={styles.num}>🌿{index + 1}.</span> {advatage}
           </li>
         ))}
-      </ol> */}
+      </ol>
     </section>
   );
 }

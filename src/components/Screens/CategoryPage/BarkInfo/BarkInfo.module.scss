@@ -2,22 +2,22 @@
 @import '@/styles/mixins';
 
 .section {
-  opacity: 0;
+  // opacity: 0;
 
   &_animate {
-    transition: opacity 0.8s;
-    opacity: 1; 
+    // transition: opacity 0.8s;
+    // opacity: 1; 
 
-    // .title {
-    //   transition: transform 0.8s;
-    //   transform: translateX(0);
-    // }
+    .title {
+      transition: transform 0.8s;
+      transform: translateX(0);
+    }
   }
 }
 
-// .title {
-//   transform: translateX(-10%);
-// }
+.title {
+  transform: translateX(-10%);
+}
 
 .subTitle {
   margin-bottom: 15px;
