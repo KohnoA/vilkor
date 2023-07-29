@@ -1,33 +1,30 @@
 @import '@/styles/variables';
 
 .section {
-  &_animate {
-    .title {
-      transition: opacity 0.8s, transform 0.8s;
-      opacity: 1;
-      transform: translateX(0);
-    }
+  opacity: 0;
 
-    .info {
-      transition: opacity 0.8s;
-      opacity: 1;
+  &_animate {
+    transition: opacity 0.8s;
+    opacity: 1; 
+
+    .title {
+      transition: transform 0.8s;
+      transform: translateX(0);
     }
   }
 }
 
 .title {
-  opacity: 0;
+  max-width: none;
+  display: inline-block;
   transform: translateX(-10%);
 }
 
-.info {
-  opacity: 0;
-}
-
 .subTitle {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .desc {
@@ -45,7 +42,6 @@
 .num {
   font-size: 1.2rem;
   font-weight: 700;
-  font-style: italic;
 }
 
 @media (max-width: $mobileM) {
