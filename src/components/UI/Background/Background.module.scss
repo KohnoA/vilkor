@@ -11,7 +11,7 @@
 
 .imageWrapper {
   z-index: -1;
-  
+
   height: 100%;
   width: 100%;
 
@@ -39,7 +39,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: $white;
   background-image: none;
   transition: 0.3s;
+
+  &_fixed {
+    background-attachment: initial;
+    background-attachment: fixed;
+  }
 }
