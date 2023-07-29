@@ -64,7 +64,7 @@ export default function Contacts({ theme }: ContactsProps) {
           </ul>
         </div>
 
-        <YMap className={styles.map} />
+        {/* <YMap className={styles.map} /> */}
       </div>
     </section>
   );
