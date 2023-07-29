@@ -18,10 +18,7 @@ export default function BarkInfo() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section
-      ref={ref}
-      className={`container section single-section-page ${inView ? styles.section_animate : ''}`}
-    >
+    <section ref={ref} className={`container section ${inView ? styles.section_animate : ''}`}>
       <h2 className={`title title_left ${styles.title}`}>Отсутствует опыт мульчирования почвы?</h2>
 
       <div className={styles.info}>
