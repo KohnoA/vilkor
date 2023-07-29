@@ -24,22 +24,20 @@ export default function BarkInfo() {
     >
       <h2 className={`title title_left ${styles.title}`}>Отсутствует опыт мульчирования почвы?</h2>
 
-      <div className={styles.info}>
-        <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>
+      <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>
 
-        <p className={styles.desc}>
-          Кора сосны подойдёт для мульчирования 💯%, ведь она не только полезна и долговечна, но и
-          красива. Итак:
-        </p>
+      <p className={styles.desc}>
+        Кора сосны подойдёт для мульчирования 💯%, ведь она не только полезна и долговечна, но и
+        красива. Итак:
+      </p>
 
-        <ol className={styles.list}>
-          {BARK_ADVATAGES_LIST.map((advatage, index) => (
-            <li className={styles.item} key={index}>
-              <span className={styles.num}>🌿{index + 1}.</span> {advatage}
-            </li>
-          ))}
-        </ol>
-      </div>
+      <ol className={styles.list}>
+        {BARK_ADVATAGES_LIST.map((advatage, index) => (
+          <li className={styles.item} key={index}>
+            <span className={styles.num}>🌿{index + 1}.</span> {advatage}
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }

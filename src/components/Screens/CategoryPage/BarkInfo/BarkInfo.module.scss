@@ -19,6 +19,8 @@
 }
 
 .title {
+  max-width: none;
+  display: inline-block;
   opacity: 0;
   transform: translateX(-10%);
 }
