@@ -2,19 +2,16 @@
 @import '@/styles/mixins';
 
 .section {
-  // opacity: 0;
-
   &_animate {
-    // transition: opacity 0.8s;
-    // opacity: 1; 
-
     .title {
       opacity: 1;
       transform: translateX(0);
       transition: opacity 0.8s, transform 0.8s;
     }
 
-    .info {
+    .subTitle,
+    .desc,
+    .list {
       opacity: 1;
       transition: opacity 0.8s;
     }
@@ -26,12 +23,8 @@
   transform: translateX(-10%);
 }
 
-.info {
-  opacity: 0;
-}
-
 .subTitle {
-  // opacity: 0; ////////////
+  opacity: 0;
   margin-bottom: 15px;
 
   font-size: 1.2rem;
@@ -39,10 +32,12 @@
 }
 
 .desc {
+  opacity: 0;
   margin-bottom: 20px;
 }
 
 .list {
+  opacity: 0;
   list-style: none;
 }
 
