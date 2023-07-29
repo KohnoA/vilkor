@@ -13,12 +13,21 @@
       transform: translateX(0);
       transition: opacity 0.8s, transform 0.8s;
     }
+
+    .info {
+      opacity: 1;
+      transition: opacity 0.8s;
+    }
   }
 }
 
 .title {
   opacity: 0;
   transform: translateX(-10%);
+}
+
+.info {
+  opacity: 0;
 }
 
 .subTitle {
