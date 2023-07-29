@@ -26,7 +26,19 @@ export default function BarkInfo() {
     >
       <h2 className={`title title_left ${styles.title}`}>Отсутствует опыт мульчирования почвы?</h2>
 
-      <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit ipsum voluptate
+        placeat necessitatibus voluptatem doloribus eum quas doloremque obcaecati? Ab, sit?
+        Excepturi quia similique maiores corporis unde aut qui voluptatibus, velit necessitatibus
+        aliquam provident illo cumque quibusdam nulla quidem? Ad nesciunt non iusto, fugit,
+        reiciendis enim facere quis dolorem saepe eius, recusandae laboriosam! Maiores rerum fugit
+        labore velit! Quos asperiores laudantium saepe quas facere? At, culpa cupiditate tempora
+        velit similique autem. Aliquid adipisci neque a sint vel libero expedita et mollitia, sed
+        quo quia, facere quos assumenda amet porro reprehenderit unde sapiente incidunt laborum
+        tenetur. Nobis beatae quas culpa.
+      </p>
+
+      {/* <h4 className={styles.subTitle}>10 ЗОЛОТЫХ СОВЕТОВ вам помогут!</h4>
 
       <p className={styles.desc}>
         Кора сосны подойдёт для мульчирования 💯%, ведь она не только полезна и долговечна, но и
@@ -39,7 +51,7 @@ export default function BarkInfo() {
             <span className={styles.num}>🌿{index + 1}.</span> {advatage}
           </li>
         ))}
-      </ol>
+      </ol> */}
     </section>
   );
 }
