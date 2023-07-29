@@ -15,7 +15,7 @@ const DEFAULT_OPACITY = '0.6';
 
 function Background({ image, opacity, fixed = true, children }: BackgroundProps) {
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <div
         className={styles.bg}
         style={{
@@ -25,7 +25,7 @@ function Background({ image, opacity, fixed = true, children }: BackgroundProps)
         }}
       ></div>
       <div className={styles.children}>{children}</div>
-    </section>
+    </div>
   );
 }
 
