@@ -1,22 +1,27 @@
 @import '@/styles/variables';
 
 .section {
-  opacity: 0;
-
   &_animate {
-    transition: opacity 0.8s;
-    opacity: 1;
-
     .title {
-      transition: transform 0.8s;
+      transition: opacity 0.8s, transform 0.8s;
+      opacity: 1;
       transform: translateX(0);
+    }
+
+    .info {
+      transition: opacity 0.8s;
+      opacity: 1;
     }
   }
 }
 
 .title {
-  // white-space: nowrap;
+  opacity: 0;
   transform: translateX(-10%);
+}
+
+.info {
+  opacity: 0;
 }
 
 .subTitle {
@@ -42,12 +47,6 @@
   font-weight: 700;
   font-style: italic;
 }
-
-// @media (max-width: $laptop) {
-//   .title {
-//     white-space: normal;
-//   }
-// }
 
 @media (max-width: $mobileM) {
   .subTitle {
