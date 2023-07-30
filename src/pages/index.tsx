@@ -25,23 +25,39 @@ export default function Home() {
     <Layout title="Главная">
       <PromoSlider content={PROMO_SLIDES} />
 
-      <Background>
+      {/* <Background>
         <Advantages content={ADVATAGES} />
 
         <TransitionIcon />
-      </Background>
+      </Background> */}
 
-      <Products content={PRODUCTS} />
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Advantages content={ADVATAGES} />
+        <TransitionIcon />
+      </div>
 
-      <Background>
-        <Services content={SERVICES} />
-      </Background>
+      <div style={{ backgroundColor: '#f9f8f3' }}>
+        <Products content={PRODUCTS} />
+      </div>
 
-      <Works content={WORKS} />
+      <Services content={SERVICES} />
 
-      <Background fixed={false} image={contactsBg} opacity={100}>
+      <div style={{ backgroundColor: '#f9f8f3' }}>
+        <Works content={WORKS} />
+      </div>
+
+      <div
+        style={{
+          backgroundImage: `url(${contactsBg.src})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
+      >
         <Contacts theme={AppTheme.DARK} />
-      </Background>
+      </div>
+      {/* <Background fixed={false} image={contactsBg} opacity={100}> */}
+      {/* </Background> */}
 
       <ScrollToTop />
     </Layout>

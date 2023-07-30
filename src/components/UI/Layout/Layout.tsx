@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
+import styles from './Layout.module.scss';
 
 interface MainContainerProps {
   children?: React.ReactNode;
@@ -20,7 +21,10 @@ export default function Layout({ children, title, description }: MainContainerPr
 
       <Header />
 
-      <main className="page">{children}</main>
+      <main className="page">
+        <div className={styles.texture}></div>
+        {children}
+      </main>
 
       <Footer />
     </>
