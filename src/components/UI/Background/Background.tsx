@@ -19,7 +19,8 @@ function Background({ image, opacity, fixed = true, children }: BackgroundProps)
       <div
         className={styles.bg}
         style={{
-          backgroundImage: `url(${image?.src ?? defaultTexture.src})`,
+          // backgroundImage: `url(${image?.src ?? defaultTexture.src})`,
+          backgroundImage: `url(${defaultTexture.src})`,
           opacity: opacity ? String(opacity / 100) : DEFAULT_OPACITY,
           backgroundAttachment: fixed ? 'fixed' : 'none',
         }}
