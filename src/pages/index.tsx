@@ -9,7 +9,6 @@ import Services from '@/components/Services/Services';
 import Works from '@/components/Works/Works';
 import Contacts from '@/components/Contacts/Contacts';
 import TransitionIcon from '@/components/icons/TransitionIcon';
-import { SERVICES } from '@/constants/services';
 import { WORKS } from '@/constants/works';
 import dynamic from 'next/dynamic';
 import contactsBg from 'public/images/background.jpg';
@@ -34,7 +33,7 @@ export default function Home() {
         <Products content={PRODUCTS} />
       </Background>
 
-      <Services content={SERVICES} />
+      <Services />
 
       <Background>
         <Works content={WORKS} />

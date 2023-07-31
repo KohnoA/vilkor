@@ -1,14 +1,10 @@
 import styles from './Services.module.scss';
 import { A1_NUMBER } from '@/constants';
-import { AccordionContentType } from '@/types';
 import Accordion from '../UI/Accordion/Accordion';
 import { useInView } from 'react-intersection-observer';
+import { SERVICES_LANDSCAPE, SERVICES_DISMANTLING } from '@/constants/services';
 
-interface ServicesProps {
-  content: AccordionContentType;
-}
-
-export default function Services({ content }: ServicesProps) {
+export default function Services() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
@@ -23,15 +19,13 @@ export default function Services({ content }: ServicesProps) {
         <span className={styles.number}>{A1_NUMBER}</span>
       </p>
 
-      <Accordion className={styles.accordion} content={content} />
-      {/* <div className={styles.landscape}>
-        <h4 className={`title title_left`}>Ландшафтные и строительные работы</h4>
-      </div> */}
+      <Accordion
+        className={styles.accordion}
+        content={SERVICES_LANDSCAPE}
+        title="Ландшафтные и строительные работы"
+      />
 
-      {/* <div>
-        <h4 className={`title title_left`}>Демонтаж</h4>
-        <Accordion className={styles.accordion} content={content} />
-      </div> */}
+      <Accordion className={styles.accordion} content={SERVICES_DISMANTLING} title="Демонтаж" />
     </section>
   );
 }
