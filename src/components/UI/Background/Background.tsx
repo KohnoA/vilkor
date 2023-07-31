@@ -2,26 +2,22 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './Background.module.scss';
 import defaultTexture from 'public/images/white-texture.jpg';
 import { memo } from 'react';
+import { IconColor } from '@/constants';
 
 interface BackgroundProps {
   children: React.ReactNode;
+  color?: IconColor;
   image?: StaticImageData;
-  opacity?: number;
-  fixed?: boolean;
+  className?: string;
 }
 
-const DEFAULT_OPACITY = '0.6';
-
-function Background({ image, opacity, fixed = true, children }: BackgroundProps) {
+function Background({ image, children, color, className }: BackgroundProps) {
   return (
-    <section className={styles.container}>
-      <div
-        className={styles.imageWrapper}
-        style={{
-          opacity: opacity ? String(opacity / 100) : DEFAULT_OPACITY,
-          position: fixed ? 'fixed' : 'absolute',
-        }}
-      >
+    <div
+      className={`${styles.container} ${className ?? ''}`}
+      style={{ backgroundColor: color ?? IconColor.WHITE }}
+    >
+      {image && (
         <Image
           className={styles.image}
           src={image ?? defaultTexture}
@@ -29,9 +25,9 @@ function Background({ image, opacity, fixed = true, children }: BackgroundProps)
           sizes="1440px"
           alt="Задний фон"
         />
-      </div>
-      <div className={styles.children}>{children}</div>
-    </section>
+      )}
+      {children}
+    </div>
   );
 }
 

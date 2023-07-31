@@ -4,7 +4,6 @@ import { PRODUCTS } from '@/constants/products';
 import { IProductItem } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import styles from '@/components/Screens/ProductPage/ProductPage.module.scss';
-import Texture from '@/components/UI/Background/Background';
 import MulchNote from '@/components/Screens/ProductPage/Notes/MulchNote';
 import BarkNote from '@/components/Screens/ProductPage/Notes/BarkNote';
 import ContactsInfo from '@/components/Screens/ProductPage/ContactsInfo/ContactsInfo';
@@ -23,43 +22,39 @@ export default function ProductPage({ product, category }: ProdcutPageProps) {
 
   return (
     <Layout title={title}>
-      <Texture>
-        <section
-          ref={ref}
-          className={`container section single-section-page ${styles.section} ${
-            inView ? styles.section_animate : ''
-          }`}
-        >
-          <h2 className={`title title_center ${styles.title}`}>{title}</h2>
-          <div className={styles.wrapper}>
-            <Gallery className={styles.gallery} images={images} />
+      <section
+        ref={ref}
+        className={`container section ${styles.section} ${inView ? styles.section_animate : ''}`}
+      >
+        <h2 className={`title title_center ${styles.title}`}>{title}</h2>
+        <div className={styles.wrapper}>
+          <Gallery className={styles.gallery} images={images} />
 
-            <div className={styles.info}>
-              <div>
-                <h3 className={`title title_left ${styles.subTitle}`}>Информация о товаре</h3>
-                <div className={styles.productProps}>
-                  {acidity && <p>Кислотность: {acidity}</p>}
-                  {fraction && <p>Фракция: {fraction}</p>}
-                  {packaging && <p>Упаковка: {packaging}</p>}
-                  {volume && <p>Объем: {volume}</p>}
-                </div>
-
-                {category === ProductCategory.MULCH && <MulchNote title={title} />}
-                {category === ProductCategory.BARK && <BarkNote />}
-                {category === ProductCategory.PEAT && <PeatNote title={title} />}
-
-                <p className={`${styles.stock} ${stock ? styles.stock_true : styles.stock_false}`}>
-                  {stock ? 'В наличии' : 'Нет в наличии'}
-                </p>
-
-                <p className={styles.price}>Цена: {price}</p>
+          <div className={styles.info}>
+            <div>
+              <h3 className={`title title_left ${styles.subTitle}`}>Информация о товаре</h3>
+              <div className={styles.productProps}>
+                {acidity && <p>Кислотность: {acidity}</p>}
+                {fraction && <p>Фракция: {fraction}</p>}
+                {packaging && <p>Упаковка: {packaging}</p>}
+                {volume && <p>Объем: {volume}</p>}
               </div>
 
-              <ContactsInfo />
+              {category === ProductCategory.MULCH && <MulchNote title={title} />}
+              {category === ProductCategory.BARK && <BarkNote />}
+              {category === ProductCategory.PEAT && <PeatNote title={title} />}
+
+              <p className={`${styles.stock} ${stock ? styles.stock_true : styles.stock_false}`}>
+                {stock ? 'В наличии' : 'Нет в наличии'}
+              </p>
+
+              <p className={styles.price}>Цена: {price}</p>
             </div>
+
+            <ContactsInfo />
           </div>
-        </section>
-      </Texture>
+        </div>
+      </section>
     </Layout>
   );
 }
