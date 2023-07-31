@@ -5,13 +5,12 @@ import { IconColor } from '@/constants';
 const InstagramLogo: FC<IconsProps> = ({ width, height, color }) => {
   const INITIAL_WIDTH = 29;
   const INITIAL_HEIGHT = 29;
-  const ICON_DIFFERENCE = 6;
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={width ? width + ICON_DIFFERENCE : INITIAL_WIDTH}
-      height={height ? height + ICON_DIFFERENCE : INITIAL_HEIGHT}
+      width={width ?? INITIAL_WIDTH}
+      height={height ?? INITIAL_HEIGHT}
       viewBox="0 0 24 24"
       fill={color ?? IconColor.WHITE}
     >

@@ -65,3 +65,9 @@
   opacity: 0;
   transform: scale(0.95);
 }
+
+@media (max-width: $mobileL) {
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}

@@ -350,7 +350,7 @@ export const SERVICES_DISMANTLING: AccordionContentType = [
       {
         id: 34,
         name: 'Уборка и фасовка строительного мусора',
-        explanation: 'мешок от 4 руб.',
+        explanation: 'мешок от 50 коп.',
       },
     ],
   },
