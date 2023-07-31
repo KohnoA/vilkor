@@ -11,7 +11,7 @@ import MulchInfo from '@/components/Screens/CategoryPage/MulchInfo/MulchInfo';
 import PlantsInfo from '@/components/Screens/CategoryPage/PlantsInfo/PlantsInfo';
 import PlantsSection from '@/components/Screens/CategoryPage/PlantsSection/PlantsSection';
 
-const Background = dynamic(() => import('@/components/UI/Background/Background'), { ssr: false });
+const Background = dynamic(() => import('@/components/UI/Background/Background'));
 
 interface CategoryPageProps {
   category: IProduct;
@@ -22,16 +22,14 @@ export default function CategoryPage({ category }: CategoryPageProps) {
 
   return (
     <Layout title={title}>
-      <div style={{ backgroundColor: '#f9f8f3' }}>
+      <Background>
         {categoryTitle === ProductCategory.PLANTS ? (
           <PlantsSection />
         ) : (
           <CategoryProductsList title={title} products={items} category={categoryTitle} />
         )}
-      </div>
+      </Background>
 
-      {/* <Background>
-      </Background> */}
       {categoryTitle === ProductCategory.BARK && <BarkInfo />}
       {categoryTitle === ProductCategory.PEAT && <PeatInfo />}
       {categoryTitle === ProductCategory.MULCH && <MulchInfo />}

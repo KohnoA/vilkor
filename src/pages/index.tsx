@@ -25,33 +25,24 @@ export default function Home() {
     <Layout title="VILKOR | Главная">
       <PromoSlider content={PROMO_SLIDES} />
 
-      {/* <Background>
-        <Advantages content={ADVATAGES} />
-        
-        <TransitionIcon />
-      </Background> */}
-
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <Advantages content={ADVATAGES} />
         <TransitionIcon />
       </div>
 
-      <div style={{ backgroundColor: '#f9f8f3' }}>
+      <Background>
         <Products content={PRODUCTS} />
-      </div>
+      </Background>
 
       <Services content={SERVICES} />
-      {/* <Background>
-        <Services content={SERVICES} />
-      </Background> */}
 
-      <div style={{ backgroundColor: '#f9f8f3' }}>
+      <Background>
         <Works content={WORKS} />
-      </div>
+      </Background>
 
-      {/* <Background fixed={false} image={contactsBg} opacity={100}>
+      <Background image={contactsBg}>
         <Contacts theme={AppTheme.DARK} />
-      </Background> */}
+      </Background>
 
       <ScrollToTop />
     </Layout>

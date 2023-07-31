@@ -1,28 +1,10 @@
 .container {
   position: relative;
-
-  width: 100%;
-  height: min-content;
-  -webkit-clip-path: inset(0 0 0 0);
-  clip-path: inset(0 0 0 0);
-}
-
-.imageWrapper {
-  z-index: -1;
   
-  height: 100%;
   width: 100%;
-
-  left: 0;
-  top: 0;
 }
 
 .image {
   object-fit: cover;
   object-position: center;
-}
-
-.children {
-  display: flex;
-  flex-direction: column;
 }
