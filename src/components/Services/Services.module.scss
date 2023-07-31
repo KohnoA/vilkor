@@ -34,7 +34,7 @@
 
 .moreInfo {
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   text-align: center;
 
@@ -46,28 +46,7 @@
   white-space: nowrap;
 }
 
-.group {
-  max-width: $accordionMaxWidth;
-  margin: 0 auto;
-  margin-bottom: 60px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: 600;
-}
-
 .accordion {
   opacity: 0;
   transform: scale(0.95);
-}
-
-@media (max-width: $mobileL) {
-  .subtitle {
-    font-size: 1.2rem;
-  }
 }

@@ -19,15 +19,13 @@ export default function Services() {
         <span className={styles.number}>{A1_NUMBER}</span>
       </p>
 
-      <div className={styles.group}>
-        <h4 className={`title title_left ${styles.subtitle}`}>Ландшафтные и строительные работы</h4>
-        <Accordion className={styles.accordion} content={SERVICES_LANDSCAPE} />
-      </div>
+      <Accordion
+        className={styles.accordion}
+        content={SERVICES_LANDSCAPE}
+        title="Ландшафтные и строительные работы"
+      />
 
-      <div className={styles.group}>
-        <h4 className={`title title_left ${styles.subtitle}`}>Демонтаж</h4>
-        <Accordion className={styles.accordion} content={SERVICES_DISMANTLING} />
-      </div>
+      <Accordion className={styles.accordion} content={SERVICES_DISMANTLING} title="Демонтаж" />
     </section>
   );
 }

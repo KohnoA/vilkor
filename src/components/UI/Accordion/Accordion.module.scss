@@ -4,8 +4,32 @@
   max-width: $accordionMaxWidth;
 
   margin: 0 auto;
+  margin-bottom: 60px;
 
   background-color: $white;
   border-radius: $borderRadius;
   box-shadow: $boxShadowLight;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header {
+  padding: 20px;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $white;
+  text-align: center;
+
+  background-color: $lightBlack;
+  border-top-left-radius: $borderRadius;
+  border-top-right-radius: $borderRadius;
+}
+
+@media (max-width: $mobileL) {
+  .header {
+    font-size: 1.2rem;
+  }
 }
