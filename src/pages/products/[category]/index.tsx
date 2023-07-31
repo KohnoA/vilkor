@@ -22,18 +22,20 @@ export default function CategoryPage({ category }: CategoryPageProps) {
 
   return (
     <Layout title={title}>
-      {categoryTitle === ProductCategory.PLANTS ? (
-        <PlantsSection />
-      ) : (
-        <CategoryProductsList title={title} products={items} category={categoryTitle} />
-      )}
+      <div style={{ backgroundColor: '#f9f8f3' }}>
+        {categoryTitle === ProductCategory.PLANTS ? (
+          <PlantsSection />
+        ) : (
+          <CategoryProductsList title={title} products={items} category={categoryTitle} />
+        )}
+      </div>
 
-      <Background>
-        {categoryTitle === ProductCategory.BARK && <BarkInfo />}
-        {categoryTitle === ProductCategory.PEAT && <PeatInfo />}
-        {categoryTitle === ProductCategory.MULCH && <MulchInfo />}
-        {categoryTitle === ProductCategory.PLANTS && <PlantsInfo />}
-      </Background>
+      {/* <Background>
+      </Background> */}
+      {categoryTitle === ProductCategory.BARK && <BarkInfo />}
+      {categoryTitle === ProductCategory.PEAT && <PeatInfo />}
+      {categoryTitle === ProductCategory.MULCH && <MulchInfo />}
+      {categoryTitle === ProductCategory.PLANTS && <PlantsInfo />}
     </Layout>
   );
 }

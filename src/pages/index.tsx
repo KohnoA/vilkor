@@ -22,26 +22,36 @@ const ScrollToTop = dynamic(() => import('@/components/UI/ScrollToTop/ScrollToTo
 
 export default function Home() {
   return (
-    <Layout title="Главная">
+    <Layout title="VILKOR | Главная">
       <PromoSlider content={PROMO_SLIDES} />
 
-      <Background>
+      {/* <Background>
         <Advantages content={ADVATAGES} />
-
+        
         <TransitionIcon />
-      </Background>
+      </Background> */}
 
-      <Products content={PRODUCTS} />
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <Advantages content={ADVATAGES} />
+        <TransitionIcon />
+      </div>
 
-      <Background>
+      <div style={{ backgroundColor: '#f9f8f3' }}>
+        <Products content={PRODUCTS} />
+      </div>
+
+      <Services content={SERVICES} />
+      {/* <Background>
         <Services content={SERVICES} />
-      </Background>
+      </Background> */}
 
-      <Works content={WORKS} />
+      <div style={{ backgroundColor: '#f9f8f3' }}>
+        <Works content={WORKS} />
+      </div>
 
-      <Background fixed={false} image={contactsBg} opacity={100}>
+      {/* <Background fixed={false} image={contactsBg} opacity={100}>
         <Contacts theme={AppTheme.DARK} />
-      </Background>
+      </Background> */}
 
       <ScrollToTop />
     </Layout>

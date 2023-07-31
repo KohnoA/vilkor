@@ -24,6 +24,14 @@ export default function Services({ content }: ServicesProps) {
       </p>
 
       <Accordion className={styles.accordion} content={content} />
+      {/* <div className={styles.landscape}>
+        <h4 className={`title title_left`}>Ландшафтные и строительные работы</h4>
+      </div> */}
+
+      {/* <div>
+        <h4 className={`title title_left`}>Демонтаж</h4>
+        <Accordion className={styles.accordion} content={content} />
+      </div> */}
     </section>
   );
 }
