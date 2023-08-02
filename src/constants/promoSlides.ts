@@ -8,10 +8,10 @@ import { AppRoutes, ProductCategory } from '.';
 
 export const PROMO_SLIDES: IPromoSlides[] = [
   {
-    image: decRastImg,
-    link: `${AppRoutes.PRODUCTS}/${ProductCategory.PLANTS}`,
-    title: 'Декоративные растения',
-    desc: 'Саженцы хвойных и лиственных деревьев',
+    image: serviecsImg,
+    link: AppRoutes.SERVICES,
+    title: 'Строительные и ландшафтные работы',
+    desc: 'Строительство домов под "ключ". Благоустройство, расчистка участка',
   },
   {
     image: koraImg,
@@ -26,15 +26,15 @@ export const PROMO_SLIDES: IPromoSlides[] = [
     desc: 'Широкий выбор, доступные цены',
   },
   {
+    image: decRastImg,
+    link: `${AppRoutes.PRODUCTS}/${ProductCategory.PLANTS}`,
+    title: 'Декоративные растения',
+    desc: 'Саженцы хвойных и лиственных деревьев',
+  },
+  {
     image: torfImg,
     link: `${AppRoutes.PRODUCTS}/${ProductCategory.PEAT}`,
     title: 'Торф',
     desc: 'Позволит повысить урожайность за счёт улучшения грунта',
-  },
-  {
-    image: serviecsImg,
-    link: AppRoutes.SERVICES,
-    title: 'Услуги',
-    desc: 'Реализация сада под «ключ». Благоустройство, расчистка участка',
   },
 ];

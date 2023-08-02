@@ -7,16 +7,18 @@ import decRastImg from 'public/images/dec-rast-card.jpg';
 import torfImg from 'public/images/torf-card.jpg';
 
 import barkLarge from 'public/images/bark-large.jpg';
-
 import barkMedium from 'public/images/bark-medium.jpg';
 import barkMedium2 from 'public/images/bark-medium2.jpg';
 import barkMedium3 from 'public/images/bark-medium3.jpg';
-
 import barkSmall03 from 'public/images/bark-small-0-3.jpg';
 import barkSmall13 from 'public/images/bark-small-1-3.jpg';
 import barkSifting from 'public/images/bark-sifting.jpg';
 
-import mulchItem from 'public/images/mulchItem.jpg';
+import cones from 'public/images/cones.jpg';
+import blueberry from 'public/images/blueberry.jpg';
+import shell from 'public/images/shell.jpg';
+import woodchips from 'public/images/wood-сhips.jpg';
+import straw from 'public/images/straw.jpg';
 
 export const PRODUCTS: IProduct[] = [
   {
@@ -85,7 +87,7 @@ export const PRODUCTS: IProduct[] = [
     items: [
       {
         id: 1,
-        images: [multMaterialImg, mulchItem],
+        images: [cones],
         title: 'Шишки',
         volume: '50 л.',
         price: '15 руб.',
@@ -94,25 +96,16 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 2,
-        images: [multMaterialImg, mulchItem],
-        title: 'Солома',
-        volume: '80 л.',
-        price: '8 руб.',
-        packaging: 'Мешок',
-        stock: true,
-      },
-      {
-        id: 3,
-        images: [multMaterialImg, mulchItem],
-        title: 'Гречишная скорлупа',
+        images: [blueberry],
+        title: 'Смесь для голубики',
         volume: '50 л.',
         price: '15 руб.',
         packaging: 'Мешок',
         stock: true,
       },
       {
-        id: 4,
-        images: [multMaterialImg, mulchItem],
+        id: 3,
+        images: [multMaterialImg],
         title: 'Опилки',
         volume: '60 л.',
         price: '10 руб.',
@@ -120,8 +113,8 @@ export const PRODUCTS: IProduct[] = [
         stock: true,
       },
       {
-        id: 5,
-        images: [multMaterialImg, mulchItem],
+        id: 4,
+        images: [woodchips],
         title: 'Щепа',
         volume: '60 л.',
         price: '12 руб.',
@@ -129,9 +122,18 @@ export const PRODUCTS: IProduct[] = [
         stock: true,
       },
       {
+        id: 5,
+        images: [straw],
+        title: 'Солома',
+        volume: '80 л.',
+        price: '8 руб.',
+        packaging: 'Мешок',
+        stock: true,
+      },
+      {
         id: 6,
-        images: [multMaterialImg, mulchItem],
-        title: 'Смесь для голубики',
+        images: [shell],
+        title: 'Гречишная скорлупа',
         volume: '50 л.',
         price: '15 руб.',
         packaging: 'Мешок',
@@ -154,7 +156,7 @@ export const PRODUCTS: IProduct[] = [
     items: [
       {
         id: 1,
-        images: [torfImg, mulchItem],
+        images: [torfImg],
         title: 'Торф верховой',
         volume: '50 л.',
         price: '13 руб.',
@@ -164,7 +166,7 @@ export const PRODUCTS: IProduct[] = [
       },
       {
         id: 2,
-        images: [torfImg, mulchItem],
+        images: [torfImg],
         title: 'Торф низинный (нейтральный)',
         volume: '50 л.',
         price: '9 руб.',
