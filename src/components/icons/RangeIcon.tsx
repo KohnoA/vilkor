@@ -11,7 +11,7 @@ const RangeIcon: FC<IconsProps> = ({ width, height, color }) => {
       xmlns="http://www.w3.org/2000/svg"
       width={width ?? INITIAL_WIDTH}
       height={height ?? INITIAL_HEIGHT}
-      viewBox="0 -2 48 48"
+      viewBox="-2 -4 52 52"
       fill={color ?? IconColor.GREEN}
     >
       <g data-name="Layer 2">
