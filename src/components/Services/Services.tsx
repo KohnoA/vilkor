@@ -2,7 +2,9 @@ import styles from './Services.module.scss';
 import { A1_NUMBER } from '@/constants';
 import Accordion from '../UI/Accordion/Accordion';
 import { useInView } from 'react-intersection-observer';
-import { SERVICES_LANDSCAPE, SERVICES_DISMANTLING } from '@/constants/services';
+import { SERVICES_LANDSCAPE, SERVICES_CONSTRUCTION } from '@/constants/services';
+import AccordionItem from '../UI/Accordion/AccordionItem/AccordionItem';
+import Table from './Table/Table';
 
 export default function Services() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
@@ -19,13 +21,25 @@ export default function Services() {
         <span className={styles.number}>{A1_NUMBER}</span>
       </p>
 
-      <Accordion
-        className={styles.accordion}
-        content={SERVICES_LANDSCAPE}
-        title="Ландшафтные и строительные работы"
-      />
+      <Accordion className={styles.accordion} title="Строительные работы">
+        {SERVICES_CONSTRUCTION.map(({ id, category, list }) => (
+          <AccordionItem key={id} title={category}>
+            <ul>
+              {list.map(({ id, title }) => (
+                <li key={id}>{title}</li>
+              ))}
+            </ul>
+          </AccordionItem>
+        ))}
+      </Accordion>
 
-      <Accordion className={styles.accordion} content={SERVICES_DISMANTLING} title="Демонтаж" />
+      <Accordion className={styles.accordion} title="Ландшафтные работы">
+        {SERVICES_LANDSCAPE.map(({ id, title, services }) => (
+          <AccordionItem key={id} title={title}>
+            <Table data={services} />
+          </AccordionItem>
+        ))}
+      </Accordion>
     </section>
   );
 }

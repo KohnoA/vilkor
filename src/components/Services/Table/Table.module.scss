@@ -1,0 +1,59 @@
+@import '@/styles/variables';
+
+.container {
+  width: 100%;
+  border-radius: $borderRadius;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-spacing: 0;
+  overflow: hidden;
+
+  & td {
+    padding: 10px;
+  }
+
+  & th {
+    padding: 15px;
+    color: $white;
+    background-color: $lightBlack;
+  }
+
+  & td,
+  th {
+    border-right: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  & tr:last-child td {
+    border-bottom: none;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: $mobileL) {
+  .container {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: $mobileM) {
+  .container {
+    border-radius: 0;
+    border: none;
+    hyphens: auto;
+
+    & td {
+      padding: 7.5px;
+    }
+
+    & th {
+      padding: 10px;
+    }
+  }
+}

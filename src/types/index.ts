@@ -53,12 +53,21 @@ export interface IWork {
   images: StaticImageData[];
 }
 
-export type AccordionContentType = {
+export type ServicesListType = {
+  id: number;
+  name: string;
+  units?: string;
+  price?: string | number;
+};
+
+export type ServicesDataType = {
   id: number;
   title: string;
-  list: {
-    id: number;
-    name: string;
-    explanation: string;
-  }[];
-}[];
+  services: ServicesListType[];
+};
+
+export type ServicesDataTypeWithCategories = {
+  id: number;
+  category: string;
+  list: ServicesDataType[];
+};

@@ -13,20 +13,32 @@ const STICKY_POINT = 100;
 
 export default function Header() {
   const { pathname } = useRouter();
-  const [isDropdown, setIsDropdown] = useState<boolean>(false);
+  const [isProductsDropdown, setIsProductsDropdown] = useState<boolean>(false);
+  const [isServicesDropdown, setIsServicesDropdown] = useState<boolean>(false);
   const [isStickHeader, setIsStickHeader] = useState<boolean>(false);
   const isMainPage = pathname === AppRoutes.MAIN;
 
-  const dropdownContent = useMemo(() => {
+  const productsDropdownContent = useMemo(() => {
     return PRODUCTS.map(({ title, category }) => ({
       title,
       link: `${AppRoutes.PRODUCTS}/${category}`,
     }));
   }, []);
 
-  const showProductsDropdown = () => setIsDropdown(true);
+  const servicesDropdownContent = useMemo(() => {
+    return [
+      { title: 'Строительные работы', link: '#' },
+      { title: 'Ландшафтные работы', link: '#' },
+    ];
+  }, []);
 
-  const closeProductsDropdown = () => setIsDropdown(false);
+  const showProductsDropdown = () => setIsProductsDropdown(true);
+
+  const closeProductsDropdown = () => setIsProductsDropdown(false);
+
+  const showServicesDropdown = () => setIsServicesDropdown(true);
+
+  const closeServicesDropdown = () => setIsServicesDropdown(false);
 
   useEffect(() => {
     if (isMainPage) {
@@ -60,14 +72,26 @@ export default function Header() {
 
             <Dropdown
               closeHanlder={closeProductsDropdown}
-              isShow={isDropdown}
-              items={dropdownContent}
+              isShow={isProductsDropdown}
+              items={productsDropdownContent}
             />
           </li>
-          <li className={styles.nav__item}>
+          <li
+            className={styles.nav__item}
+            onMouseOut={closeServicesDropdown}
+            onBlur={closeServicesDropdown}
+            onMouseOver={showServicesDropdown}
+            onFocus={showServicesDropdown}
+          >
             <Link href={AppRoutes.SERVICES} className={styles.nav__link}>
               Услуги
             </Link>
+
+            <Dropdown
+              closeHanlder={closeServicesDropdown}
+              isShow={isServicesDropdown}
+              items={servicesDropdownContent}
+            />
           </li>
           <li className={styles.nav__item}>
             <Link href={AppRoutes.CONTACTS} className={styles.nav__link}>
