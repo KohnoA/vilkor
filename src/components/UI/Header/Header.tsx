@@ -27,8 +27,14 @@ export default function Header() {
 
   const servicesDropdownContent = useMemo(() => {
     return [
-      { title: 'Строительные работы', link: '#' },
-      { title: 'Ландшафтные работы', link: '#' },
+      {
+        title: 'Строительные работы',
+        link: AppRoutes.SERVICES_CONSTRUCTION,
+      },
+      {
+        title: 'Ландшафтные работы',
+        link: AppRoutes.SERVICES_LANDSCAPE,
+      },
     ];
   }, []);
 

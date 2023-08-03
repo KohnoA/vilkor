@@ -4,10 +4,13 @@ import Accordion from '../UI/Accordion/Accordion';
 import { useInView } from 'react-intersection-observer';
 import { SERVICES_LANDSCAPE, SERVICES_CONSTRUCTION } from '@/constants/services';
 import AccordionItem from '../UI/Accordion/AccordionItem/AccordionItem';
-import Table from './Table/Table';
+import { useMemo } from 'react';
+import Table from '../UI/Table/Table';
 
 export default function Services() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+
+  const landscapeTableHead = useMemo(() => ['Наименование услуги', 'Цена за', 'Цена от'], []);
 
   return (
     <section
@@ -36,7 +39,7 @@ export default function Services() {
       <Accordion className={styles.accordion} title="Ландшафтные работы">
         {SERVICES_LANDSCAPE.map(({ id, title, services }) => (
           <AccordionItem key={id} title={title}>
-            <Table data={services} />
+            <Table head={landscapeTableHead} data={services} />
           </AccordionItem>
         ))}
       </Accordion>

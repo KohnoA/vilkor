@@ -1,11 +1,5 @@
 .section {
   &_animate {
-    .title {
-      transition: opacity 0.8s, transform 0.8s;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     .accordion {
       transition: opacity 0.8s, transform 0.8s;
       opacity: 1;
@@ -22,13 +16,6 @@
       opacity: 1;
     }
   }
-}
-
-.title {
-  margin-bottom: 30px;
-
-  opacity: 0;
-  transform: translateY(50%);
 }
 
 .accordion {

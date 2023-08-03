@@ -53,17 +53,23 @@ export interface IWork {
   images: StaticImageData[];
 }
 
-export type ServicesListType = {
+export type TableItemType = {
   id: number;
   name: string;
   units?: string;
   price?: string | number;
 };
 
+export type PlantsDataType = {
+  id: number;
+  title: string;
+  list: TableItemType[];
+};
+
 export type ServicesDataType = {
   id: number;
   title: string;
-  services: ServicesListType[];
+  services: TableItemType[];
 };
 
 export type ServicesDataTypeWithCategories = {

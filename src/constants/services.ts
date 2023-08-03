@@ -122,6 +122,7 @@ export const SERVICES_LANDSCAPE: ServicesDataType[] = [
       {
         id: 5,
         name: 'Создание клумб',
+        price: 'договорная',
       },
       {
         id: 6,
@@ -198,6 +199,7 @@ export const SERVICES_LANDSCAPE: ServicesDataType[] = [
       {
         id: 9,
         name: 'Устройство декоративных водоемов, водоподов, ручьев',
+        price: 'договорная',
       },
     ],
   },
