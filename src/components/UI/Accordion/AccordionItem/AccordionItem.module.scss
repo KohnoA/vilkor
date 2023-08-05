@@ -115,6 +115,10 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .fakeToggler svg {
+    transform: rotate(90deg);
+  }
 }
 
 @media (max-width: $mobileL) {
