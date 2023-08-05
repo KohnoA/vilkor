@@ -126,7 +126,11 @@
 }
 
 .map {
+  flex-basis: 50%;
+  width: 100%;
+
   opacity: 0;
+  border: none;
 }
 
 @media (max-width: $laptop) {
@@ -138,6 +142,14 @@
     display: block;
     max-width: 768px;
     margin: 0 auto;
+  }
+
+  .map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
   }
 }
 
