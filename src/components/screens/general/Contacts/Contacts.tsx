@@ -64,7 +64,16 @@ export default function Contacts({ theme }: ContactsProps) {
           </ul>
         </div>
 
-        <YMap className={styles.map} />
+        <iframe
+          className={styles.map}
+          title="Местонахождение предприятия"
+          style={{ flexBasis: '50%', border: 'none' }}
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8c9018416e21318a0d87070b516ea1b69663274bf609c0133877f4e3a55a6fa&amp;source=constructor&amp;scroll=false"
+          width="100%"
+          height="500"
+        />
+
+        {/* <YMap className={styles.map} /> */}
       </div>
     </section>
   );
