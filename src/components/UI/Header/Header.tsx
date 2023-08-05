@@ -14,7 +14,6 @@ const STICKY_POINT = 100;
 export default function Header() {
   const { pathname } = useRouter();
   const [isProductsDropdown, setIsProductsDropdown] = useState<boolean>(false);
-  const [isServicesDropdown, setIsServicesDropdown] = useState<boolean>(false);
   const [isStickHeader, setIsStickHeader] = useState<boolean>(false);
   const isMainPage = pathname === AppRoutes.MAIN;
 
@@ -25,26 +24,9 @@ export default function Header() {
     }));
   }, []);
 
-  const servicesDropdownContent = useMemo(() => {
-    return [
-      {
-        title: 'Строительные работы',
-        link: AppRoutes.SERVICES_CONSTRUCTION,
-      },
-      {
-        title: 'Ландшафтные работы',
-        link: AppRoutes.SERVICES_LANDSCAPE,
-      },
-    ];
-  }, []);
-
   const showProductsDropdown = () => setIsProductsDropdown(true);
 
   const closeProductsDropdown = () => setIsProductsDropdown(false);
-
-  const showServicesDropdown = () => setIsServicesDropdown(true);
-
-  const closeServicesDropdown = () => setIsServicesDropdown(false);
 
   useEffect(() => {
     if (isMainPage) {
@@ -82,22 +64,10 @@ export default function Header() {
               items={productsDropdownContent}
             />
           </li>
-          <li
-            className={styles.nav__item}
-            onMouseOut={closeServicesDropdown}
-            onBlur={closeServicesDropdown}
-            onMouseOver={showServicesDropdown}
-            onFocus={showServicesDropdown}
-          >
+          <li className={styles.nav__item}>
             <Link href={AppRoutes.SERVICES} className={styles.nav__link}>
               Услуги
             </Link>
-
-            <Dropdown
-              closeHanlder={closeServicesDropdown}
-              isShow={isServicesDropdown}
-              items={servicesDropdownContent}
-            />
           </li>
           <li className={styles.nav__item}>
             <Link href={AppRoutes.CONTACTS} className={styles.nav__link}>

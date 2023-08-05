@@ -1,5 +1,5 @@
-import Services from '@/components/Services/Services';
-import Layout from '@/components/UI/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
+import Services from '@/components/screens/general/Services/Services';
 
 export default function ServicesPage() {
   return (

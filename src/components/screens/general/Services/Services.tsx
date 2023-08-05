@@ -1,11 +1,12 @@
 import styles from './Services.module.scss';
-import { A1_NUMBER } from '@/constants';
-import Accordion from '../UI/Accordion/Accordion';
+import { A1_NUMBER, AppRoutes } from '@/constants';
+import Accordion from '@/components/UI/Accordion/Accordion';
 import { useInView } from 'react-intersection-observer';
 import { SERVICES_LANDSCAPE, SERVICES_CONSTRUCTION } from '@/constants/services';
-import AccordionItem from '../UI/Accordion/AccordionItem/AccordionItem';
+import AccordionItem from '@/components/UI/Accordion/AccordionItem/AccordionItem';
 import { useMemo } from 'react';
-import Table from '../UI/Table/Table';
+import Table from '@/components/UI/Table/Table';
+import FakeAccordionItem from '@/components/UI/Accordion/AccordionItem/FakeAccordionItem';
 
 export default function Services() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
@@ -25,14 +26,8 @@ export default function Services() {
       </p>
 
       <Accordion className={styles.accordion} title="Строительные работы">
-        {SERVICES_CONSTRUCTION.map(({ id, category, list }) => (
-          <AccordionItem key={id} title={category}>
-            <ul>
-              {list.map(({ id, title }) => (
-                <li key={id}>{title}</li>
-              ))}
-            </ul>
-          </AccordionItem>
+        {SERVICES_CONSTRUCTION.map(({ id, category }) => (
+          <FakeAccordionItem key={id} title={category} link={`${AppRoutes.SERVICES}/${category}`} />
         ))}
       </Accordion>
 

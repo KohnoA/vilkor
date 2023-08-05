@@ -15,8 +15,6 @@ export const enum AppRoutes {
   MAIN = '/',
   PRODUCTS = '/products',
   SERVICES = '/services',
-  SERVICES_LANDSCAPE = '/services/landscape',
-  SERVICES_CONSTRUCTION = '/services/construction',
   CONTACTS = '/contacts',
 }
 

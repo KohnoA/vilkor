@@ -1,6 +1,6 @@
 import styles from './Products.module.scss';
 import { IProduct } from '@/types';
-import Card from '../UI/Card/Card';
+import Card from '@/components/UI/Card/Card';
 import { AppRoutes } from '@/constants';
 import { useInView } from 'react-intersection-observer';
 

@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import Button from '../UI/Button';
+import Button from '../../../UI/Button';
 import Image from 'next/image';
 import styles from './PromoSlider.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';

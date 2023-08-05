@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../UI/Header';
+import Footer from '../UI/Footer';
 import Texture from '@/components/UI/Texture/Texture';
 
 interface MainContainerProps {

@@ -72,7 +72,7 @@ export type ServicesDataType = {
   services: TableItemType[];
 };
 
-export type ServicesDataTypeWithCategories = {
+export type ServicesDataTypeGroup = {
   id: number;
   category: string;
   list: ServicesDataType[];

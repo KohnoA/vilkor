@@ -18,23 +18,6 @@ function BurgerMenu() {
     })).concat({ title: 'Показать все', link: `${AppRoutes.PRODUCTS}` });
   }, []);
 
-  const servicesDropdown = useMemo(() => {
-    return [
-      {
-        title: 'Строительные работы',
-        link: AppRoutes.SERVICES_CONSTRUCTION,
-      },
-      {
-        title: 'Ландшафтные работы',
-        link: AppRoutes.SERVICES_LANDSCAPE,
-      },
-      {
-        title: 'Показать все',
-        link: AppRoutes.SERVICES,
-      },
-    ];
-  }, []);
-
   const burgerToggler = () => setIsActiveBurger(!isActiveBurger);
 
   const closeBurgerHandler = useCallback(() => setIsActiveBurger(false), []);
@@ -70,13 +53,11 @@ function BurgerMenu() {
           isActiveBurger={isActiveBurger}
           closeBurger={closeBurgerHandler}
         />
-        <DropdownItem
-          header="Услуги"
-          content={servicesDropdown}
-          className={styles.item}
-          isActiveBurger={isActiveBurger}
-          closeBurger={closeBurgerHandler}
-        />
+        <li className={styles.item}>
+          <Link href={AppRoutes.SERVICES} className={styles.link} onClick={closeBurgerHandler}>
+            Услуги
+          </Link>
+        </li>
         <li className={styles.item}>
           <Link href={AppRoutes.CONTACTS} className={styles.link} onClick={closeBurgerHandler}>
             Контакты

@@ -1,5 +1,5 @@
 import styles from './Works.module.scss';
-import Button from '../UI/Button/Button';
+import Button from '@/components/UI/Button/Button';
 import { IWork } from '@/types';
 import { INSTAGRAM_LINK } from '@/constants';
 import WorkItem from './WorkItem/WorkItem';
