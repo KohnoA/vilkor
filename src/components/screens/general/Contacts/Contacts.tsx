@@ -3,8 +3,8 @@ import { A1_NUMBER, A1_NUMBER_REF, ADRESS, AppTheme, BusinessInfo, IconColor } f
 import Link from 'next/link';
 import Image from 'next/image';
 import A1Img from 'public/images/logo-a1.png';
-import SocialsList from '../SocialsList/SocialsList';
-import DeliveryIcon from '../icons/DeliveryIcon';
+import SocialsList from '@/components/SocialsList/SocialsList';
+import DeliveryIcon from '@/components/icons/DeliveryIcon';
 import dynamic from 'next/dynamic';
 import { useInView } from 'react-intersection-observer';
 

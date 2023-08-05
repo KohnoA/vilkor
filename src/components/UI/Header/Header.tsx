@@ -13,20 +13,20 @@ const STICKY_POINT = 100;
 
 export default function Header() {
   const { pathname } = useRouter();
-  const [isDropdown, setIsDropdown] = useState<boolean>(false);
+  const [isProductsDropdown, setIsProductsDropdown] = useState<boolean>(false);
   const [isStickHeader, setIsStickHeader] = useState<boolean>(false);
   const isMainPage = pathname === AppRoutes.MAIN;
 
-  const dropdownContent = useMemo(() => {
+  const productsDropdownContent = useMemo(() => {
     return PRODUCTS.map(({ title, category }) => ({
       title,
       link: `${AppRoutes.PRODUCTS}/${category}`,
     }));
   }, []);
 
-  const showProductsDropdown = () => setIsDropdown(true);
+  const showProductsDropdown = () => setIsProductsDropdown(true);
 
-  const closeProductsDropdown = () => setIsDropdown(false);
+  const closeProductsDropdown = () => setIsProductsDropdown(false);
 
   useEffect(() => {
     if (isMainPage) {
@@ -60,8 +60,8 @@ export default function Header() {
 
             <Dropdown
               closeHanlder={closeProductsDropdown}
-              isShow={isDropdown}
-              items={dropdownContent}
+              isShow={isProductsDropdown}
+              items={productsDropdownContent}
             />
           </li>
           <li className={styles.nav__item}>

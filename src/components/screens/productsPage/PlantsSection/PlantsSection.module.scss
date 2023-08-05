@@ -6,6 +6,12 @@
       transform: translateY(0);
     }
 
+    .moreInfo {    
+      transition: opacity 800ms 500ms, transform 800ms 500ms;
+      opacity: 1;
+      transform: translateY(0%);
+    }
+
     .accordion {
       transition: opacity 0.8s, transform 0.8s;
       opacity: 1;
@@ -25,10 +31,24 @@
 }
 
 .title {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   opacity: 0;
   transform: translateY(50%);
+}
+
+.moreInfo {
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(-15%);
+}
+
+.number {
+  white-space: nowrap;
 }
 
 .accordion {

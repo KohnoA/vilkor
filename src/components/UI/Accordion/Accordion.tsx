@@ -1,15 +1,14 @@
-import { memo } from 'react';
+import { ReactElement, memo } from 'react';
 import styles from './Accordion.module.scss';
-import AccordionItem from './AccordionItem/AccordionItem';
-import { AccordionContentType } from '@/types';
+import { AccordionItemProps } from './AccordionItem/AccordionItem';
 
 interface AccordionProps {
   className?: string;
-  content: AccordionContentType;
   title?: string;
+  children: ReactElement<AccordionItemProps> | ReactElement<AccordionItemProps>[];
 }
 
-function Accordion({ className, content, title }: AccordionProps) {
+function Accordion({ className, title, children }: AccordionProps) {
   return (
     <ul className={`${styles.list} ${className ?? ''}`}>
       {title && (
@@ -18,9 +17,7 @@ function Accordion({ className, content, title }: AccordionProps) {
         </li>
       )}
 
-      {content.map(({ id, title, list }) => (
-        <AccordionItem key={id} title={title} list={list} />
-      ))}
+      {children}
     </ul>
   );
 }

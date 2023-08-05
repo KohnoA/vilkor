@@ -1,12 +1,14 @@
-import { memo, useState } from 'react';
+import { ReactNode, memo, useState } from 'react';
 import styles from './AccordionItem.module.scss';
 import PlusIcon from '@/components/icons/PlusIcon';
-import { AccordionContentType } from '@/types';
 import Collapse from '../../Collapse/Collapse';
 
-type AccordionItemProps = Omit<AccordionContentType[0], 'id'>;
+export type AccordionItemProps = {
+  title: string;
+  children: ReactNode;
+};
 
-function AccordionItem({ title, list }: AccordionItemProps) {
+function AccordionItem({ title, children }: AccordionItemProps) {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const stateToggler = () => setIsActive(!isActive);
@@ -37,13 +39,7 @@ function AccordionItem({ title, list }: AccordionItemProps) {
       </div>
 
       <Collapse isActive={isActive}>
-        <ul className={styles.list}>
-          {list.map(({ name, explanation, id }) => (
-            <li key={id} className={styles.item}>
-              {name} — <span className={styles.explanation}>{explanation}</span>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.children}>{children}</div>
       </Collapse>
     </li>
   );

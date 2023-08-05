@@ -1,13 +1,13 @@
 import Gallery from '@/components/UI/Gallery/Gallery';
-import Layout from '@/components/UI/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
 import { PRODUCTS } from '@/constants/products';
 import { IProductItem } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import styles from '@/components/Screens/ProductPage/ProductPage.module.scss';
-import MulchNote from '@/components/Screens/ProductPage/Notes/MulchNote';
-import BarkNote from '@/components/Screens/ProductPage/Notes/BarkNote';
-import ContactsInfo from '@/components/Screens/ProductPage/ContactsInfo/ContactsInfo';
-import PeatNote from '@/components/Screens/ProductPage/Notes/PeatNote';
+import styles from '@/components/screens/productsPage/product/product.module.scss';
+import MulchNote from '@/components/screens/productsPage/product/Notes/MulchNote';
+import BarkNote from '@/components/screens/productsPage/product/Notes/BarkNote';
+import PeatNote from '@/components/screens/productsPage/product/Notes/PeatNote';
+import ContactsInfo from '@/components/screens/productsPage/product/ContactsInfo/ContactsInfo';
 import { ProductCategory } from '@/constants';
 import { useInView } from 'react-intersection-observer';
 

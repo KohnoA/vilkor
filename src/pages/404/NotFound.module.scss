@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .section {
   display: flex;
   flex-direction: column;
@@ -8,10 +10,8 @@
 .statusCode {
   font-size: 6rem;
   letter-spacing: 5px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
-  padding-bottom: 5px;
-  margin-bottom: 6px;
 }
 
 .errorMessage {
@@ -21,4 +21,5 @@
 
 .desc {
   margin-bottom: 30px;
+  text-align: center;
 }

@@ -1,15 +1,15 @@
-import Layout from '@/components/UI/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { PRODUCTS } from '@/constants/products';
 import { IProduct } from '@/types';
 import dynamic from 'next/dynamic';
 import { ProductCategory } from '@/constants';
-import CategoryProductsList from '@/components/Screens/CategoryPage/CategoryProductsList/CategoryProductsList';
-import BarkInfo from '@/components/Screens/CategoryPage/BarkInfo/BarkInfo';
-import PeatInfo from '@/components/Screens/CategoryPage/PeatInfo/PeatInfo';
-import MulchInfo from '@/components/Screens/CategoryPage/MulchInfo/MulchInfo';
-import PlantsInfo from '@/components/Screens/CategoryPage/PlantsInfo/PlantsInfo';
-import PlantsSection from '@/components/Screens/CategoryPage/PlantsSection/PlantsSection';
+import BarkInfo from '@/components/screens/productsPage/BarkInfo/BarkInfo';
+import CategoryProductsList from '@/components/screens/productsPage/CategoryProductsList/CategoryProductsList';
+import PeatInfo from '@/components/screens/productsPage/PeatInfo/PeatInfo';
+import MulchInfo from '@/components/screens/productsPage/MulchInfo/MulchInfo';
+import PlantsInfo from '@/components/screens/productsPage/PlantsInfo/PlantsInfo';
+import PlantsSection from '@/components/screens/productsPage/PlantsSection/PlantsSection';
 
 const Background = dynamic(() => import('@/components/UI/Background/Background'));
 

@@ -1,6 +1,6 @@
-import Products from '@/components/Products/Products';
 import Background from '@/components/UI/Background/Background';
-import Layout from '@/components/UI/Layout/Layout';
+import Products from '@/components/screens/general/Products/Products';
+import Layout from '@/components/Layout/Layout';
 import { PRODUCTS } from '@/constants/products';
 
 export default function ProductsPage() {

@@ -1,6 +1,7 @@
 @import '@/styles/variables';
 
-.container {
+.container,
+.fakeItemContainer {
   font-size: 1.2rem;
   font-weight: 600;
 
@@ -8,6 +9,22 @@
 
   &:last-child {
     border: none;
+  }
+}
+
+.fakeItemContainer {
+  transition: background 300ms, opacity 300ms;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+
+    & .fakeToggler svg {
+      transform: translateX(0%) rotate(90deg);
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
   }
 }
 
@@ -62,8 +79,30 @@
   }
 }
 
-.list {
-  padding: 0 30px 0 50px;
+.fakeToggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px 5px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  & svg {
+    will-change: transform;
+    transition: transform 300ms;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  & svg path {
+    fill: #919191dc;
+  }
+}
+
+.children {
+  padding: 0 30px 30px 30px;
 
   font-size: 1rem;
   font-weight: 500;
@@ -71,34 +110,16 @@
   list-style: disc;
 }
 
-.item {
-  margin-bottom: 10px;
-
-  &:last-child {
-    margin-bottom: 30px;
-  }
-}
-
-.explanation {
-  font-weight: 600;
-  font-style: italic;
-  white-space: nowrap;
-}
-
 @media (max-width: $tablet) {
-  .item {
-    margin-bottom: 15px;
+  .children {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media (max-width: $mobileL) {
   .container {
     font-size: 1rem;
-  }
-
-  .item {
-    margin-bottom: 15px;
-    font-size: 14px;
   }
 }
 
@@ -108,7 +129,7 @@
     padding-left: 20px;
   }
 
-  .list {
-    padding: 0 10px 0 35px;
+  .children {
+    padding: 0;
   }
 }
