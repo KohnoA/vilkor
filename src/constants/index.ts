@@ -7,8 +7,9 @@ export const VIBER_LINK =
 // Other Info
 export const A1_NUMBER = '+375 (29) 607-87-76';
 export const A1_NUMBER_REF = 'tel:+375296078776';
+export const A1_SECOND_NUMBER = '+375 (29) 256-99-49';
+export const A1_SECOND_NUMBER_REF = 'tel:+375292569949';
 export const ADRESS = 'Минск, переулок Козлова, 9Г';
-export const MAP_COORDINATES = [53.896432, 27.597359];
 
 // enums
 export const enum AppRoutes {

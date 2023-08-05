@@ -1,14 +1,20 @@
 import styles from './Contacts.module.scss';
-import { A1_NUMBER, A1_NUMBER_REF, ADRESS, AppTheme, BusinessInfo, IconColor } from '@/constants';
+import {
+  A1_NUMBER,
+  A1_NUMBER_REF,
+  A1_SECOND_NUMBER,
+  A1_SECOND_NUMBER_REF,
+  ADRESS,
+  AppTheme,
+  BusinessInfo,
+  IconColor,
+} from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
 import A1Img from 'public/images/logo-a1.png';
 import SocialsList from '@/components/SocialsList/SocialsList';
 import DeliveryIcon from '@/components/icons/DeliveryIcon';
-import dynamic from 'next/dynamic';
 import { useInView } from 'react-intersection-observer';
-
-const YMap = dynamic(() => import('./YMap/YMap'), { ssr: false });
 
 interface ContactsProps {
   theme: AppTheme;
@@ -40,6 +46,16 @@ export default function Contacts({ theme }: ContactsProps) {
                 />{' '}
                 {A1_NUMBER}
               </Link>
+              <Link href={A1_SECOND_NUMBER_REF} className={styles.number}>
+                <Image
+                  src={A1Img}
+                  width={20}
+                  height={20}
+                  sizes="50px"
+                  alt="Мобильный оператор А1"
+                />{' '}
+                {A1_SECOND_NUMBER}
+              </Link>
             </li>
 
             <li className={styles.item}>
@@ -63,17 +79,11 @@ export default function Contacts({ theme }: ContactsProps) {
             </li>
           </ul>
         </div>
-
         <iframe
           className={styles.map}
           title="Местонахождение предприятия"
-          style={{ flexBasis: '50%', border: 'none' }}
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8c9018416e21318a0d87070b516ea1b69663274bf609c0133877f4e3a55a6fa&amp;source=constructor&amp;scroll=false"
-          width="100%"
-          height="500"
         />
-
-        {/* <YMap className={styles.map} /> */}
       </div>
     </section>
   );
