@@ -2,7 +2,7 @@ import styles from './BarkInfo.module.scss';
 import { useInView } from 'react-intersection-observer';
 
 export default function BarkInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section

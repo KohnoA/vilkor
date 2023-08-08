@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import styles from './PlantsInfo.module.scss';
 
 export default function PlantsInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section
@@ -11,19 +11,36 @@ export default function PlantsInfo() {
         inView ? styles.section_animate : ''
       }`}
     >
-      <h2 className={`title title_left ${styles.title}`}>Декоративные растения</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fuga voluptatem nihil,
-        cumque optio modi? Soluta optio repellendus iusto. Suscipit incidunt voluptatum maiores
-        inventore velit in error, dolores obcaecati quam illum fugit ipsum nihil beatae reiciendis
-        illo distinctio. Quod aperiam architecto nisi voluptas quia quisquam placeat incidunt,
-        quibusdam illo tempora sapiente optio quasi sed porro similique assumenda accusamus quidem
-        quaerat autem ipsam! Perspiciatis dicta totam hic sunt deserunt quae doloribus cumque,
-        deleniti magnam. Libero dicta velit, quas, aperiam excepturi itaque nulla iure temporibus
-        tempora suscipit alias laudantium, veritatis repudiandae. Eveniet ducimus, doloremque ad
-        cumque tenetur quas voluptate. Non, excepturi vero!
+      <h2 className={`title title_center ${styles.title}`}>Полезная информация</h2>
+      <p className={styles.desc}>
+        <b className={styles.mark}>Декоративные растения</b> – идеальное украшение загородного
+        участка, которого так часто не хватает на дачах, предназначенных лишь для получения урожаев.
+        Тем не менее их роль достаточно велика:
       </p>
+
+      <ul className={styles.list}>
+        <li>украшают собой участок, придает ему эстетичный внешний вид.</li>
+
+        <li>насыщение окружающей среды кислородом, поглощение углекислого газа.</li>
+
+        <li>выделение в воздух различных полезных веществ.</li>
+
+        <li>
+          при посадке вдоль периметра участка – защита людей, плодовых растений от пыли,
+          загазованности.
+        </li>
+
+        <li>
+          в жаркий день густые кроны деревьев укроют в своей тени хозяев дачи от летнего зноя.
+        </li>
+
+        <li>«живая изгородь» защитит участок с низким или сетчатым забором от посторонних глаз.</li>
+
+        <li>
+          густые декоративные кусты вдоль забора не дадут сильным ветрам повлиять на овощные,
+          ягодные культуры.
+        </li>
+      </ul>
     </section>
   );
 }

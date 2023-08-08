@@ -2,7 +2,7 @@ import { useInView } from 'react-intersection-observer';
 import styles from './MulchInfo.module.scss';
 
 export default function MulchInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section
