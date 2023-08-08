@@ -11,18 +11,33 @@ export default function MulchInfo() {
         inView ? styles.section_animate : ''
       }`}
     >
-      <h2 className={`title title_left ${styles.title}`}>Мульчирующие изделия</h2>
+      <h2 className={`title title_center ${styles.title}`}>Полезная информация</h2>
 
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fuga voluptatem nihil,
-        cumque optio modi? Soluta optio repellendus iusto. Suscipit incidunt voluptatum maiores
-        inventore velit in error, dolores obcaecati quam illum fugit ipsum nihil beatae reiciendis
-        illo distinctio. Quod aperiam architecto nisi voluptas quia quisquam placeat incidunt,
-        quibusdam illo tempora sapiente optio quasi sed porro similique assumenda accusamus quidem
-        quaerat autem ipsam! Perspiciatis dicta totam hic sunt deserunt quae doloribus cumque,
-        deleniti magnam. Libero dicta velit, quas, aperiam excepturi itaque nulla iure temporibus
-        tempora suscipit alias laudantium, veritatis repudiandae. Eveniet ducimus, doloremque ad
-        cumque tenetur quas voluptate. Non, excepturi vero!
+        <b className={styles.mark}>Мульчирование</b> - это агротехнический прием, при котором
+        верхний слой почвы покрывают различными веществами (мульчей) в целях защиты культурных
+        растений от воздействий окружающей среды и улучшения общего эстетического вида.
+      </p>
+
+      <p>
+        Мульча защищает растения от размыва поверхностным стоком воды и уменьшает грязевое
+        забрызгивание растений во время дождя. Микроклиматические условия, возникающие под слоем
+        мульчи благоприятны для развития дождевых червей, которые способствует увеличению плодородия
+        почвы, улучшению ее структуры и воздухопроницаемости. Мульчирование помогает в борьбе с
+        сорняками: слой в 5—7 сантиметров сокращает рост сорных растений. При использовании
+        мульчирующих материалов значительно сокращается испарение влаги из почвы и, как следствие,
+        снижается частота поливов. Верхний слой почвы под слоем мульчи остается рыхлым, что улучшает
+        ее воздухообмен и водопроницаемость.{' '}
+      </p>
+
+      <p>
+        При мульчировании необходимо учитывать механический состав почвы: на средних и легких почвах
+        кору вокруг растений распределяют слоем 5-8см, на тяжелых суглинках слой должен быть не
+        более 2см. Кустарники мульчируют в радиусе 40-50 см, средние деревья – 70-80см. Слой мульчи
+        не должен доходить до стволов или стеблей растений, чтобы они не загнили. Не стоит по тем же
+        причинам уплотнять материал вокруг корней. В среднем раз в 2-3 года нужно добавлять слой
+        мульчи, поскольку она постепенно разлагается и превращается в плодородный слой (гумус), что
+        значительно улучшает структуру и плодородие почвы.
       </p>
     </section>
   );

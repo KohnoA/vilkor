@@ -1,17 +1,24 @@
 .section {
   opacity: 0;
 
+  & p {
+    margin-bottom: 30px;
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
+  }
+
   &_animate {
     transition: opacity 0.8s;
     opacity: 1;
-
-    .title {
-      transition: transform 0.8s;
-      transform: translateX(0);
-    }
   }
 }
 
 .title {
-  transform: translateX(-10%);
+  margin-bottom: 35px;
+}
+
+.mark {
+  font-size: 1.2rem;
 }

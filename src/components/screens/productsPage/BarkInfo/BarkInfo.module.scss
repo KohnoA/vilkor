@@ -8,22 +8,18 @@
     margin-bottom: 30px;
   }
 
+  & div:last-child {
+    margin-bottom: 0;
+  }
+
   &_animate {
     transition: opacity 0.8s;
     opacity: 1;
-
-    .title {
-      transition: opacity 800ms, transform 800ms;
-      transform: translateY(0);
-      opacity: 1;
-    }
   }
 }
 
 .title {
   margin-bottom: 35px;
-  transform: translateY(100%);
-  opacity: 0;
 }
 
 .mark {
@@ -47,4 +43,8 @@
   & li:last-child {
     padding-bottom: 0;
   }
+}
+
+.itemTitle {
+  font-style: italic;
 }
