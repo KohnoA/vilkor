@@ -4,16 +4,11 @@
   &_animate {
     transition: opacity 0.8s;
     opacity: 1;
-
-    .title {
-      transition: transform 0.8s;
-      transform: translateX(0);
-    }
   }
 }
 
 .title {
-  transform: translateX(-10%);
+  margin-bottom: 35px;
 }
 
 .advatages {
@@ -24,10 +19,11 @@
 }
 
 .listDesc {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 
-  font-size: 1.2rem;
   font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .list {
@@ -37,9 +33,9 @@
 }
 
 .item {
-  margin-bottom: 5px;
+  padding: 5px 0;
 
   &:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
