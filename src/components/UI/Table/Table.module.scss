@@ -2,6 +2,7 @@
 
 .container {
   width: 100%;
+
   border-radius: $borderRadius;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-spacing: 0;
@@ -32,6 +33,10 @@
   }
 }
 
+.left {
+  text-align: left;
+}
+
 .center {
   text-align: center;
 }
@@ -44,8 +49,6 @@
 
 @media (max-width: $mobileM) {
   .container {
-    border-radius: 0;
-    border: none;
     hyphens: auto;
 
     & td {

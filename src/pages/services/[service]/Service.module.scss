@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/mixins';
 
 .section {
   &_animate {
@@ -14,7 +15,8 @@
       transform: translateY(0);
     }
 
-    .accordion {
+    .accordion,
+    .table {
       transition: opacity 800ms, transform 800ms;
       opacity: 1;
       transform: scale(1);
@@ -46,7 +48,12 @@
   white-space: nowrap;
 }
 
-.accordion {
+.accordion,
+.table {
   opacity: 0;
   transform: scale(0.95);
+}
+
+.tableInAccordion {
+  @include TableInAccordion;
 }

@@ -1,6 +1,6 @@
 import Accordion from '@/components/UI/Accordion/Accordion';
 import styles from './PlantsSection.module.scss';
-import { memo, useMemo } from 'react';
+import { memo } from 'react';
 import { PLANTS } from '@/constants/plants';
 import Button from '@/components/UI/Button/Button';
 import InstagramLogo from '@/components/icons/InstagramLogo';
@@ -11,8 +11,6 @@ import Table from '@/components/UI/Table/Table';
 
 function PlantsSection() {
   const { ref, inView } = useInView({ triggerOnce: true });
-
-  const plantsTableHead = useMemo(() => ['Наименование растения', 'Цена за', 'Цена от'], []);
 
   return (
     <section
@@ -29,7 +27,11 @@ function PlantsSection() {
       <Accordion className={styles.accordion}>
         {PLANTS.map(({ id, title, list }) => (
           <AccordionItem key={id} title={title}>
-            <Table head={plantsTableHead} data={list} />
+            <Table
+              className={styles.tableInAccordion}
+              firstColTitle="Наименование растения"
+              data={list}
+            />
           </AccordionItem>
         ))}
       </Accordion>

@@ -2,7 +2,7 @@ import styles from './PeatInfo.module.scss';
 import { useInView } from 'react-intersection-observer';
 
 export default function PeatInfo() {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
     <section
@@ -11,7 +11,7 @@ export default function PeatInfo() {
         inView ? styles.section_animate : ''
       }`}
     >
-      <h2 className={`title title_left ${styles.title}`}>Что нужно знать о торфе</h2>
+      <h2 className={`title title_center ${styles.title}`}>Полезная информация</h2>
 
       <p className={styles.advatages}>
         В первую очередь торф используется для улучшения структуры почвы. Благодаря своей
@@ -22,7 +22,7 @@ export default function PeatInfo() {
         квадратный метр
       </p>
 
-      <p className={styles.listDesc}>Важные показатели торфа:</p>
+      <p className={`title title_left ${styles.listDesc}`}>Важные показатели торфа:</p>
       <ul className={styles.list}>
         <li className={styles.item}>
           Торф нейтральный отличается массой органических элементов, не содержит сорных растений и

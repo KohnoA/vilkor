@@ -19,7 +19,7 @@ export default function Works({ content }: WorksProps) {
     >
       <h3 className={`title title_center ${styles.title}`}>Наши работы</h3>
       <p className={styles.desc}>
-        Мы поможем реализовать ваши желания или предложить свои варианты тюнинга вашего автомобиля
+        Мы поможем реализовать ваши желания или предложить свои варианты благоустройства вашего дома
       </p>
 
       <ul className={styles.list}>

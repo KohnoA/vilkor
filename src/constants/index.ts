@@ -39,6 +39,6 @@ export const enum IconColor {
 }
 
 export const enum BusinessInfo {
-  IP = 'ИП Илькевич И.Н.',
+  IP = 'ООО «VILKOR»',
   OPN = 'УПН 111111111',
 }

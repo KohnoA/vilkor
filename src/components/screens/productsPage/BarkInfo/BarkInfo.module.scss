@@ -3,54 +3,48 @@
 .section {
   opacity: 0;
 
+  & div,
+  p {
+    margin-bottom: 30px;
+  }
+
+  & div:last-child {
+    margin-bottom: 0;
+  }
+
   &_animate {
     transition: opacity 0.8s;
     opacity: 1;
-
-    .title {
-      transition: transform 0.8s;
-      transform: translateX(0);
-    }
   }
 }
 
 .title {
-  white-space: nowrap;
-  transform: translateX(-10%);
+  margin-bottom: 35px;
 }
 
-.subTitle {
-  margin-bottom: 20px;
-
-  font-size: 1.4rem;
+.mark {
+  font-size: 1.2rem;
 }
 
-.desc {
-  margin-bottom: 20px;
+.listTitle {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .list {
-  list-style: none;
+  padding-left: 20px;
+  list-style: disc;
+
+  & li {
+    padding: 5px 0;
+  }
+
+  & li:last-child {
+    padding-bottom: 0;
+  }
 }
 
-.item {
-  margin-bottom: 5px;
-}
-
-.num {
-  font-size: 1.2rem;
-  font-weight: 700;
+.itemTitle {
   font-style: italic;
-}
-
-@media (max-width: $laptop) {
-  .title {
-    white-space: normal;
-  }
-}
-
-@media (max-width: $mobileM) {
-  .subTitle {
-    font-size: 1.2rem;
-  }
 }
