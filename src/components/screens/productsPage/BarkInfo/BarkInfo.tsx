@@ -11,7 +11,7 @@ export default function BarkInfo() {
     >
       <h2 className={`title title_center ${styles.title}`}>Полезная информация</h2>
 
-      <p className={styles.desc}>
+      <p>
         <b className={styles.mark}>Сосновая кора</b> – это натуральный мульчирующий материал.
         Применяется для агротехнических и ландшафтно-дизайнерских работ на приусадебных участках,
         клумбах, садах. Используется при оформлении парков, открытых площадок и дорожек.
@@ -48,7 +48,7 @@ export default function BarkInfo() {
       </div>
 
       <div>
-        <h4 className={`title title_left ${styles.listTitle}`}>Преимущества сосновой коры:</h4>
+        <h4 className={`title title_left ${styles.listTitle}`}>Преимущества:</h4>
 
         <ul className={styles.list}>
           <li>Надежная защита почвы от потери влаги.</li>

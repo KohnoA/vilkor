@@ -1,3 +1,6 @@
+@import '@/styles/mixins';
+@import '@/styles/variables';
+
 .section {
   &_animate {
     .title {
@@ -71,4 +74,8 @@
 .buttonWrapper {
   text-align: center;
   opacity: 0;
+}
+
+.tableInAccordion {
+  @include TableInAccordion;
 }

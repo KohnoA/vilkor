@@ -57,7 +57,7 @@ export type TableItemType = {
   id: number;
   name: string;
   units?: string;
-  price?: string | number;
+  price?: string;
 };
 
 export type PlantsDataType = {
