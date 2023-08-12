@@ -5,20 +5,6 @@
   position: relative;
   padding-top: 80px;
 
-  &_dark {
-    .wrapper {
-      color: $white;
-      background-color: $lightBlack;
-    }
-  }
-
-  &_light {
-    .wrapper {
-      color: $black;
-      background-color: $white;
-    }
-  }
-
   &_animate {
     .info {
       opacity: 1;
@@ -46,6 +32,9 @@
   border-radius: $borderRadius;
   box-shadow: $boxShadowStrong;
   overflow: hidden;
+
+  color: $white;
+  background-color: $lightBlack;
 }
 
 .info {

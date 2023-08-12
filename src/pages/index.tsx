@@ -12,7 +12,6 @@ import TransitionIcon from '@/components/icons/TransitionIcon';
 import { WORKS } from '@/constants/works';
 import dynamic from 'next/dynamic';
 import contactsBg from 'public/images/background.jpg';
-import { AppTheme } from '@/constants';
 
 const Background = dynamic(() => import('@/components/UI/Background/Background'));
 const ScrollToTop = dynamic(() => import('@/components/UI/ScrollToTop/ScrollToTop'), {
@@ -40,7 +39,7 @@ export default function Home() {
       </Background>
 
       <Background image={contactsBg}>
-        <Contacts theme={AppTheme.DARK} />
+        <Contacts />
       </Background>
 
       <ScrollToTop />
