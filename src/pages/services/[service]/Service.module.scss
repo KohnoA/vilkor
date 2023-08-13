@@ -15,6 +15,11 @@
       transform: translateY(0);
     }
 
+    .back {
+      transition: opacity 800ms 500ms, background 300ms;
+      opacity: 1;
+    }
+
     .accordion,
     .table {
       transition: opacity 800ms, transform 800ms;
@@ -48,10 +53,19 @@
   white-space: nowrap;
 }
 
+.back {
+  margin: 0 auto;
+  opacity: 0;
+}
+
 .accordion,
 .table {
   opacity: 0;
   transform: scale(0.95);
+}
+
+.table {
+  margin-bottom: 60px;
 }
 
 .tableInAccordion {

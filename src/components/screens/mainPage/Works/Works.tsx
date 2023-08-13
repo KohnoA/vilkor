@@ -33,7 +33,9 @@ export default function Works({ content }: WorksProps) {
         ))}
       </ul>
 
-      <Button href={INSTAGRAM_LINK}>Увидеть больше &rsaquo;</Button>
+      <Button href={INSTAGRAM_LINK} additionalClasses={styles.button}>
+        Увидеть больше &rsaquo;
+      </Button>
     </section>
   );
 }

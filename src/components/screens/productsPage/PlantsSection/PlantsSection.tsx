@@ -41,11 +41,9 @@ function PlantsSection() {
         можно увидеть у нас в инстаграме!
       </p>
 
-      <div className={styles.buttonWrapper}>
-        <Button href={INSTAGRAM_LINK}>
-          <InstagramLogo /> Наш Инстаграм
-        </Button>
-      </div>
+      <Button href={INSTAGRAM_LINK} additionalClasses={styles.button}>
+        <InstagramLogo /> Наш Инстаграм
+      </Button>
     </section>
   );
 }
