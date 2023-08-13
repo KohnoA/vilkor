@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import styles from './ContactsInfo.module.scss';
 import Link from 'next/link';
-import { A1_NUMBER, A1_NUMBER_REF, IconColor } from '@/constants';
+import {
+  A1_NUMBER,
+  A1_NUMBER_REF,
+  A1_SECOND_NUMBER,
+  A1_SECOND_NUMBER_REF,
+  IconColor,
+} from '@/constants';
 import SocialsList from '@/components/SocialsList/SocialsList';
 import a1Logo from 'public/images/logo-a1.png';
 
@@ -13,6 +19,10 @@ export default function ContactsInfo() {
         <Link href={A1_NUMBER_REF} className={styles.number__link}>
           <Image src={a1Logo} width={20} height={20} sizes="50px" alt="Мобильный оператор А1" />
           {A1_NUMBER}
+        </Link>
+        <Link href={A1_SECOND_NUMBER_REF} className={styles.number__link}>
+          <Image src={a1Logo} width={20} height={20} sizes="50px" alt="Мобильный оператор А1" />
+          {A1_SECOND_NUMBER}
         </Link>
       </div>
 
