@@ -19,6 +19,7 @@ function SocialsList({ className, full, ...props }: SocialsListProps) {
         <li key={title}>
           <Link
             href={link}
+            aria-label={title}
             className={`${styles.socials__link} ${full ? styles.socials__link_full : ''}`}
           >
             <Icon {...props} /> {full && title}

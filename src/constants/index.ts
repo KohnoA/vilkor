@@ -1,6 +1,6 @@
 // Links
 export const TELEGRAM_LINK = 'https://t.me/+SU47CN1ClKcMLhHA';
-export const INSTAGRAM_LINK = 'https://www.instagram.com/dary_lesa.by/?igshid=YmMyMTA2M2Y%3D';
+export const INSTAGRAM_LINK = 'https://www.instagram.com/vilkor.by/';
 export const VIBER_LINK =
   'https://invite.viber.com/?g2=AQAT228AsNcSoEzT0OSio2NtzA5207hYmTe%2BlI7WrsbIOm61XGrVwqjEq%2BpOTrCD&lang=ru';
 

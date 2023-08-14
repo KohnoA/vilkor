@@ -1,9 +1,10 @@
-import { useState, CSSProperties, useCallback } from 'react';
+import { useState, CSSProperties, useCallback, useEffect } from 'react';
 import styles from './WorkItem.module.scss';
 import { IWork } from '@/types';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import ModalContent from '../ModalContent/ModalContent';
+import { useRouter } from 'next/router';
 
 const ModalLazy = dynamic(() => import('@/components/UI/Modal/Modal'), {
   ssr: false,
@@ -18,18 +19,32 @@ interface WorkItemProps {
 export default function WorkItem({ className, style, content }: WorkItemProps) {
   const { title, desc, images } = content;
   const [preview, hoverPreview] = images;
+  const { query, replace } = useRouter();
 
   const [isShowModal, setIsShowModal] = useState<boolean>(false);
 
-  const showModalHanlder = () => setIsShowModal(true);
+  const showModalHanlder = () => {
+    replace({ query: { ...query, work: title } }, undefined, { shallow: true });
+  };
 
-  const closeModalHandler = useCallback(() => setIsShowModal(false), []);
+  const closeModalHandler = useCallback(() => {
+    delete query?.work;
+    replace({ query: query }, undefined, { shallow: true });
+  }, [replace, query]);
 
   const keyboardHandler = (event: React.KeyboardEvent<HTMLLIElement>) => {
     if (event.code === 'Enter') {
       showModalHanlder();
     }
   };
+
+  useEffect(() => {
+    if (query?.work && query?.work === title) {
+      setIsShowModal(true);
+    } else {
+      setIsShowModal(false);
+    }
+  }, [query, title]);
 
   return (
     <>

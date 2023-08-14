@@ -8,6 +8,8 @@ import styles from './Service.module.scss';
 import { useInView } from 'react-intersection-observer';
 import Accordion from '@/components/UI/Accordion/Accordion';
 import AccordionItem from '@/components/UI/Accordion/AccordionItem/AccordionItem';
+import { useRouter } from 'next/router';
+import Button from '@/components/UI/Button/Button';
 
 interface ServicesCategoryPageProps {
   data: ServicesDataTypeGroup;
@@ -16,6 +18,9 @@ interface ServicesCategoryPageProps {
 export default function ServicesCategoryPage({ data }: ServicesCategoryPageProps) {
   const { category, list } = data;
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const router = useRouter();
+
+  const historyBack = () => router.back();
 
   return (
     <Layout title={category}>
@@ -49,6 +54,10 @@ export default function ServicesCategoryPage({ data }: ServicesCategoryPageProps
             data={list[0]?.services ?? []}
           />
         )}
+
+        <Button additionalClasses={styles.back} onClick={historyBack}>
+          &lsaquo; Назад к услугам
+        </Button>
       </section>
     </Layout>
   );

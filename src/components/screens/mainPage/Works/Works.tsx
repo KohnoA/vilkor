@@ -22,7 +22,7 @@ export default function Works({ content }: WorksProps) {
         Мы поможем реализовать ваши желания или предложить свои варианты благоустройства вашего дома
       </p>
 
-      <ul className={styles.list}>
+      <ul className={styles.list} role="tablist">
         {content.map((work, index) => (
           <WorkItem
             className={styles.item}
@@ -33,7 +33,9 @@ export default function Works({ content }: WorksProps) {
         ))}
       </ul>
 
-      <Button href={INSTAGRAM_LINK}>Увидеть больше &rsaquo;</Button>
+      <Button href={INSTAGRAM_LINK} additionalClasses={styles.button}>
+        Увидеть больше &rsaquo;
+      </Button>
     </section>
   );
 }

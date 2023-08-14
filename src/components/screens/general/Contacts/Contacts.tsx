@@ -5,7 +5,6 @@ import {
   A1_SECOND_NUMBER,
   A1_SECOND_NUMBER_REF,
   ADRESS,
-  AppTheme,
   BusinessInfo,
   IconColor,
 } from '@/constants';
@@ -16,19 +15,13 @@ import SocialsList from '@/components/SocialsList/SocialsList';
 import DeliveryIcon from '@/components/icons/DeliveryIcon';
 import { useInView } from 'react-intersection-observer';
 
-interface ContactsProps {
-  theme: AppTheme;
-}
-
-export default function Contacts({ theme }: ContactsProps) {
+export default function Contacts() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
     <section
       ref={ref}
-      className={`section container ${styles.section} ${inView ? styles.section_animate : ''} ${
-        theme === AppTheme.DARK ? styles.section_dark : styles.section_light
-      }`}
+      className={`section container ${styles.section} ${inView ? styles.section_animate : ''}`}
     >
       <div className={styles.wrapper}>
         <div className={styles.info}>

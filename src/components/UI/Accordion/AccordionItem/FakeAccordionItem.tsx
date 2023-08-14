@@ -14,9 +14,9 @@ function FakeAccordionItem({ title, link }: FakeAccordionItemProps) {
       <Link href={link} className={styles.header}>
         <p className={styles.header__title}>{title}</p>
 
-        <button className={styles.fakeToggler} tabIndex={-1}>
+        <div className={styles.fakeToggler} tabIndex={-1}>
           <ArrowUpIcon width={19} height={19} />
-        </button>
+        </div>
       </Link>
     </li>
   );
