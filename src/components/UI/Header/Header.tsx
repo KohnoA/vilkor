@@ -76,7 +76,7 @@ export default function Header() {
           </li>
         </ul>
 
-        <Link href={AppRoutes.MAIN} className={styles.nav__logo}>
+        <Link href={AppRoutes.MAIN} className={styles.nav__logo} aria-label="Vilkor">
           <Logo color={IconColor.WHITE} />
         </Link>
 

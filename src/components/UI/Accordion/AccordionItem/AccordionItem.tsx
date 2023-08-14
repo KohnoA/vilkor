@@ -30,12 +30,9 @@ function AccordionItem({ title, children }: AccordionItemProps) {
       >
         <p className={styles.header__title}>{title}</p>
 
-        <button
-          className={`${styles.toggler} ${isActive ? styles.toggler_active : ''}`}
-          tabIndex={-1}
-        >
+        <div className={`${styles.toggler} ${isActive ? styles.toggler_active : ''}`} tabIndex={-1}>
           <PlusIcon />
-        </button>
+        </div>
       </div>
 
       <Collapse isActive={isActive}>
