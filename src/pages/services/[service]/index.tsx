@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout/Layout';
 import Table from '@/components/UI/Table/Table';
-import { A1_NUMBER, AppRoutes } from '@/constants';
+import { A1_NUMBER } from '@/constants';
 import { SERVICES } from '@/constants/services';
 import { ServicesDataTypeGroup } from '@/types';
 import { GetStaticPaths, GetStaticProps } from 'next';
