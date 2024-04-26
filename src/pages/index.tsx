@@ -22,26 +22,20 @@ export default function Home() {
   return (
     <Layout title="VILKOR | Главная">
       <PromoSlider content={PROMO_SLIDES} />
-
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <Advantages content={ADVATAGES} />
         <TransitionIcon />
       </div>
-
       <Background>
         <Products content={PRODUCTS} />
       </Background>
-
       <Services />
-
       <Background>
         <Works content={WORKS} />
       </Background>
-
       <Background image={contactsBg}>
         <Contacts />
       </Background>
-
       <ScrollToTop />
     </Layout>
   );
