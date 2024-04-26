@@ -157,16 +157,6 @@ export const PRODUCTS: IProduct[] = [
       {
         id: 1,
         images: [torfImg],
-        title: 'Торф верховой',
-        volume: '50 л.',
-        price: '13 руб.',
-        acidity: 'pH 2,5-3,1',
-        packaging: 'Мешок',
-        stock: true,
-      },
-      {
-        id: 2,
-        images: [torfImg],
         title: 'Торф низинный (нейтральный)',
         volume: '50 л.',
         price: '9 руб.',
