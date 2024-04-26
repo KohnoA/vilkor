@@ -1,6 +1,7 @@
 // Links
 export const TELEGRAM_LINK = 'https://t.me/+SU47CN1ClKcMLhHA';
-export const INSTAGRAM_LINK = 'https://www.instagram.com/vilkor.by/';
+export const INSTAGRAM_LINK =
+  'https://www.instagram.com/vilkor_group?igsh=azR1bGR4bjlhNTQ%3D&utm_source=qr';
 export const VIBER_LINK =
   'https://invite.viber.com/?g2=AQAT228AsNcSoEzT0OSio2NtzA5207hYmTe%2BlI7WrsbIOm61XGrVwqjEq%2BpOTrCD&lang=ru';
 
