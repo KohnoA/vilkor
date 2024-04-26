@@ -2,11 +2,11 @@ import { ServicesDataTypeGroup } from '@/types';
 
 export const FLOORING: ServicesDataTypeGroup = {
   id: 8,
-  category: 'Устройство полов',
+  category: 'Укладка паркета',
   list: [
     {
       id: 1,
-      title: 'Устройство полов',
+      title: 'Укладка паркета',
       services: [
         {
           id: 1,
