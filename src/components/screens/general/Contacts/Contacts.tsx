@@ -57,7 +57,7 @@ export default function Contacts() {
             </li>
 
             <li className={styles.item}>
-              <p className={styles.item__header}>Адрес производства:</p>
+              <p className={styles.item__header}>Юридический адрес:</p>
               <p className={styles.item__desc}>{ADRESS}</p>
             </li>
 

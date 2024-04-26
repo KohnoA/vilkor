@@ -9,7 +9,7 @@ export const A1_NUMBER = '+375 (29) 607-87-76';
 export const A1_NUMBER_REF = 'tel:+375296078776';
 export const A1_SECOND_NUMBER = '+375 (29) 256-99-49';
 export const A1_SECOND_NUMBER_REF = 'tel:+375292569949';
-export const ADRESS = 'Минск, переулок Козлова, 9Г';
+export const ADRESS = 'Пр-т Победителей 135';
 
 // enums
 export const enum AppRoutes {
@@ -39,6 +39,6 @@ export const enum IconColor {
 }
 
 export const enum BusinessInfo {
-  IP = 'ООО «VILKOR»',
-  OPN = 'УПН 111111111',
+  IP = 'ООО «Вилкор»',
+  OPN = 'УНП 193704771',
 }
