@@ -68,7 +68,7 @@ export default function Contacts() {
             </li>
 
             <li className={styles.item}>
-              <p>{BusinessInfo.IP}</p>
+              <p className={styles.ip}>{BusinessInfo.IP}</p>
               <p>{BusinessInfo.OPN}</p>
             </li>
           </ul>
