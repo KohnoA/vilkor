@@ -10,6 +10,8 @@ export const A1_NUMBER_REF = 'tel:+375296078776';
 export const A1_SECOND_NUMBER = '+375 (29) 256-99-49';
 export const A1_SECOND_NUMBER_REF = 'tel:+375292569949';
 export const ADRESS = 'Пр-т Победителей 135';
+export const MAP_LINK =
+  'https://yandex.ru/map-widget/v1/?um=constructor%3A26e9185174047c860cfa5e9d15b3a5aa2c40f78d9168fbd42e30a9fb1b935d8f&source=constructor&scroll=false';
 
 // enums
 export const enum AppRoutes {

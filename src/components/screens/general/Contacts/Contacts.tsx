@@ -7,6 +7,7 @@ import {
   ADRESS,
   BusinessInfo,
   IconColor,
+  MAP_LINK,
 } from '@/constants';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -72,11 +73,7 @@ export default function Contacts() {
             </li>
           </ul>
         </div>
-        <iframe
-          className={styles.map}
-          title="Местонахождение предприятия"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8c9018416e21318a0d87070b516ea1b69663274bf609c0133877f4e3a55a6fa&amp;source=constructor&amp;scroll=false"
-        />
+        <iframe className={styles.map} title="Местонахождение предприятия" src={MAP_LINK} />
       </div>
     </section>
   );
