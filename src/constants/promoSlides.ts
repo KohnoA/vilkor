@@ -10,8 +10,8 @@ export const PROMO_SLIDES: IPromoSlides[] = [
   {
     image: serviecsImg,
     link: AppRoutes.SERVICES,
-    title: 'Строительные и ландшафтные работы',
-    desc: 'Строительство домов под "ключ". Благоустройство, расчистка участка',
+    title: 'Ландшафтные и строительные работы',
+    desc: 'Услуги по посадке растений, обрезке деревьев. Укладка паркета',
   },
   {
     image: koraImg,
